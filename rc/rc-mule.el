@@ -1,0 +1,17 @@
+(set-language-info-alist
+ "Chinese-UTF-8" '((charset unicode-bmp unicode)
+		  (iso639-language . zh)
+		  (coding-system utf-8)
+		  (coding-priority utf-8 chinese-big5 iso-2022-cn chinese-iso-8bit)
+		  (input-method . "chinese-cns-tsangchi")
+		  (features china-util)
+		  (sample-text . "Cantonese (粵語,廣東話)	早晨, 你好")
+		  (documentation . "0")
+		  (tutorial . "TUTORIAL.zh"))
+ '("Chinese"))
+(set-language-environment "Chinese-UTF-8")
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+(provide 'rc-mule)
