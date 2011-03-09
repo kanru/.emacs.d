@@ -57,6 +57,7 @@
 (require 'rc-java)
 (require 'rc-markdown)
 (require 'rc-nxml)
+(require 'rc-python)
 
 (load custom-file 'noerror)
 ;;; init.el ends here
