@@ -24,8 +24,10 @@
 
 ;;; Code:
 
-;; (setq slime-lisp-implementations
-;;       '((sbcl ("sbcl" "--core" "/home/kanru/.cache/sbcl.core-for-slime"))))
+(setq slime-lisp-implementations
+      '((sbcl ("sbcl"))
+        (clisp ("clisp"))
+        (ecl ("ecl"))))
 
 (provide 'rc-slime)
 ;;; rc-slime.el ends here
