@@ -24,8 +24,11 @@
 
 ;;; Code:
 
-(setq slime-lisp-implementations
-      '((sbcl ("sbcl"))
+(load (expand-file-name "~/quicklisp/slime-helper.el") 'noerror)
+
+(setq slime-net-coding-system 'utf-8-unix
+      slime-lisp-implementations
+      '((sbcl ("sbcl" "--core" "/home/kanru/.cache/common-lisp/sbcl.core-for-slime"))
         (clisp ("clisp"))
         (ecl ("ecl"))))
 

@@ -56,6 +56,7 @@
 (require 'rc-markdown)
 (require 'rc-nxml)
 (require 'rc-python)
+(require 'rc-slime)
 
 (load custom-file 'noerror)
 ;;; init.el ends here
