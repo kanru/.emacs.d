@@ -51,7 +51,6 @@
 (require 'rc-ediff)
 (require 'rc-gtags)
 (require 'rc-ibuffer)
-(require 'rc-view)
 
 ;; Programming Modes
 (require 'rc-java)
