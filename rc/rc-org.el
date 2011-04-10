@@ -1,5 +1,12 @@
 ;;; rc-org.el -- OrgMode Settings
 
+(add-to-list 'load-path "~/src/mirror/org-mode/lisp")
+(add-to-list 'load-path "~/src/mirror/org-mode/contrib/lisp")
+
+(require 'org)
+(require 'org-checklist nil t)
+(require 'org-contacts nil t)
+
 (setq org-directory "~/org"
       diary-file "~/etc/diary"
       ;org-agenda-include-diary t
@@ -42,13 +49,20 @@
         ("p" "GTD: New project" entry (file+headline "newgtd.org" "Projects")
          "* %^{Brief Description}")
         ("i" "GTD: In-Basket" entry (file+headline "newgtd.org" "In-Basket")
-         "* %^{Brief Description}"))
+         "* %^{Brief Description}")
+        ("c" "Contacts" entry (file "contacts.org")
+         "* %(org-contacts-template-name)
+  :PROPERTIES:
+  :EMAIL:    %(org-contacts-template-email)
+  :END:"))
       org-link-abbrev-alist
       '(("debbugs"  . "http://bugs.debian.org/%s")
         ("google"   . "https://www.google.com/search?q=")
         ("duckgo"   . "https://duckduckgo.com/?q=")
         ("gmap"     . "http://maps.google.com/maps?q=%s")
         ("omap"     . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")))
+
+(setq org-contacts-files '("~/org/contacts.org"))
 
 (provide 'rc-org)
 ;; rc-org.el ends here

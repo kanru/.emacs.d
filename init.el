@@ -47,7 +47,6 @@
 ; (require 'rc-yasnippet)
 (require 'rc-org)
 (require 'rc-rfc)
-(require 'rc-bbdb)
 (require 'rc-ediff)
 (require 'rc-gtags)
 (require 'rc-ibuffer)
