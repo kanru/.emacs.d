@@ -37,6 +37,7 @@
 (require 'rc-kbd)
 (require 'rc-info)
 (require 'rc-autoinsert)
+(require 'rc-theme)
 
 ;; Generic Modes
 (require 'rc-predictive)
