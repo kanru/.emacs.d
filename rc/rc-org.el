@@ -64,5 +64,10 @@
 
 (setq org-contacts-files '("~/org/contacts.org"))
 
+(setq org-latex-to-pdf-process
+      '("xelatex -interaction nonstopmode -output-directory %o %f"
+	"xelatex -interaction nonstopmode -output-directory %o %f"
+	"xelatex -interaction nonstopmode -output-directory %o %f"))
+
 (provide 'rc-org)
 ;; rc-org.el ends here
