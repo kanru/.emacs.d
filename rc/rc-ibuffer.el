@@ -2,9 +2,11 @@
 
 (setq ibuffer-saved-filter-groups
       '(("default"
-         ("android" (filename . ".*android.*"))
          ("dired" (mode . dired-mode))
-         ("lisp" (mode . emacs-lisp-mode))
+         ("lisp" (or
+		  (mode . lisp-mode)
+		  (mode . emacs-lisp-mode)
+		  (name . "^\\*slime-")))
          ("erc" (mode . erc-mode))
          ("org" (or
                  (mode . org-mode)))
@@ -17,10 +19,7 @@
                   (mode . gnus-article-mode)
                   (name . "^\\.bbdb$")
                   (name . "^\\.newsrc-dribble")
-                  (name . "^\\*gnus.*\\*$")))
-         ("jabber" (or
-                    (mode . jabber-roster-mode)
-                    (mode . jabber-chat-mode))))))
+                  (name . "^\\*gnus.*\\*$"))))))
 (add-hook 'ibuffer-mode-hook
 	  (lambda ()
 	    (ibuffer-switch-to-saved-filter-groups "default")))
