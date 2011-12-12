@@ -28,9 +28,17 @@
 
 (setq slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
-      '((sbcl ("sbcl" "--core" "/home/kanru/.cache/common-lisp/sbcl.core-for-slime"))
+      '((sbcl ("sbcl"))
+	(my-sbcl ("~/src/mirror/sbcl/run-sbcl.sh"))
+	(ccl ("~/src/mirror/ccl/lx86cl64"))
         (clisp ("clisp"))
-        (ecl ("ecl"))))
+        (ecl ("ecl"))
+        (picolisp ("pil") :init slime-init-picolisp)))
 
+(defun slime-init-picolisp (file _)
+  (setq slime-protocol-version 'ignore)
+  (format "%S\n"
+          `(prog (load ,(expand-file-name "~/src/mirror/swank-picolisp/swank-picolisp.l"))
+                 (start-swank ,file))))
 (provide 'rc-slime)
 ;;; rc-slime.el ends here
