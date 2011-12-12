@@ -62,5 +62,6 @@
 ;; ispell
 (setq ispell-dictionary "american")
 
+(setq ring-bell-function (lambda nil))
 (provide 'rc-misc)
 ;; rc-misc.el ends here
