@@ -1,3 +1,3 @@
 (require 'solarized-definitions)
 
-(create-solarized-theme light)
+(create-solarized-theme dark)
