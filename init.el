@@ -24,8 +24,9 @@
 (require 'thingatpt)
 (require 'imenu)
 (require 'undo-tree)
-(require 'gtags)
+(require 'gtags nil t)
 (require 'nav)
+(require 'generic-x)
 
 (require 'starter-kit-defuns)
 (require 'starter-kit-lisp)
@@ -42,22 +43,26 @@
 ;; Generic Modes
 (require 'rc-predictive)
 (require 'rc-gnus)
-(require 'rc-jabber)
 (require 'rc-cua)
 (require 'rc-tramp)
-; (require 'rc-yasnippet)
+(require 'rc-yasnippet)
 (require 'rc-org)
 (require 'rc-rfc)
 (require 'rc-ediff)
 (require 'rc-gtags)
 (require 'rc-ibuffer)
+(require 'rc-eshell)
+(require 'rc-dired)
+(require 'rc-calfw)
 
 ;; Programming Modes
+(require 'rc-cc-mode)
 (require 'rc-java)
 (require 'rc-markdown)
 (require 'rc-nxml)
 (require 'rc-python)
 (require 'rc-slime)
+(require 'rc-auto-complete)
 
 (load custom-file 'noerror)
 ;;; init.el ends here
