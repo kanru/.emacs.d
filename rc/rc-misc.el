@@ -60,7 +60,7 @@
   '(global-undo-tree-mode))
 
 ;; ispell
-(setq ispell-dictionary "en")
+(setq ispell-dictionary "american")
 
 (provide 'rc-misc)
 ;; rc-misc.el ends here
