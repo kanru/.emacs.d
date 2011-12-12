@@ -1,0 +1,12 @@
+# directory
+auto-save-list/
+el-get/
+eshell/
+info/
+# files
+*~
+*.elc
+bookmarks
+custom.el
+places.el
+tramp
