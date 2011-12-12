@@ -1,6 +1,9 @@
 ;; rc-kbd.el --- Set up some handy key bindings
 ;;
 
+;; Bind C-2 to C-@ so emacs-gtk2 behaves like in xterm
+(global-set-key (kbd "C-2") 'set-mark-command)
+
 ;; You know, like Readline.
 (global-set-key (kbd "C-M-h") 'backward-kill-word)
 
