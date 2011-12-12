@@ -41,6 +41,7 @@
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
 (add-hook 'text-mode-hook 'turn-on-flyspell)
+(add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (random t) ;; Seed the random-number generator
