@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(setq eshell-directory-name (locate-user-emacs-file "eshell"))
+
 (defun eshell/clear ()
   "Clears the shell buffer ala Unix's clear or DOS' cls"
   (interactive)
