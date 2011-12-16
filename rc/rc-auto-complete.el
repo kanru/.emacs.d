@@ -27,14 +27,17 @@
 (add-to-list 'load-path "~/src/mirror/auto-complete/")
 (add-to-list 'load-path "~/src/mirror/auto-complete-clang/")
 (add-to-list 'load-path "~/src/mirror/ac-slime/")
+
 (when (require 'auto-complete-config nil t)
   (add-to-list 'ac-dictionary-directories "~/src/mirror/auto-complete/dict")
   (ac-config-default)
-  (require 'auto-complete-clang nil t)
-  (require 'ac-slime nil t)
-;  (add-to-list 'ac-sources 'ac-source-clang)
-;  (add-to-list 'ac-sources 'ac-slime)
-  )
+  (require 'auto-complete-clang)
+  (add-hook 'c-mode-common-hook (lambda () (add-to-list 'ac-sources 'ac-source-clang)))
+  (require 'ac-slime)
+  (add-hook 'slime-mode-hook 'set-up-slime-ac)
+  (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
+  (eval-after-load "auto-complete"
+    '(add-to-list 'ac-modes 'slime-repl-mode)))
 
 (provide 'rc-auto-complete)
 ;;; rc-auto-complete.el ends here
