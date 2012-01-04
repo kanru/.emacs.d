@@ -1,6 +1,6 @@
 ;;; rc-markdown.el -- Markdown Mode Settings
 
-(autoload 'markdown-mode "~/src/mirror/markdown-mode/markdown-mode.el"
+(autoload 'markdown-mode "~/src/mirror/emacs/markdown-mode/markdown-mode.el"
   "Major mode for editing Markdown files" t)
 
 (add-to-list 'auto-mode-alist

@@ -24,12 +24,12 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/src/mirror/auto-complete/")
-(add-to-list 'load-path "~/src/mirror/auto-complete-clang/")
-(add-to-list 'load-path "~/src/mirror/ac-slime/")
+(add-to-list 'load-path "~/src/mirror/emacs/auto-complete/")
+(add-to-list 'load-path "~/src/mirror/emacs/auto-complete-clang/")
+(add-to-list 'load-path "~/src/mirror/emacs/ac-slime/")
 
 (when (require 'auto-complete-config nil t)
-  (add-to-list 'ac-dictionary-directories "~/src/mirror/auto-complete/dict")
+  (add-to-list 'ac-dictionary-directories "~/src/mirror/emacs/auto-complete/dict")
   (ac-config-default)
   (require 'auto-complete-clang)
   (add-hook 'c-mode-common-hook (lambda () (add-to-list 'ac-sources 'ac-source-clang)))

@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(let ((new-python-mode "/home/kanru/src/mirror/python-el/python.el"))
+(let ((new-python-mode "/home/kanru/src/mirror/emacs/python-el/python.el"))
   (when (file-exists-p new-python-mode)
     (require 'python new-python-mode)))
 
