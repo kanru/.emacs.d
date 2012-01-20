@@ -3,6 +3,8 @@ auto-save-list/
 el-get/
 eshell/
 info/
+thumbs/
+url/
 # files
 *~
 *.elc
