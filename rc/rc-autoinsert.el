@@ -45,7 +45,11 @@
 
 
 
-\;;; " (file-name-nondirectory (buffer-file-name)) " ends here\n"))
+\;;; " (file-name-nondirectory (buffer-file-name)) " ends here
+
+\;;; Local Variables:
+\;;; mode: lisp
+\;;; End:\n"))
 
 
 (provide 'rc-autoinsert)

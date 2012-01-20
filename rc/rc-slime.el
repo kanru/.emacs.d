@@ -29,8 +29,8 @@
 (setq slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(my-sbcl ("~/src/mirror/sbcl/run-sbcl.sh"))
-	(ccl ("~/src/mirror/ccl/lx86cl64"))
+	(my-sbcl ("~/src/mirror/lisp/sbcl/run-sbcl.sh"))
+	(ccl ("~/src/mirror/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
         (picolisp ("pil") :init slime-init-picolisp)))

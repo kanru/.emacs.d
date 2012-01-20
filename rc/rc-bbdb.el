@@ -1,6 +1,6 @@
 ;;; rc-bbdb.el -- BBDB Settings
 
-(add-to-list 'load-path (expand-file-name "~/src/mirror/bbdb3/lisp"))
+(add-to-list 'load-path (expand-file-name "~/src/mirror/emacs/bbdb3/lisp"))
 (require 'bbdb-autoloads nil t)
 (require 'bbdb nil t)
 

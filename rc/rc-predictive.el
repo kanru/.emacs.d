@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/src/mirror/predictive")
+(add-to-list 'load-path "~/src/mirror/emacs/predictive")
 (autoload 'predictive-mode "predictive" "predictive" t)
 
 (provide 'rc-predictive)

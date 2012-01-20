@@ -1,12 +1,12 @@
 ;;; rc-yasnippet.el -- Yasnippet Mode Settings
 
-(add-to-list 'load-path (expand-file-name "~/src/mirror/yasnippet"))
+(add-to-list 'load-path (expand-file-name "~/src/mirror/emacs/yasnippet"))
 (require 'yasnippet nil t)
 
 (eval-after-load 'yasnippet
   `(progn
      (setq yas/root-directory '(,(locate-user-emacs-file "snippets")
-				"~/src/mirror/yasnippet/snippets")
+				"~/src/mirror/emacs/yasnippet/snippets")
 	   yas/prompt-functions '(yas/dropdown-prompt
 				  yas/x-prompt
 				  yas/completing-prompt
