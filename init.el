@@ -54,6 +54,7 @@
 (require 'rc-eshell)
 (require 'rc-dired)
 (require 'rc-calfw)
+(require 'rc-rcirc)
 
 ;; Programming Modes
 (require 'rc-cc-mode)

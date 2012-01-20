@@ -7,7 +7,8 @@
 		  (mode . lisp-mode)
 		  (mode . emacs-lisp-mode)
 		  (name . "^\\*slime-")))
-         ("erc" (mode . erc-mode))
+         ("irc" (or (mode . erc-mode)
+                    (mode . rcirc-mode)))
          ("org" (or
                  (mode . org-mode)))
          ("gnus" (or
