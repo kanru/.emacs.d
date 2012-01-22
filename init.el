@@ -39,6 +39,7 @@
 (require 'rc-info)
 (require 'rc-autoinsert)
 (require 'rc-theme)
+(require 'rc-pcomplete)
 
 ;; Generic Modes
 (require 'rc-predictive)
