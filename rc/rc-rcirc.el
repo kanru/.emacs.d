@@ -26,5 +26,8 @@
 
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
+(rcirc-track-minor-mode 1)
+(setq rcirc-fill-column 80)
+
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
