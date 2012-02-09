@@ -36,6 +36,7 @@
 
 ;;; TODO:
 ;;
+;; * Interactive command.
 ;; * Simplify implementation and interfaces.
 ;; * Unpack time-based UUID.
 
@@ -51,6 +52,12 @@
   "Non-nil means suppress warning messages for missing\
 `network-interface-list' or `network-interface-info' support."
   :type 'boolean
+  :group 'uuid)
+
+(defcustom uuid-cid-format-string
+  "{ 0x%02x%02x%02x%02x, 0x%02x%02x, 0x%02x%02x, { 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x } }"
+  "Format string used to output CID string."
+  :type 'string
   :group 'uuid)
 
 (defvar uuid-unix-epoch-delta (math-read-radix "1b21dd213814000" 16)
@@ -257,8 +264,6 @@ the node information.  Pre-defined ADDR-FUNCTION are
         (seq (random)))
     (uuid--from-time clock seq 4 'uuid--format-random-address)))
 
-(defalias 'uuid 'uuid-1)
-
 (defun uuid-from-hash (hash ver)
   "Generate name based UUID form hash HASH and version VER."
   (mapconcat 'identity
@@ -292,6 +297,28 @@ NAME is the node name string."
 (defun uuid-urn (uuid)
   "Return the string representation of a UUID as a URN."
   (concat "urn:uuid:" uuid))
+
+(defun uuid-cid (&optional uuid)
+  "Return UUID string in CID format that is suitable for COM definition.
+If UUID is nil will generate UUID-4 automatically.
+You customize `uuid-cid-format-string' to change the default format."
+  (let ((raw (uuid--string-to-octets (or uuid
+                                         (uuid-4)))))
+    (apply 'format uuid-cid-format-string raw)))
+
+(defun insert-uuid-cid (uuid)
+  "Insert UUID string in CID format that is suitable for COM definition.
+If UUID is nil will generate UUID-4 automatically.
+You customize `uuid-cid-format-string' to change the default format."
+  (interactive (list (read-string "UUID: " (uuid-4))))
+  (insert (uuid-cid uuid)))
+
+(defun uuid (random)
+  "Insert UUID-1 at point. If RANDOM is non-nil, insert UUID-4 instead."
+  (interactive "P")
+  (if random
+      (insert (uuid-4))
+    (insert (uuid-1))))
 
 (provide 'uuid)
 ;;; uuid.el ends here
