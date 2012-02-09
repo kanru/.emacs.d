@@ -27,6 +27,7 @@
 (require 'gtags nil t)
 (require 'nav)
 (require 'generic-x)
+(require 'idutils "id-utils" t)
 
 (require 'starter-kit-defuns)
 (require 'starter-kit-lisp)
