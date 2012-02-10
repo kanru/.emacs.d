@@ -41,6 +41,7 @@
 (require 'rc-autoinsert)
 (require 'rc-theme)
 (require 'rc-pcomplete)
+(require 'rc-shortcuts)
 
 ;; Generic Modes
 (require 'rc-predictive)
