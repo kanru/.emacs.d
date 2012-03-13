@@ -83,5 +83,20 @@ minibuffer to ease cutting and pasting."
     (insert tinyurl)
     (message tinyurl)))
 
+(defun tinyurl ()
+  "Grabs the url at point and echos the equivalent tinyurl in the
+minibuffer to ease cutting and pasting."
+  (interactive)
+  (let* ((url-bounds (bounds-of-thing-at-point 'url))
+	 (long-url (buffer-substring-no-properties (car url-bounds) (cdr url-bounds)))
+	 (tinyurl
+	  (save-excursion
+	    (with-temp-buffer
+	      (mm-url-insert
+	       (concat "http://tinyurl.com/api-create.php?url=" (url-hexify-string long-url)))
+	      (kill-ring-save (point-min) (point-max))
+	      (buffer-string)))))
+    (message tinyurl)))
+
 (provide 'rc-misc)
 ;; rc-misc.el ends here
