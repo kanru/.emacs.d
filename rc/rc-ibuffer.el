@@ -2,13 +2,12 @@
 
 (setq ibuffer-saved-filter-groups
       '(("default"
+         ("mozilla" (or (filename . "mozilla")))
          ("dired" (mode . dired-mode))
          ("lisp" (or
 		  (mode . lisp-mode)
 		  (mode . emacs-lisp-mode)
 		  (name . "^\\*slime-")))
-         ("irc" (or (mode . erc-mode)
-                    (mode . rcirc-mode)))
          ("org" (or
                  (mode . org-mode)))
          ("gnus" (or
@@ -20,7 +19,9 @@
                   (mode . gnus-article-mode)
                   (name . "^\\.bbdb$")
                   (name . "^\\.newsrc-dribble")
-                  (name . "^\\*gnus.*\\*$"))))))
+                  (name . "^\\*gnus.*\\*$")))
+         ("irc" (or (mode . erc-mode)
+                    (mode . rcirc-mode))))))
 (add-hook 'ibuffer-mode-hook
 	  (lambda ()
 	    (ibuffer-switch-to-saved-filter-groups "default")))
