@@ -49,5 +49,8 @@ Use url " url)
 (define-shortcut vlasi
   "http://vlasisku.lojban.org/vlasisku/%s")
 
+(define-shortcut ddg
+  "http://duckduckgo.com/?q=%s")
+
 (provide 'rc-shortcuts)
 ;;; rc-shortcuts.el ends here
