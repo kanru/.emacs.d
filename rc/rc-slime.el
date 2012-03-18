@@ -24,13 +24,13 @@
 
 ;;; Code:
 
-(load (expand-file-name "~/quicklisp/slime-helper.el") 'noerror)
+(load (expand-file-name "~/zone4/quicklisp/slime-helper.el") 'noerror)
 
 (setq slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(my-sbcl ("~/src/mirror/lisp/sbcl/run-sbcl.sh"))
-	(ccl ("~/src/mirror/lisp/ccl/lx86cl64"))
+	(my-sbcl ("~/zone2/public/lisp/sbcl/run-sbcl.sh"))
+	(ccl ("~/zone2/public/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
         (picolisp ("pil") :init slime-init-picolisp)))
@@ -38,7 +38,7 @@
 (defun slime-init-picolisp (file _)
   (setq slime-protocol-version 'ignore)
   (format "%S\n"
-          `(prog (load ,(expand-file-name "~/src/mirror/swank-picolisp/swank-picolisp.l"))
+          `(prog (load ,(expand-file-name "~/zone2/public/swank-picolisp/swank-picolisp.l"))
                  (start-swank ,file))))
 (provide 'rc-slime)
 ;;; rc-slime.el ends here

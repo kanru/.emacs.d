@@ -24,9 +24,7 @@
 
 ;;; Code:
 
-(let ((new-python-mode "/home/kanru/src/mirror/emacs/python-el/python.el"))
-  (when (file-exists-p new-python-mode)
-    (require 'python new-python-mode)))
+(require 'python "~/zone2/public/emacs/python-el/python" t)
 
 (provide 'rc-python)
 ;;; rc-python.el ends here

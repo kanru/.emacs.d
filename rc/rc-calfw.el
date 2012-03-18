@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/src/mirror/emacs/emacs-calfw")
+(add-to-list 'load-path "~/zone2/public/emacs/emacs-calfw")
 (require 'calfw nil t)
 (require 'calfw-cal nil t)
 (require 'calfw-org nil t)

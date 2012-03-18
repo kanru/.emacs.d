@@ -1,7 +1,7 @@
 ;;; rc-org.el -- OrgMode Settings
 
-(add-to-list 'load-path "~/src/mirror/emacs/org-mode/lisp")
-(add-to-list 'load-path "~/src/mirror/emacs/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/zone2/public/emacs/org-mode/lisp")
+(add-to-list 'load-path "~/zone2/public/emacs/org-mode/contrib/lisp")
 
 (require 'org)
 (require 'org-checklist nil t)
