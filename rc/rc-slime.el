@@ -29,7 +29,7 @@
 (setq slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(my-sbcl ("~/zone2/public/lisp/sbcl/run-sbcl.sh"))
+	(my-sbcl ("sh" "/home/kanru/zone2/public/lisp/sbcl/run-sbcl.sh"))
 	(ccl ("~/zone2/public/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
