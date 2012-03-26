@@ -6,7 +6,7 @@
  (cons '("Han" "WenQuanYi Micro Hei" "AR Heiti Light B5" "cwTexYen")
        face-font-family-alternatives))
 (setq face-font-rescale-alist
-      '(("WenQuanYi Micro Hei" . 1.2)
+      '(("WenQuanYi Micro Hei" . 1.25)
 	("cwTexYen" . 1.35)
 	("AR Heiti Light B5" . 1.2)))
 (set-fontset-font t 'han "Han")
@@ -15,9 +15,8 @@
 (add-to-list 'frame-inherited-parameters 'font)
 
 ;; Display battery status
-(setq battery-status-function 'battery-linux-sysfs
-      battery-mode-line-format "[BAT0 %b%p]")
-(display-battery-mode t)
+(setq battery-mode-line-format "[BAT %b%p]")
+(display-battery-mode 1)
 
 ;; Enable syntax highlighting for older Emacsen that have it off
 (global-font-lock-mode t)
