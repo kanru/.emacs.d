@@ -27,7 +27,20 @@
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
 (rcirc-track-minor-mode 1)
-(setq rcirc-fill-column 80)
+(setq rcirc-fill-column 80
+      rcirc-buffer-maximum-lines 4000
+      rcirc-server-alist '(("irc.freenode.net" :channels ("#lisp"
+                                                          "#hime"
+                                                          "#lojban"
+                                                          "#emacs"
+                                                          "#emacs.tw"
+                                                          "#sbcl"
+                                                          "#pushisland"))
+                           ("irc.debian.org" :channels ("#dot"
+                                                        "#debian-devel"))
+                           ("irc.mozilla.org" :channels ("#b2g"
+                                                         "#developers"
+                                                         "#mozilla-taiwan"))))
 
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
