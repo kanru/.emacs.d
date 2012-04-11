@@ -40,7 +40,9 @@
                                                         "#debian-devel"))
                            ("irc.mozilla.org" :channels ("#b2g"
                                                          "#developers"
-                                                         "#mozilla-taiwan"))))
+                                                         "#mozilla-taiwan")))
+      rcirc-keywords '("kanru"
+                       "urnak"))
 
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
