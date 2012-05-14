@@ -46,7 +46,7 @@
                        "urnak"))
 
 (defadvice rcirc (around rcirc-read-from-authinfo activate)
-  "Allow rcirc to read authinfo from ~/.authinfo.gpg via the auth-source API."
+  "Allow rcirc to read authinfo from `auth-sources' via the auth-source API."
   (let ((rcirc-authinfo rcirc-authinfo)
         (credentials (auth-source-search :port '("irc-nickserv")
                                          :require '(:user :secret))))
