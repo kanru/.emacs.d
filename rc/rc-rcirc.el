@@ -35,6 +35,7 @@
                                                           "#emacs"
                                                           "#emacs.tw"
                                                           "#sbcl"
+                                                          "#python.tw"
                                                           "#pushisland"))
                            ("irc.debian.org" :channels ("#dot"
                                                         "#debian-devel"))
