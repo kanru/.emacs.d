@@ -1,7 +1,8 @@
 # directory
 auto-save-list/
 el-get/
-eshell/
+eshell/history
+eshell/lastdir
 info/
 thumbs/
 url/

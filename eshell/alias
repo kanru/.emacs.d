@@ -1,0 +1,7 @@
+alias rm rm -i $*
+alias mk make $*
+alias i ls $*
+alias ii ls -l $*
+alias ia ls -a $*
+alias et find-file $1
+alias c clear
