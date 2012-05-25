@@ -41,6 +41,8 @@
                                                         "#debian-devel"))
                            ("irc.mozilla.org" :channels ("#b2g"
                                                          "#developers"
+                                                         "#gfx"
+                                                         "#content"
                                                          "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
                        "urnak"))
