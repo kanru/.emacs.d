@@ -7,8 +7,8 @@
 (require 'org-checklist nil t)
 (require 'org-contacts nil t)
 
-(setq org-directory "~/org"
-      diary-file "~/etc/diary"
+(setq org-directory "~/zone1/org"
+      diary-file "~/zone1/etc/diary"
       ;org-agenda-include-diary t
       mark-diary-entries-in-calendar t
       org-default-notes-file "journal.org"
@@ -62,7 +62,7 @@
         ("gmap"     . "http://maps.google.com/maps?q=%s")
         ("omap"     . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")))
 
-(setq org-contacts-files '("~/org/contacts.org"))
+(setq org-contacts-files '("~/zone1/org/contacts.org"))
 
 (setq org-latex-to-pdf-process
       '("xelatex -interaction nonstopmode -output-directory %o %f"
