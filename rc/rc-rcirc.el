@@ -38,7 +38,8 @@
                                                           "#python.tw"
                                                           "#pushisland"))
                            ("irc.debian.org" :channels ("#dot"
-                                                        "#debian-devel"))
+                                                        "#debian-devel"
+                                                        "#debian-www"))
                            ("irc.mozilla.org" :channels ("#b2g"
                                                          "#developers"
                                                          "#gfx"
