@@ -58,6 +58,7 @@
 (require 'rc-dired)
 (require 'rc-calfw)
 (require 'rc-rcirc)
+(require 'rc-paredit)
 
 ;; Programming Modes
 (require 'rc-cc-mode)
