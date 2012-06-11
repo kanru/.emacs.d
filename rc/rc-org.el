@@ -8,6 +8,7 @@
 (require 'org-contacts nil t)
 
 (setq org-directory "~/zone1/org"
+      org-agenda-files '("~/zone1/org/newgtd.org")
       diary-file "~/zone1/etc/diary"
       ;org-agenda-include-diary t
       mark-diary-entries-in-calendar t
