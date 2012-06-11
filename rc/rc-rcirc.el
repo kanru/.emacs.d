@@ -34,6 +34,8 @@
                                                           "#lojban"
                                                           "#emacs"
                                                           "#emacs.tw"
+                                                          "#lisp.tw"
+                                                          "#haskell.tw"
                                                           "#sbcl"
                                                           "#python.tw"
                                                           "#pushisland"))
@@ -48,7 +50,12 @@
       rcirc-keywords '("kanru"
                        "urnak"))
 
-(defadvice rcirc (around rcirc-read-from-authinfo activate)
+(defadvice rcirc (before rcirc-cache-authinfo activate)
+  "Read authinfo from `auth-sources' via the auth-source API."
+  (auth-source-search :port '("irc-nickserv")
+                      :require '(:user :secret)))
+
+(defadvice rcirc-authenticate (around rcirc-read-from-authinfo activate)
   "Allow rcirc to read authinfo from `auth-sources' via the auth-source API."
   (let ((rcirc-authinfo rcirc-authinfo)
         (credentials (auth-source-search :port '("irc-nickserv")
