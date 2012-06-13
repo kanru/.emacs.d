@@ -48,7 +48,10 @@
                                                          "#content"
                                                          "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
-                       "urnak"))
+                       "urnak")
+      rcirc-default-nick "kanru"
+      rcirc-default-user-name "kanru"
+      rcirc-default-full-name "Kan-Ru Chen")
 
 (defadvice rcirc (before rcirc-cache-authinfo activate)
   "Read authinfo from `auth-sources' via the auth-source API."
