@@ -78,6 +78,7 @@
 (defvar rcirc-colors
   (let ((bg (face-background 'default))
 	(fg (face-foreground 'rcirc-my-nick))
+        (shr-color-visible-luminance-min 80)
 	candidates)
     (dolist (item color-name-rgb-alist)
       (let ((color (car item)))
