@@ -91,6 +91,7 @@ By default, all the non-grey colors that are very different from
 the default background are candidates.
 
 To check out the list, evaluate (list-colors-display rcirc-colors).")
+(require 'rcirc-color nil t)
 
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
