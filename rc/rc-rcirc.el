@@ -74,5 +74,22 @@
                              secret)))))
     ad-do-it))
 
+(require 'shr-color)
+(defvar rcirc-colors
+  (let ((bg (face-background 'default))
+	(fg (face-foreground 'rcirc-my-nick))
+	candidates)
+    (dolist (item color-name-rgb-alist)
+      (let ((color (car item)))
+	(when (not (color-gray-p color))
+	  (let ((new-color (cadr (shr-color-visible bg color t))))
+            (setq candidates (cons new-color candidates))))))
+    candidates)
+  "Colors to use for nicks in rcirc.
+By default, all the non-grey colors that are very different from
+the default background are candidates.
+
+To check out the list, evaluate (list-colors-display rcirc-colors).")
+
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
