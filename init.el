@@ -13,6 +13,7 @@
 
 ;; Load features that needs to be loaded early in startup
 (require 'rc-startup)
+(require 'rc-cedet)
 
 ;; Load packages
 (require 'cl)

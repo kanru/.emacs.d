@@ -14,3 +14,5 @@ custom.el
 places.el
 tramp
 ac-comphist.dat
+ede-projects.el
+srecode-map.el
