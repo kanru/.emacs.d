@@ -27,7 +27,6 @@
 (require 'undo-tree)
 (require 'gtags nil t)
 (require 'nav)
-(require 'generic-x)
 (require 'idutils "id-utils" t)
 
 (require 'starter-kit-defuns)
@@ -45,6 +44,7 @@
 (require 'rc-shortcuts)
 
 ;; Generic Modes
+(require 'rc-generic-x)
 (require 'rc-predictive)
 (require 'rc-gnus)
 (require 'rc-cua)
