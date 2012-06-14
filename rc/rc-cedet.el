@@ -29,7 +29,8 @@
 (global-ede-mode t)
 
 (ede-cpp-root-project "mozilla-central"
-                      :file "~/zone2/mozilla/central/configure.in")
+                      :file "~/zone2/mozilla/central/configure.in"
+                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko"))
 
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
