@@ -26,8 +26,6 @@
 
 (load "~/zone2/public/emacs/cedet/cedet-devel-load" t)
 
-(global-ede-mode t)
-
 (ede-cpp-root-project "mozilla-central"
                       :file "~/zone2/mozilla/central/configure.in"
                       :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko"))
