@@ -14,5 +14,8 @@ custom.el
 places.el
 tramp
 ac-comphist.dat
+
+# CEDET
 ede-projects.el
 srecode-map.el
+semanticdb/
