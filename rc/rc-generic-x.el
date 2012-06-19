@@ -20,14 +20,23 @@
 
 ;;; Commentary:
 
-;; 
+;; TODO: Should be upstreamed.
 
 ;;; Code:
 
 (require 'generic-x)
+(require 'cl-seq)
 
 (setq generic-extras-enable-list
-      (remove 'javascript-generic-mode generic-extras-enable-list))
+      (remove 'javascript-generic-mode generic-extras-enable-list)
+      generic-default-modes
+      (remove 'javascript-generic-mode generic-default-modes))
+
+;; hack! Remove javascript-generic-mode
+(setq auto-mode-alist
+      (cl-remove-if (lambda (obj)
+                      (eq (cdr obj) 'javascript-generic-mode))
+                    auto-mode-alist))
 
 (provide 'rc-generic-x)
 ;;; rc-generic-x.el ends here
