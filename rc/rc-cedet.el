@@ -25,12 +25,16 @@
 ;;; Code:
 
 (load "~/zone2/public/emacs/cedet/cedet-devel-load" t)
+(require 'ede/cpp-root)
 
 (ede-cpp-root-project "mozilla-central"
                       :file "~/zone2/mozilla/central/configure.in"
-                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko"))
+                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"))
 
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
+
+(semantic-load-enable-excessive-code-helpers)
+(add-hook 'prog-mode-hook 'ede-minor-mode)
 
 (provide 'rc-cedet)
 ;;; rc-cedet.el ends here
