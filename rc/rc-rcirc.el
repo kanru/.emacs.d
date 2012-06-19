@@ -28,7 +28,7 @@
 
 (rcirc-track-minor-mode 1)
 (setq rcirc-fill-column 80
-      rcirc-buffer-maximum-lines 4000
+      rcirc-buffer-maximum-lines 2000
       rcirc-server-alist '(("irc.freenode.net" :channels ("#lisp"
                                                           "#hime"
                                                           "#lojban"
