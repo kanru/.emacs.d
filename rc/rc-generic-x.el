@@ -25,7 +25,7 @@
 ;;; Code:
 
 (require 'generic-x)
-(require 'cl-seq)
+(require 'cl-lib)
 
 (setq generic-extras-enable-list
       (remove 'javascript-generic-mode generic-extras-enable-list)
