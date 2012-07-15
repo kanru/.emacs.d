@@ -26,7 +26,15 @@
 
 (load (expand-file-name "~/zone4/quicklisp/slime-helper.el") 'noerror)
 
-(setq slime-net-coding-system 'utf-8-unix
+(slime-setup '(slime-fancy
+               slime-indentation
+               slime-sbcl-exts
+               slime-sprof
+               slime-xref-browser))
+
+(make-directory "~/.cache/slime-fasls/" t)
+(setq slime-compile-file-options '(:fasl-directory "~/.cache/slime-fasls/")
+      slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
 	(my-sbcl ("sh" "/home/kanru/zone2/public/lisp/sbcl/run-sbcl.sh"))
