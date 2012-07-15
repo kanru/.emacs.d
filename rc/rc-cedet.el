@@ -31,6 +31,10 @@
                       :file "~/zone2/mozilla/central/configure.in"
                       :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"))
 
+(ede-cpp-root-project "mozilla-central"
+                      :file "~/zone2/mozilla/B2G/gecko/configure.in"
+                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"))
+
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
 (semantic-load-enable-excessive-code-helpers)
