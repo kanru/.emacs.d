@@ -29,6 +29,7 @@
 (setq dired-omit-files "\\(^\\.[^\\.].*$\\|^\\.\\..+$\\)")
 
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
+(add-hook 'dired-mode-hook 'hl-line-mode)
 
 (provide 'rc-dired)
 ;;; rc-dired.el ends here
