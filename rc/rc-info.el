@@ -1,6 +1,6 @@
 (require 'info)
-(add-to-list 'Info-default-directory-list "~/src/gnus/texi/")
-(add-to-list 'Info-default-directory-list "~/.emacs.d/info/")
+(add-to-list 'Info-additional-directory-list "~/src/gnus/texi/")
+(add-to-list 'Info-additional-directory-list (locate-user-emacs-file "info"))
 
 (require 'info-look)
 (info-lookup-add-help
