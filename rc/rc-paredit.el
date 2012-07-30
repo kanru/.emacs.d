@@ -48,7 +48,7 @@
                  (not (funcall look "#" oq 2)))
                 (else t))))))
 
-(add-hook 'common-lisp-mode-hook
+(add-hook 'lisp-mode-hook
           (defun common-lisp-mode-hook-paredit ()
             (make-local-variable 'paredit-space-for-delimiter-predicates)
             (add-to-list 'paredit-space-for-delimiter-predicates
