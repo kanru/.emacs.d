@@ -45,6 +45,7 @@
                            ("irc.mozilla.org" :channels ("#b2g"
                                                          "#developers"
                                                          "#gfx"
+                                                         "#media"
                                                          "#content"
                                                          "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
