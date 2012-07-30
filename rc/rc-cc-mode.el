@@ -30,7 +30,7 @@
 	       (c-offsets-alist
 		(access-label . -)
 		(arglist-cont . 0)	; Guessed value
-		(arglist-intro . ++)	; Guessed value
+		(arglist-intro . +)
 		(block-close . 0)	; Guessed value
 		(class-close . 0)	; Guessed value
 		(class-open . 0)	; Guessed value
