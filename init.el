@@ -42,6 +42,7 @@
 (require 'rc-theme)
 (require 'rc-pcomplete)
 (require 'rc-shortcuts)
+(require 'rc-compile)
 
 ;; Generic Modes
 (require 'rc-generic-x)
