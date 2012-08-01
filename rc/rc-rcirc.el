@@ -75,6 +75,11 @@
                              secret)))))
     ad-do-it))
 
+(defadvice rcirc-record-activity (around rcirc-dont-record-normal-activity activate)
+  "Don't record normal activity of buffers"
+  (when (member type '(nick keyword))
+    ad-do-it))
+
 (require 'shr-color)
 (defvar rcirc-colors
   (let ((bg (face-background 'default))
