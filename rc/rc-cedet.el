@@ -29,11 +29,13 @@
 
 (ede-cpp-root-project "mozilla-central"
                       :file "~/zone2/mozilla/central/configure.in"
-                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"))
+                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
+                                             "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
 
 (ede-cpp-root-project "mozilla-central"
                       :file "~/zone2/mozilla/B2G/gecko/configure.in"
-                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"))
+                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
+                                             "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
 
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
