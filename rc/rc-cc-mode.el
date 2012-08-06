@@ -60,7 +60,7 @@
 		(brace-list-intro . +)
 		(brace-list-open . 0)
 		(c . c-lineup-C-comments)
-		(case-label . 0)
+		(case-label . +)
 		(catch-clause . 0)
 		(comment-intro . c-lineup-comment)
 		(composition-close . 0)
