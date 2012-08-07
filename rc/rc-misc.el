@@ -4,6 +4,9 @@
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program (getenv "BROWSER"))
 
+;; User FULL NAME
+(setq user-full-name "Kan-Ru Chen (陳侃如)")
+
 ;; UUID
 (setq uuid-ns-kanru "e026a194-898b-54d7-a2cb-1e822452179c")
 

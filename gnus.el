@@ -70,7 +70,8 @@
          (address ,(rot13 "xpura@zbmvyyn.pbz")))
         ((header "List-Id" "0xlab.*googlegroups")
          (signature-file "~/.signature-0xlab")
-         (address ,(rot13 "xnaeh@0kyno.bet")))))
+         (address ,(rot13 "xnaeh@0kyno.bet"))))
+      message-from-style 'angles)
 
 ;; Treatment
 (setq gnus-inhibit-images t)
