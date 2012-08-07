@@ -2,7 +2,8 @@
 
 ;; Browser
 (setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program (getenv "BROWSER"))
+      browse-url-generic-program (or (getenv "BROWSER")
+                                     (executable-find "browse")))
 
 ;; User FULL NAME
 (setq user-full-name "Kan-Ru Chen (陳侃如)")
