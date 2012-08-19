@@ -61,6 +61,7 @@
 (require 'rc-calfw)
 (require 'rc-rcirc)
 (require 'rc-paredit)
+(require 'rc-eldoc)
 
 ;; Programming Modes
 (require 'rc-cc-mode)
