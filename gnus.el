@@ -55,7 +55,7 @@
 
 ;; Scoring
 (setq gnus-home-score-file
-      '("/home/kanru/News/home.SCORE"))
+      "/home/kanru/News/home.SCORE")
 (add-hook 'message-sent-hook 'gnus-score-followup-thread)
 
 ;; Posting styles
