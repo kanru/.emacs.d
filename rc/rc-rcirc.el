@@ -29,25 +29,34 @@
 (rcirc-track-minor-mode 1)
 (setq rcirc-fill-column 80
       rcirc-buffer-maximum-lines 2000
-      rcirc-server-alist '(("irc.freenode.net" :channels ("#lisp"
-                                                          "#hime"
-                                                          "#lojban"
-                                                          "#emacs"
-                                                          "#emacs.tw"
-                                                          "#lisp.tw"
-                                                          "#haskell.tw"
-                                                          "#sbcl"
-                                                          "#python.tw"
-                                                          "#pushisland"))
-                           ("irc.debian.org" :channels ("#dot"
-                                                        "#debian-devel"
-                                                        "#debian-www"))
-                           ("irc.mozilla.org" :channels ("#b2g"
-                                                         "#developers"
-                                                         "#gfx"
-                                                         "#media"
-                                                         "#content"
-                                                         "#mozilla-taiwan")))
+      rcirc-server-alist '(("irc.freenode.net"
+                            :port 6697
+                            :encryption tls
+                            :channels ("#lisp"
+                                       "#hime"
+                                       "#lojban"
+                                       "#emacs"
+                                       "#emacs.tw"
+                                       "#lisp.tw"
+                                       "#haskell.tw"
+                                       "#sbcl"
+                                       "#python.tw"
+                                       "#pushisland"))
+                           ("irc.debian.org"
+                            :port 6697
+                            :encryption tls
+                            :channels ("#dot"
+                                       "#debian-devel"
+                                       "#debian-www"))
+                           ("irc.mozilla.org"
+                            :port 6697
+                            :encryption tls
+                            :channels ("#b2g"
+                                       "#developers"
+                                       "#gfx"
+                                       "#media"
+                                       "#content"
+                                       "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
                        "urnak")
       rcirc-default-nick "kanru"
