@@ -107,6 +107,7 @@ the default background are candidates.
 
 To check out the list, evaluate (list-colors-display rcirc-colors).")
 (require 'rcirc-color nil t)
+(require 'rcirc-controls nil t)
 
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
