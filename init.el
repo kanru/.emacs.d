@@ -12,8 +12,8 @@
 (put 'downcase-region 'disabled nil)
 
 ;; Load features that needs to be loaded early in startup
-(require 'rc-startup)
 (require 'rc-cedet)
+(require 'rc-startup)
 
 ;; Load packages
 (require 'cl)
