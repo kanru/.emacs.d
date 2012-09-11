@@ -84,10 +84,20 @@
                              secret)))))
     ad-do-it))
 
-(defadvice rcirc-record-activity (around rcirc-dont-record-normal-activity activate)
+(defadvice rcirc-record-activity (around rcirc-dont-record-normal-activity)
   "Don't record normal activity of buffers"
   (when (member type '(nick keyword))
     ad-do-it))
+
+(defvar rcirc-ignore-all-buffer-activity-flag nil)
+(defun rcirc-toggle-ignore-all-buffer-activity ()
+  "Toggle whether to ignore normal conversations."
+  (interactive)
+  (setq rcirc-ignore-all-buffer-activity-flag
+        (not rcirc-ignore-all-buffer-activity-flag))
+  (if rcirc-ignore-all-buffer-activity-flag
+      (ad-activate 'rcirc-record-activity)
+    (ad-deactivate 'rcirc-record-activity)))
 
 (require 'shr-color)
 (defvar rcirc-colors
