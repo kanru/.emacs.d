@@ -27,19 +27,22 @@
 (load "~/zone2/public/emacs/cedet/cedet-devel-load" t)
 (require 'ede/cpp-root)
 
-(ede-cpp-root-project "mozilla-central"
-                      :file "~/zone2/mozilla/central/configure.in"
-                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
-                                             "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
+(when (file-exists-p "~/zone2/mozilla/central")
+  (ede-cpp-root-project "mozilla-central"
+			:file "~/zone2/mozilla/central/configure.in"
+			:system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
+					       "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
 
-(ede-cpp-root-project "mozilla-central"
-                      :file "~/zone2/mozilla/B2G/gecko/configure.in"
-                      :system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
-                                             "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
+  (ede-cpp-root-project "mozilla-central"
+			:file "~/zone2/mozilla/B2G/gecko/configure.in"
+			:system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
+					       "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders")))
 
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
-(semantic-load-enable-excessive-code-helpers)
+(when (fboundp 'semantic-load-enable-excessive-code-helpers)
+  (semantic-load-enable-excessive-code-helpers))
+
 (add-hook 'prog-mode-hook 'ede-minor-mode)
 
 (provide 'rc-cedet)

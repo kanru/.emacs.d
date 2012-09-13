@@ -9,7 +9,8 @@
       '(("WenQuanYi Micro Hei" . 1.25)
 	("cwTexYen" . 1.35)
 	("AR Heiti Light B5" . 1.2)))
-(set-fontset-font t 'han "Han")
+(when (fboundp 'set-fontset-font)
+  (set-fontset-font t 'han "Han"))
 ;; Setting `face-font-rescale-alist' somehow changes the default font
 ;; for new frame.
 (add-to-list 'frame-inherited-parameters 'font)

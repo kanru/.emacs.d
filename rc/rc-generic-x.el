@@ -25,7 +25,10 @@
 ;;; Code:
 
 (require 'generic-x)
-(require 'cl-lib)
+(require 'cl-lib nil t)
+(when (not (featurep 'cl-lib))
+  (require 'cl)
+  (defalias 'cl-remove-if 'remove-if))
 
 (setq generic-extras-enable-list
       (remove 'javascript-generic-mode generic-extras-enable-list)
