@@ -40,10 +40,30 @@
 
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
-(when (fboundp 'semantic-load-enable-excessive-code-helpers)
-  (semantic-load-enable-excessive-code-helpers))
+;; https://lwn.net/Articles/502119
 
-(add-hook 'prog-mode-hook 'ede-minor-mode)
+(setq semantic-default-submodes (append semantic-default-submodes
+                                        '(global-semantic-idle-local-symbol-highlight-mode
+                                          global-semantic-idle-summary-mode
+                                          global-semantic-decoration-mode
+                                          global-semantic-highlight-func-mode
+                                          global-semantic-stickyfunc-mode)))
+
+(setq semantic-decoration-styles '(("semantic-decoration-on-includes" . t)
+                                   ("semantic-decoration-on-protected-members")
+                                   ("semantic-decoration-on-private-members")))
+
+(semantic-mode)
+(global-ede-mode)
+
+;; auto-complete setup
+;;
+;; (ac-config-default)
+;; (ac-set-trigger-key "TAB")
+
+;; (defun nix-setup-auto-complete-semantic ()
+;;   "Arrange to do semantic autocompletion."
+;;   (add-to-list 'ac-sources 'ac-source-semantic))
 
 (provide 'rc-cedet)
 ;;; rc-cedet.el ends here
