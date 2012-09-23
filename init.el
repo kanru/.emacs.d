@@ -29,9 +29,6 @@
 (require 'nav)
 (require 'idutils "id-utils" t)
 
-(require 'starter-kit-defuns)
-(require 'starter-kit-lisp)
-
 ;; Misc
 (require 'rc-mule)
 (require 'rc-misc)
@@ -44,6 +41,7 @@
 (require 'rc-shortcuts)
 (require 'rc-compile)
 (require 'rc-time)
+(require 'rc-bbdb)
 
 ;; Generic Modes
 (require 'rc-generic-x)
@@ -65,6 +63,8 @@
 (require 'rc-eldoc)
 
 ;; Programming Modes
+(require 'rc-prog)
+(require 'rc-lisp)
 (require 'rc-cc-mode)
 (require 'rc-java)
 (require 'rc-markdown)
