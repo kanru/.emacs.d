@@ -11,7 +11,7 @@
       org-agenda-files '("~/zone1/org/newgtd.org")
       diary-file "~/zone1/etc/diary"
       ;org-agenda-include-diary t
-      mark-diary-entries-in-calendar t
+      calendar-mark-diary-entries-flag t
       org-default-notes-file "journal.org"
       org-log-done 'time
       org-log-into-drawer "LOGBOOK"

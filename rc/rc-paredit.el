@@ -46,7 +46,7 @@
                       (not (funcall look "#[0-9]*" opp 20))))
                 ((eq (char-syntax delimiter) ?\")
                  (not (funcall look "#" oq 2)))
-                (else t))))))
+                (t t))))))
 
 (add-hook 'lisp-mode-hook
           (defun common-lisp-mode-hook-paredit ()
