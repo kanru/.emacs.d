@@ -34,8 +34,6 @@
   (mouse-wheel-mode t)
   (blink-cursor-mode -1))
 
-(add-hook 'before-make-frame-hook 'turn-off-tool-bar)
-
 (setq visible-bell nil
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
