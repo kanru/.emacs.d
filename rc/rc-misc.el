@@ -26,6 +26,7 @@
 (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
 ;; Hippie expand: at times perhaps too hip
+(require 'hippie-exp)
 (delete 'try-expand-line hippie-expand-try-functions-list)
 (delete 'try-expand-list hippie-expand-try-functions-list)
 
