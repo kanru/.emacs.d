@@ -11,6 +11,8 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
+(autoload 'gid "id-utils" "Id Utilities; get id" t)
+
 ;; Load features that needs to be loaded early in startup
 (require 'rc-cedet)
 (require 'rc-startup)
@@ -27,7 +29,6 @@
 (require 'undo-tree)
 (require 'gtags nil t)
 (require 'nav)
-(require 'idutils "id-utils" t)
 
 ;; Misc
 (require 'rc-mule)
