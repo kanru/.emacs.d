@@ -48,7 +48,7 @@
                             :channels ("#dot"
                                        "#debian-devel"
                                        "#debian-www"))
-                           ("irc.mozilla.org"
+                           ("concrete.mozilla.org"
                             :port 6697
                             :encryption tls
                             :channels ("#b2g"
