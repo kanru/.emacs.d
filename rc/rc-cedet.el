@@ -38,6 +38,13 @@
 			:system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
 					       "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders")))
 
+(when (file-exists-p "~/zone2/public/chewing/npapi-chewing")
+  (ede-cpp-root-project "npapi-chewing"
+                        :name "NPAPI libchewing wrapper"
+                        :file "~/zone2/public/chewing/npapi-chewing/configure.ac"
+                        :include-path '("/src" "/npapi")
+                        :spp-table '(("XP_UNIX" . "1"))))
+
 (setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
 
 ;; https://lwn.net/Articles/502119
