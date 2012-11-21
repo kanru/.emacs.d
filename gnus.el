@@ -56,6 +56,8 @@
 ;; Scoring
 (setq gnus-home-score-file
       "/home/kanru/News/home.SCORE")
+(setq gnus-extra-headers '(To Cc Newsgroups Keywords X-Bugzilla-Reason)
+      nnmail-extra-headers gnus-extra-headers)
 (add-hook 'message-sent-hook 'gnus-score-followup-thread)
 
 ;; Posting styles
