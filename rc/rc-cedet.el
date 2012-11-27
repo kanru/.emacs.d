@@ -24,7 +24,6 @@
 
 ;;; Code:
 
-(load "~/zone2/public/emacs/cedet/cedet-devel-load" t)
 (require 'ede/cpp-root)
 
 (when (file-exists-p "~/zone2/mozilla/central")
