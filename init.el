@@ -43,6 +43,7 @@
 (require 'rc-compile)
 (require 'rc-time)
 (require 'rc-bbdb)
+(require 'rc-expand-region)
 
 ;; Generic Modes
 (require 'rc-generic-x)
