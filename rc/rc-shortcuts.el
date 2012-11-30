@@ -27,18 +27,46 @@
 (require 'thingatpt)
 (require 'url-util)
 
+(defun forward-number (&optional n)
+  "Move N numbers forward (backward if N is negative)."
+  (interactive "p")
+  (let ((direction (if (natnump n) 'forward 'backward))
+        (times (abs n)))
+    (case direction
+      (forward (re-search-forward "[[:digit:]]+" nil t times))
+      (backward (re-search-backward "[^[:digit:]][[:digit:]]" nil t times)
+                (goto-char (1+ (match-beginning 0)))))))
+
+(defun beginning-of-number ()
+  "Move point to beginning of a number."
+  (interactive)
+  (forward-number -1))
+
+(defun end-of-number ()
+  "Move point to end of a number."
+  (interactive)
+  (forward-number 1))
+
+(put 'number 'forward-op 'forward-number)
+(put 'number 'beginning-op 'beginning-of-number)
+(put 'number 'end-op 'end-of-number)
+
 (defun shortcut-query (url term)
   (browse-url (replace-regexp-in-string "%s" (url-hexify-string term) url)))
 
-(defmacro define-shortcut (name url)
+(defmacro define-shortcut (name url &optional thing)
   `(defun ,name (term)
      ,(concat "Lookup TERM on " (symbol-name name) "
 Use url " url)
-     (interactive (list (read-string "Lookup: " (thing-at-point 'symbol))))
+     (interactive (list (read-string "Lookup: " (let ((bounds (bounds-of-thing-at-point ,(or thing ''symbol))))
+                                                  (when bounds
+                                                    (buffer-substring-no-properties
+                                                     (car bounds) (cdr bounds)))))))
      (shortcut-query ,url term)))
 
 (define-shortcut bugzilla
-  "http://bugzilla.mozilla.org/%s")
+  "http://bugzilla.mozilla.org/%s"
+  'number)
 
 (define-shortcut mxr
   "https://mxr.mozilla.org/mozilla-central/search?string=%s")
