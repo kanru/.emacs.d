@@ -44,6 +44,7 @@
 (require 'rc-time)
 (require 'rc-bbdb)
 (require 'rc-expand-region)
+(require 'rc-ace-jump)
 
 ;; Generic Modes
 (require 'rc-generic-x)
