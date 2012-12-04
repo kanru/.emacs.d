@@ -26,7 +26,7 @@
 
 (require 'ace-jump-mode nil t)
 
-(global-set-key (kbd "C-c 0") 'ace-jump-mode)
+(global-set-key (kbd "C-0") 'ace-jump-mode)
 
 (provide 'rc-ace-jump)
 ;;; rc-ace-jump.el ends here
