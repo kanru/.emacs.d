@@ -23,12 +23,12 @@
         org-log-into-drawer "LOGBOOK"
         org-clock-into-drawer "CLOCK"
         org-capture-templates
-        `(("r" "Reply this mail" plain
+        `(("r" "Reply this mail" entry
            (file+olp ,quest-file "Quests" "Miscellaneous")
-           "   - [ ] Reply mail from %:fromname\n         %a")
-          ("n" "New misc quest" plain
+           "*** TODO Reply mail from %:fromname\n         %a")
+          ("n" "New misc quest" entry
            (file+olp ,quest-file "Quests" "Miscellaneous")
-           "   - [ ] %?")
+           "*** TODO %?")
           ("m" "New main quest" entry
            (file+headline ,quest-file "Quests")
            "** %?"))
