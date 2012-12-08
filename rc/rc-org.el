@@ -20,8 +20,7 @@
                          '((agenda time-up priority-down tag-up)))
                         (org-deadline-warning-days 0))))))
         org-log-done 'time
-        org-log-into-drawer "LOGBOOK"
-        org-clock-into-drawer "CLOCK"
+        org-log-into-drawer t
         org-capture-templates
         `(("r" "Reply this mail" entry
            (file+olp ,quest-file "Quests" "Miscellaneous")
