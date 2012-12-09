@@ -1,13 +1,12 @@
 ;;; rc-bbdb.el -- BBDB Settings
 
-(add-to-list 'load-path (expand-file-name "~/zone2/public/emacs/bbdb3/lisp"))
-(require 'bbdb-autoloads nil t)
-(require 'bbdb nil t)
+(require 'bbdb-loaddefs "~/zone2/public/emacs/bbdb/lisp/bbdb-loaddefs.el" t)
 
 (eval-after-load 'bbdb
   '(progn
      (bbdb-initialize 'gnus 'message)
-     (add-hook 'bbdb-notice-hook 'bbdb-auto-notes-hook)))
+     ;(add-hook 'bbdb-notice-mail-hook 'bbdb-auto-notes-hook)
+     ))
 
 (setq bbdb-file (locate-user-emacs-file "bbdb.el") ;; keep ~/ clean; set before loading
       bbdb-offer-save 1                            ;; 1 means save-without-asking
