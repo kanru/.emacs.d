@@ -1,22 +1,25 @@
 # directory
-auto-save-list/
-el-get/
-eshell/history
-eshell/lastdir
-info/
-thumbs/
-url/
+/auto-save-list/
+/el-get/
+/elpa/
+/eshell/history
+/eshell/lastdir
+/image-dired/
+/info/
+/thumbs/
+/url/
 # files
 *~
 *.elc
-bookmarks
-custom.el
-places.el
-tramp
-ac-comphist.dat
+/abbrev_defs
+/ac-comphist.dat
 /bbdb.el
+/bookmarks
+/custom.el
+/places.el
+/tramp
 
 # CEDET
-ede-projects.el
-srecode-map.el
-semanticdb/
+/ede-projects.el
+/srecode-map.el
+/semanticdb/
