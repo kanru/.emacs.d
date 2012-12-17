@@ -41,7 +41,8 @@
                                        "#haskell.tw"
                                        "#sbcl"
                                        "#python.tw"
-                                       "#pushisland"))
+                                       "#pushisland"
+                                       "#g0v.tw"))
                            ("irc.debian.org"
                             :port 6697
                             :encryption tls
@@ -57,6 +58,7 @@
                                        "#gfx"
                                        "#media"
                                        "#content"
+                                       "#auckland"
                                        "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
                        "urnak")
