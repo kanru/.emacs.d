@@ -6,9 +6,6 @@
 (require 'org)
 (require 'org-checklist nil t)
 
-(setq diary-file "~/zone1/etc/diary"
-      calendar-mark-diary-entries-flag t)
-
 (let ((quest-file (format-time-string "~/zone1/org/quests/%Y.org")))
   (setq org-directory "~/zone1/org"
         org-default-notes-file quest-file

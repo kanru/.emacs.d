@@ -64,6 +64,7 @@
 (require 'rc-rcirc)
 (require 'rc-paredit)
 (require 'rc-eldoc)
+(require 'rc-diary)
 
 ;; Programming Modes
 (require 'rc-prog)
