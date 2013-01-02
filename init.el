@@ -42,6 +42,7 @@
 (require 'rc-shortcuts)
 (require 'rc-compile)
 (require 'rc-time)
+(require 'rc-timeclock)
 (require 'rc-bbdb)
 (require 'rc-expand-region)
 (require 'rc-ace-jump)
