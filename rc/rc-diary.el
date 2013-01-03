@@ -47,5 +47,9 @@
                                 holiday-local-holidays
                                 holiday-other-holidays
                                 holiday-taiwan-holidays))
+
+(require 'appt)
+(appt-activate 1)
+
 (provide 'rc-diary)
 ;;; rc-diary.el ends here
