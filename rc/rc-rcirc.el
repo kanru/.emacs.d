@@ -37,7 +37,7 @@
                                        "#lojban"
                                        "#emacs"
                                        "#emacs.tw"
-                                       "#lisp.tw"
+                                       "#cschat.tw"
                                        "#haskell.tw"
                                        "#sbcl"
                                        "#python.tw"
