@@ -16,7 +16,8 @@
 ;; Load features that needs to be loaded early in startup
 (require 'rc-cedet)
 (require 'rc-startup)
-(require 'rc-packages)
+(when (>= emacs-major-version 24)
+  (require 'rc-packages))
 
 ;; Load packages
 (require 'cl)
