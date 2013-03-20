@@ -20,7 +20,8 @@
 
 ;;; Commentary:
 
-;; TODO: Should be upstreamed.
+;; Since Emacs 24.3
+;; ** `javascript-generic-mode' is now an obsolete alias for `js-mode'.
 
 ;;; Code:
 
@@ -30,16 +31,19 @@
   (require 'cl)
   (defalias 'cl-remove-if 'remove-if))
 
-(setq generic-extras-enable-list
-      (remove 'javascript-generic-mode generic-extras-enable-list)
-      generic-default-modes
-      (remove 'javascript-generic-mode generic-default-modes))
+(when (or (< emacs-major-version 24)
+          (and (= emacs-major-version 24)
+               (< emacs-minor-version 3)))
+  (setq generic-extras-enable-list
+        (remove 'javascript-generic-mode generic-extras-enable-list)
+        generic-default-modes
+        (remove 'javascript-generic-mode generic-default-modes))
 
-;; hack! Remove javascript-generic-mode
-(setq auto-mode-alist
-      (cl-remove-if (lambda (obj)
-                      (eq (cdr obj) 'javascript-generic-mode))
-                    auto-mode-alist))
+  ;; hack! Remove javascript-generic-mode
+  (setq auto-mode-alist
+        (cl-remove-if (lambda (obj)
+                        (eq (cdr obj) 'javascript-generic-mode))
+                      auto-mode-alist)))
 
 (provide 'rc-generic-x)
 ;;; rc-generic-x.el ends here
