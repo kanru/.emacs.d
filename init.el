@@ -75,6 +75,7 @@
 (require 'rc-markdown)
 (require 'rc-nxml)
 (require 'rc-python)
+(require 'rc-js-mode)
 (require 'rc-slime)
 (require 'rc-auto-complete)
 
