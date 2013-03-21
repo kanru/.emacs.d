@@ -20,7 +20,6 @@
   (require 'rc-packages))
 
 ;; Load packages
-;(require 'cl)
 (require 'saveplace)
 (require 'uniquify)
 (require 'uuid)
