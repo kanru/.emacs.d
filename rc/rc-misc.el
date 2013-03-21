@@ -63,6 +63,9 @@
 ;; undo-tree mode
 (global-undo-tree-mode)
 
+;; dtrt-indent mode
+(dtrt-indent-mode)
+
 ;; ispell
 (setq ispell-dictionary "american")
 
