@@ -64,8 +64,9 @@
     (font-lock-add-keywords
      (intern (concat (symbol-name x) "-mode"))
      '(("(\\|)" . 'esk-paren-face))))
-  (add-hook
-   (intern (concat (symbol-name x) "-mode-hook")) 'paredit-mode))
+  (when (fboundp 'paredit-mode)
+    (add-hook
+     (intern (concat (symbol-name x) "-mode-hook")) 'paredit-mode)))
 
 (provide 'rc-lisp)
 ;;; rc-lisp.el ends here
