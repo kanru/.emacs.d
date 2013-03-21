@@ -20,17 +20,13 @@
   (require 'rc-packages))
 
 ;; Load packages
-(require 'cl)
+;(require 'cl)
 (require 'saveplace)
 (require 'uniquify)
-(require 'paredit)
 (require 'uuid)
-(require 'git-commit)
 (require 'thingatpt)
 (require 'imenu)
-(require 'undo-tree)
 (require 'gtags nil t)
-(require 'nav)
 
 ;; Misc
 (require 'rc-mule)

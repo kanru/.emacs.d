@@ -61,8 +61,7 @@
     (add-to-list 'grep-find-ignored-files "*.class")))
 
 ;; undo-tree mode
-(eval-after-load 'undo-tree
-  '(global-undo-tree-mode))
+(global-undo-tree-mode)
 
 ;; ispell
 (setq ispell-dictionary "american")

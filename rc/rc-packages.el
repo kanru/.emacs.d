@@ -34,12 +34,19 @@
   (package-refresh-contents))
 
 (dolist (package '(ace-jump-mode
-                   expand-region
                    dtrt-indent
+                   expand-region
+                   git-commit-mode
                    go-mode
                    iedit
                    lua-mode
-                   rcirc-color))
+                   nav
+                   openwith
+                   paredit
+                   pretty-mode
+                   rcirc-color
+                   undo-tree
+                   vc-darcs))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
       (package-install package))))
