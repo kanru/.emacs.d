@@ -38,6 +38,7 @@
                    expand-region
                    git-commit-mode
                    go-mode
+                   haskell-mode
                    iedit
                    lua-mode
                    nav
