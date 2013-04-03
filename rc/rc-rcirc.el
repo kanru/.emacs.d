@@ -121,7 +121,8 @@
         (when (not (color-gray-p color))
           (let ((new-color (cadr (shr-color-visible bg color t))))
             (setq candidates (cons new-color candidates))))))
-    (defvar rcirc-colors candidates)))
+    (defvar rcirc-colors)
+    (setq rcirc-colors candidates)))
 (require 'rcirc-color nil t)
 
 (provide 'rc-rcirc)
