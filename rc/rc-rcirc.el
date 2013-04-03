@@ -29,42 +29,48 @@
 (rcirc-track-minor-mode 1)
 (setq rcirc-fill-column 80
       rcirc-buffer-maximum-lines 2000
-      rcirc-server-alist '(("irc.freenode.net"
-                            :port 6697
-                            :encryption tls
-                            :channels ("#lisp"
-                                       "#hime"
-                                       "#lojban"
-                                       "#emacs"
-                                       "#emacs.tw"
-                                       "#cschat.tw"
-                                       "#haskell.tw"
-                                       "#sbcl"
-                                       "#python.tw"
-                                       "#pushisland"
-                                       "#g0v.tw"))
-                           ("irc.debian.org"
-                            :port 6697
-                            :encryption tls
-                            :channels ("#dot"
-                                       "#debian-devel"
-                                       "#debian-www"))
-                           ("concrete.mozilla.org"
-                            :port 6697
-                            :encryption tls
-                            :channels ("#b2g"
-                                       "#gaia"
-                                       "#developers"
-                                       "#gfx"
-                                       "#media"
-                                       "#content"
-                                       "#auckland"
-                                       "#mozilla-taiwan")))
       rcirc-keywords '("kanru"
                        "urnak")
       rcirc-default-nick "kanru"
       rcirc-default-user-name "kanru"
       rcirc-default-full-name "Kan-Ru Chen")
+
+(add-to-list 'rcirc-server-alist
+             '("irc.freenode.net"
+               :port 6697
+               :encryption tls
+               :channels ("#lisp"
+                          "#hime"
+                          "#lojban"
+                          "#emacs"
+                          "#emacs.tw"
+                          "#cschat.tw"
+                          "#haskell.tw"
+                          "#sbcl"
+                          "#python.tw"
+                          "#pushisland"
+                          "#g0v.tw")))
+
+(add-to-list 'rcirc-server-alist
+             '("irc.debian.org"
+               :port 6697
+               :encryption tls
+               :channels ("#dot"
+                          "#debian-devel"
+                          "#debian-www")))
+
+(add-to-list 'rcirc-server-alist
+             '("concrete.mozilla.org"
+               :port 6697
+               :encryption tls
+               :channels ("#b2g"
+                          "#gaia"
+                          "#developers"
+                          "#gfx"
+                          "#media"
+                          "#content"
+                          "#auckland"
+                          "#mozilla-taiwan")))
 
 (defadvice rcirc (before rcirc-cache-authinfo activate)
   "Read authinfo from `auth-sources' via the auth-source API."
