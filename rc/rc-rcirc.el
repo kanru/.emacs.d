@@ -72,12 +72,12 @@
                           "#auckland"
                           "#mozilla-taiwan")))
 
-(defadvice rcirc (before rcirc-cache-authinfo activate)
+(defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
   (auth-source-search :port '("irc-nickserv")
                       :require '(:user :secret)))
 
-(defadvice rcirc-authenticate (around rcirc-read-from-authinfo activate)
+(defun rcirc--authenticate-using-authinfo (next-method &rest args)
   "Allow rcirc to read authinfo from `auth-sources' via the auth-source API."
   (let ((rcirc-authinfo rcirc-authinfo)
         (credentials (auth-source-search :port '("irc-nickserv")
@@ -86,27 +86,29 @@
       (let ((host (plist-get p :host))
             (user (plist-get p :user))
             (secret (plist-get p :secret)))
-        (add-to-list 'rcirc-authinfo
-                     (list host 'nickserv user
-                           (if (functionp secret)
-                               (funcall secret)
-                             secret)))))
-    ad-do-it))
+        (let ((real-secret (if (functionp secret) (funcall secret) secret)))
+          (add-to-list 'rcirc-authinfo (list host 'nickserv user real-secret)))))
+    (apply next-method args)))
 
-(defadvice rcirc-record-activity (around rcirc-dont-record-normal-activity)
-  "Don't record normal activity of buffers"
-  (when (member type '(nick keyword))
-    ad-do-it))
+(advice-add 'rcirc :before #'rcirc--cache-authinfo)
+(advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
 
-(defvar rcirc-ignore-all-buffer-activity-flag nil)
+(defvar rcirc-ignore-all-buffer-activity nil
+  "Whether to ignore normal conversations.")
+
 (defun rcirc-toggle-ignore-all-buffer-activity ()
   "Toggle whether to ignore normal conversations."
   (interactive)
-  (setq rcirc-ignore-all-buffer-activity-flag
-        (not rcirc-ignore-all-buffer-activity-flag))
-  (if rcirc-ignore-all-buffer-activity-flag
-      (ad-activate 'rcirc-record-activity)
-    (ad-deactivate 'rcirc-record-activity)))
+  (setq rcirc-ignore-all-buffer-activity
+        (not rcirc-ignore-all-buffer-activity)))
+
+(defun rcirc--filter-normal-buffer-activity (next-method buffer &optional type)
+  "Filter normal activity of buffers"
+  (when (or (not rcirc-ignore-all-buffer-activity)
+            (member type '(nick keyword)))
+    (funcall next-method buffer type)))
+
+(advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity)
 
 (require 'shr-color nil t)
 (when (featurep 'shr-color)
