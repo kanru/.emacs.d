@@ -90,9 +90,6 @@
           (add-to-list 'rcirc-authinfo (list host 'nickserv user real-secret)))))
     (apply next-method args)))
 
-(advice-add 'rcirc :before #'rcirc--cache-authinfo)
-(advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
-
 (defvar rcirc-ignore-all-buffer-activity nil
   "Whether to ignore normal conversations.")
 
@@ -108,7 +105,10 @@
             (member type '(nick keyword)))
     (funcall next-method buffer type)))
 
-(advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity)
+(when (fboundp 'advice-add)
+  (advice-add 'rcirc :before #'rcirc--cache-authinfo)
+  (advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
+  (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity))
 
 (require 'shr-color nil t)
 (when (featurep 'shr-color)
