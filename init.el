@@ -43,6 +43,7 @@
 (require 'rc-bbdb)
 (require 'rc-expand-region)
 (require 'rc-ace-jump)
+(require 'rc-flyspell)
 
 ;; Generic Modes
 (require 'rc-generic-x)

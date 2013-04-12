@@ -14,9 +14,6 @@
 ;; Transparently open compressed files
 (auto-compression-mode t)
 
-;; Allow M-TAB in org-mode
-(setq flyspell-use-meta-tab nil)
-
 ;; Save a list of recent files visited.
 (recentf-mode 1)
 
@@ -45,7 +42,6 @@
 (set-default 'imenu-auto-rescan t)
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)
-(add-hook 'text-mode-hook 'turn-on-flyspell)
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
