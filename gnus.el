@@ -16,11 +16,11 @@
               (nntp-address "nntp.aioe.org"))
 	(nntp "mozilla"
 	      (nntp-address "news.mozilla.org"))
-	(nnimap "mozilla"
-		(nnimap-address "mail.mozilla.com"))
         (nnimap "kanru"
                 (nnimap-stream shell)
-                (nnimap-shell-program "ssh kanru.info nc localhost imap")))
+                (nnimap-shell-program "ssh kanru.info nc localhost imap"))
+        (nnmaildir "mozilla"
+                   (directory "~/.offlineimap/.mozilla")))
       mail-sources
       '((file :plugged t)))
 
