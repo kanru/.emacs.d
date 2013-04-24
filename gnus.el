@@ -16,8 +16,8 @@
               (nntp-address "nntp.aioe.org"))
 	(nntp "mozilla"
 	      (nntp-address "news.mozilla.org"))
-	(nnimap "mozilla"
-		(nnimap-address "mail.mozilla.com"))
+	(nnmaildir "mozilla"
+		(directory "~/.offlineimap/.mozilla"))
         (nnimap "kanru"
                 (nnimap-stream shell)
                 (nnimap-shell-program "ssh kanru.info nc localhost imap")))
