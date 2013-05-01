@@ -67,7 +67,7 @@
         ("^gmane\\.linux\\.debian.*"
          (signature nil)
          (address ,(rot13 "xbfgre@qrovna.bet")))
-        ("\\\(nnimap\\\|nntp\\\)\\+mozilla.*"
+        ("\\\(nnimap\\\|nntp\\\|nnmaildir\\\)\\+mozilla.*"
          (signature nil)
          (address ,(rot13 "xpura@zbmvyyn.pbz")))
         ((header "List-Id" "0xlab.*googlegroups")
