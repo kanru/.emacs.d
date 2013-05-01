@@ -69,6 +69,7 @@
                           "#gfx"
                           "#media"
                           "#content"
+                          "#geo"
                           "#auckland"
                           "#mozilla-taiwan")))
 
