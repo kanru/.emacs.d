@@ -27,7 +27,7 @@
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
 (rcirc-track-minor-mode 1)
-(setq rcirc-fill-column 80
+(setq rcirc-fill-flag nil
       rcirc-buffer-maximum-lines 2000
       rcirc-keywords '("kanru"
                        "urnak")
@@ -67,10 +67,12 @@
                           "#gaia"
                           "#developers"
                           "#gfx"
+                          "#layout"
                           "#media"
                           "#content"
                           "#geo"
                           "#auckland"
+                          "#toronto"
                           "#mozilla-taiwan")))
 
 (defun rcirc--cache-authinfo (arg)
