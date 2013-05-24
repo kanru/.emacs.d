@@ -27,7 +27,7 @@
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
 (rcirc-track-minor-mode 1)
-(setq rcirc-fill-flag nil
+(setq rcirc-fill-column 80
       rcirc-buffer-maximum-lines 2000
       rcirc-keywords '("kanru"
                        "urnak")
