@@ -55,9 +55,10 @@
                                           global-semantic-highlight-func-mode
                                           global-semantic-stickyfunc-mode)))
 
-(setq semantic-decoration-styles '(("semantic-decoration-on-includes" . t)
-                                   ("semantic-decoration-on-protected-members")
-                                   ("semantic-decoration-on-private-members")))
+(semantic-toggle-decoration-style "semantic-tag-boundary" -1)
+(semantic-toggle-decoration-style "semantic-decoration-on-includes" 1)
+(semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
+(semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
 (semantic-mode)
 (global-ede-mode)
