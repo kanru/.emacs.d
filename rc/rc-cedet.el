@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'ede/cpp-root)
+(require 'semantic/decorate/mode)
 
 (when (file-exists-p "~/zone2/mozilla/central")
   (ede-cpp-root-project "mozilla-central"
@@ -56,7 +57,7 @@
                                           global-semantic-stickyfunc-mode)))
 
 (semantic-toggle-decoration-style "semantic-tag-boundary" -1)
-(semantic-toggle-decoration-style "semantic-decoration-on-includes" 1)
+;(semantic-toggle-decoration-style "semantic-decoration-on-includes" 1)
 (semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
 (semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
