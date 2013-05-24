@@ -67,10 +67,12 @@
                           "#gaia"
                           "#developers"
                           "#gfx"
+                          "#layout"
                           "#media"
                           "#content"
                           "#geo"
                           "#auckland"
+                          "#toronto"
                           "#mozilla-taiwan")))
 
 (defun rcirc--cache-authinfo (arg)
