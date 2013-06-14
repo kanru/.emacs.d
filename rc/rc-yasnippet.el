@@ -6,7 +6,8 @@
 (eval-after-load 'yasnippet
   '(progn
      (setq yas-prompt-functions '(yas-ido-prompt))
-     (yas-global-mode 1)))
+     (yas-global-mode 1)
+     (add-hook 'term-mode-hook (lambda () (yas-minor-mode -1)))))
 
 (provide 'rc-yasnippet)
 ;; rc-yasnippet.el ends here
