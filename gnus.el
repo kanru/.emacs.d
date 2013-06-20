@@ -18,7 +18,7 @@
 	      (nntp-address "news.mozilla.org"))
         (nnimap "kanru"
                 (nnimap-stream shell)
-                (nnimap-shell-program "ssh kanru.info nc localhost imap"))
+                (nnimap-shell-program "ssh -C kanru.info nc localhost imap"))
         (nnmaildir "mozilla"
                    (directory "~/.offlineimap/.mozilla")))
       mail-sources
