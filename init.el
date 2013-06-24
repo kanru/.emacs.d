@@ -44,6 +44,7 @@
 (require 'rc-expand-region)
 (require 'rc-ace-jump)
 (require 'rc-flyspell)
+(require 'rc-rmail)
 
 ;; Generic Modes
 (require 'rc-generic-x)
