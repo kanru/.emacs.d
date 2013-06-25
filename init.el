@@ -45,6 +45,7 @@
 (require 'rc-ace-jump)
 (require 'rc-flyspell)
 (require 'rc-rmail)
+(require 'rc-jabber)
 
 ;; Generic Modes
 (require 'rc-generic-x)
