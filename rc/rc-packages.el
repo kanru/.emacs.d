@@ -44,7 +44,6 @@
                    nav
                    openwith
                    paredit
-                   pretty-mode
                    rcirc-color
                    undo-tree
                    vc-darcs))
