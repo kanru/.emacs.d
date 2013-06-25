@@ -33,7 +33,8 @@
     (if target-window
         (when (cdr (window-list))
           ;; Not the last window
-          (delete-window target-window))
+          (delete-window target-window)
+          (bury-buffer target-buffer))
       (let ((window (split-window-below -10)))
         (select-window window)
         (switch-to-buffer target-buffer)))))
