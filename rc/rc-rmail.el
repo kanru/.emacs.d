@@ -58,6 +58,8 @@
       (rmail-summary-goto-msg n)
     (rmail-summary-scroll-msg-up 1)))
 (define-key rmail-summary-mode-map "\C-m" 'rmail-summary-scroll-msg-up-or-goto-msg)
+(define-key rmail-summary-mode-map "<" 'rmail-summary-beginning-of-message)
+(define-key rmail-summary-mode-map ">" 'rmail-summary-end-of-message)
 
 (provide 'rc-rmail)
 ;;; rc-rmail.el ends here
