@@ -39,7 +39,7 @@
 
 (face-spec-set 'rmail-highlight '((t (:inherit nil :weight bold))) 'face-defface-spec)
 
-(setq rmail-user-mail-address-regexp
+(setq user-mail-address-regexp
       (regexp-opt
        (mapcar #'rot13
                '("xnaeh@0kyno.bet"
@@ -48,7 +48,10 @@
                  "xnaeh@xnaeh.vasb"
                  "xnaeh.96@fgh.pfvr.apah.rqh.gj"
                  "pxnaeh@tznvy.pbz"
-                 "xpura@zbmvyyn.pbz"))))
+                 "xpura@zbmvyyn.pbz")))
+      rmail-user-mail-address-regexp user-mail-address-regexp
+      mail-dont-reply-to-names user-mail-address-regexp
+      message-alternative-emails user-mail-address-regexp)
 
 ;;; Press RET directly in the summary buffer will scroll the mail
 ;;; buffer up by one line just like in Gnus.
