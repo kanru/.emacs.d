@@ -35,7 +35,8 @@
       rmail-nonignored-headers "^date:\\|^to:\\|^cc:\\|^from:\\|^subject:")
 
 ;;; Mails are archived to here
-(setq rmail-secondary-file-directory "~/Mail")
+(setq rmail-secondary-file-directory "~/Mail"
+      rmail-secondary-file-regexp ".")
 
 (face-spec-set 'rmail-highlight '((t (:inherit nil :weight bold))) 'face-defface-spec)
 
@@ -52,6 +53,12 @@
       rmail-user-mail-address-regexp user-mail-address-regexp
       mail-dont-reply-to-names user-mail-address-regexp
       message-alternative-emails user-mail-address-regexp)
+
+;;; Auto-file
+(setq rmail-automatic-folder-directives
+      '(("Geolocation" "list-id" "dev-geolocation")
+        ("Bugzilla" "from" "bugzilla-daemon@")
+        ("B2G-internal" "list-id" "b2g-internal")))
 
 ;;; Press RET directly in the summary buffer will scroll the mail
 ;;; buffer up by one line just like in Gnus.
