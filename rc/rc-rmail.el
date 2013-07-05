@@ -60,6 +60,18 @@
         ("Bugzilla" "from" "bugzilla-daemon@")
         ("B2G-internal" "list-id" "b2g-internal")))
 
+(add-hook 'rmail-show-message-hook 'goto-address-mode)
+
+(require 'sendmail)
+(defun rmail-strip-crlf-in-message ()
+  "Remove trailing CRLF in some emails."
+  (save-excursion
+    (mail-text)
+    (let ((inhibit-read-only t))
+      (while (re-search-forward "\xd\n" nil t)
+       (replace-match "\n")))))
+(add-hook 'rmail-show-message-hook 'rmail-strip-crlf-in-message)
+
 ;;; Press RET directly in the summary buffer will scroll the mail
 ;;; buffer up by one line just like in Gnus.
 (defun rmail-summary-scroll-msg-up-or-goto-msg (&optional n)
