@@ -44,7 +44,6 @@
 (add-hook 'prog-mode-hook 'local-comment-auto-fill)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 (add-hook 'prog-mode-hook 'turn-on-save-place-mode)
-(add-hook 'prog-mode-hook 'pretty-lambdas)
 (add-hook 'prog-mode-hook 'add-watchwords)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'prettify-symbols-mode)
