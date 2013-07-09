@@ -24,10 +24,10 @@
 
 ;;; Code:
 
-(define-key read-expression-map (kbd "TAB") 'lisp-complete-symbol)
+(define-key read-expression-map (kbd "TAB") 'completion-at-point)
 (define-key lisp-mode-shared-map (kbd "C-c l") "lambda")
 (define-key lisp-mode-shared-map (kbd "RET") 'reindent-then-newline-and-indent)
-(define-key lisp-mode-shared-map (kbd "C-\\") 'lisp-complete-symbol)
+(define-key lisp-mode-shared-map (kbd "C-\\") 'completion-at-point)
 (define-key lisp-mode-shared-map (kbd "C-c v") 'eval-buffer)
 
 (defface esk-paren-face
