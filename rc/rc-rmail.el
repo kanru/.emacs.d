@@ -56,9 +56,9 @@
 
 ;;; Auto-file
 (setq rmail-automatic-folder-directives
-      '(("Geolocation" "list-id" "dev-geolocation")
-        ("Bugzilla" "from" "bugzilla-daemon@")
-        ("B2G-internal" "list-id" "b2g-internal")))
+      '(("~/Mail/Geolocation" "list-id" "dev-geolocation")
+        ("~/Mail/Bugzilla" "from" "bugzilla-daemon@")
+        ("~/Mail/B2G-internal" "list-id" "b2g-internal")))
 
 (add-hook 'rmail-show-message-hook 'goto-address-mode)
 
