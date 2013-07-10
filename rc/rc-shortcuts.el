@@ -71,6 +71,9 @@ Use url " url)
 (define-shortcut mxr
   "https://mxr.mozilla.org/mozilla-central/search?string=%s")
 
+(define-shortcut dxr
+  "http://dxr.mozilla.org/mozilla-central/search?q=%s")
+
 (define-shortcut mdn
   "https://developer.mozilla.org/search?q=%s")
 
