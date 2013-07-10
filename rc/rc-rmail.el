@@ -69,7 +69,7 @@
     (mail-text)
     (let ((inhibit-read-only t))
       (while (re-search-forward "\xd\n" nil t)
-       (replace-match "\n")))))
+        (replace-match "\n")))))
 (add-hook 'rmail-show-message-hook 'rmail-strip-crlf-in-message)
 
 (defun rmail-treat-date ()
