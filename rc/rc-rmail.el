@@ -72,6 +72,16 @@
        (replace-match "\n")))))
 (add-hook 'rmail-show-message-hook 'rmail-strip-crlf-in-message)
 
+(defun rmail-treat-date ()
+  "Treat date header with Gnus-Art"
+  (save-excursion
+    (save-restriction
+      (let ((inhibit-read-only t))
+        (article-narrow-to-head)
+        (gnus-article-save-original-date
+         (article-date-combined-lapsed))))))
+(add-hook 'rmail-show-message-hook 'rmail-treat-date)
+
 ;;; Press RET directly in the summary buffer will scroll the mail
 ;;; buffer up by one line just like in Gnus.
 (defun rmail-summary-scroll-msg-up-or-goto-msg (&optional n)
