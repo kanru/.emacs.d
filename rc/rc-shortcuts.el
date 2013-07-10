@@ -65,7 +65,7 @@ Use url " url)
      (shortcut-query ,url term)))
 
 (define-shortcut bugzilla
-  "http://bugzilla.mozilla.org/%s"
+  "https://bugzilla.mozilla.org/buglist.cgi?quicksearch=%s"
   'number)
 
 (define-shortcut mxr
