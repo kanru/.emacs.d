@@ -1,6 +1,6 @@
-# ~/.emacs.d
+## ~/.emacs.d
 
-## Directory layout
+### Directory layout
 
 * init.el: Main config loader.
 * rc/: Where all configs are stored. A config file name should have a rc- prefix. In load-path.
