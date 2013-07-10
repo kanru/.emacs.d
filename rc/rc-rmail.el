@@ -82,6 +82,7 @@
 (define-key rmail-summary-mode-map "\C-m" 'rmail-summary-scroll-msg-up-or-goto-msg)
 (define-key rmail-summary-mode-map "<" 'rmail-summary-beginning-of-message)
 (define-key rmail-summary-mode-map ">" 'rmail-summary-end-of-message)
+(define-key rmail-summary-mode-map "=" 'delete-other-windows)
 
 (provide 'rc-rmail)
 ;;; rc-rmail.el ends here
