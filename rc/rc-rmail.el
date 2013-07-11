@@ -94,6 +94,8 @@
 (define-key rmail-summary-mode-map "<" 'rmail-summary-beginning-of-message)
 (define-key rmail-summary-mode-map ">" 'rmail-summary-end-of-message)
 (define-key rmail-summary-mode-map "=" 'delete-other-windows)
+(define-key rmail-summary-mode-map "P" 'previous-line)
+(define-key rmail-summary-mode-map "N" 'next-line)
 
 (provide 'rc-rmail)
 ;;; rc-rmail.el ends here
