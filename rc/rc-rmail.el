@@ -73,6 +73,7 @@
         (replace-match "\n")))))
 (add-hook 'rmail-show-message-hook 'rmail-strip-crlf-in-message)
 
+(require 'gnus-art)
 (defun rmail-treat-date ()
   "Treat date header with Gnus-Art"
   (save-excursion
