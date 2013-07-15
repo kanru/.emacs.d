@@ -36,7 +36,8 @@
 
 ;;; Mails are archived to here
 (setq rmail-secondary-file-directory "~/Mail"
-      rmail-secondary-file-regexp ".")
+      rmail-secondary-file-regexp "."
+      mail-archive-file-name "~/Mail/Sent")
 
 (face-spec-set 'rmail-highlight '((t (:inherit nil :weight bold))) 'face-defface-spec)
 
