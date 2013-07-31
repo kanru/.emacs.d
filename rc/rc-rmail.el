@@ -26,34 +26,17 @@
 
 (require 'rmailsum)
 
-;;; Default composing style
-(setq message-from-style 'angles
-      mail-from-style    'angles)
-
 ;;; Default ignore all headers but some important ones
 (setq rmail-ignored-headers ""
       rmail-nonignored-headers "^date:\\|^to:\\|^cc:\\|^from:\\|^subject:")
 
 ;;; Mails are archived to here
 (setq rmail-secondary-file-directory "~/Mail"
-      rmail-secondary-file-regexp "."
-      message-default-mail-headers "FCC: ~/Mail/Sent\n")
+      rmail-secondary-file-regexp ".")
 
 (face-spec-set 'rmail-highlight '((t (:inherit nil :weight bold))) 'face-defface-spec)
 
-(setq user-mail-address-regexp
-      (regexp-opt
-       (mapcar #'rot13
-               '("xnaeh@0kyno.bet"
-                 "xbfgre@qrovna.bet"
-                 "xbfgre@qrovna.bet.gj"
-                 "xnaeh@xnaeh.vasb"
-                 "xnaeh.96@fgh.pfvr.apah.rqh.gj"
-                 "pxnaeh@tznvy.pbz"
-                 "xpura@zbmvyyn.pbz")))
-      rmail-user-mail-address-regexp user-mail-address-regexp
-      mail-dont-reply-to-names user-mail-address-regexp
-      message-alternative-emails user-mail-address-regexp)
+(setq rmail-user-mail-address-regexp user-mail-address-regexp)
 
 ;;; Auto-file
 (setq rmail-automatic-folder-directives
@@ -62,6 +45,7 @@
         ("~/Mail/B2G-internal" "list-id" "b2g-internal")
         ("~/Mail/Archive"      "to"      "kchen@mozilla.com")))
 
+(add-hook 'rmail-show-message-hook 'visual-line-mode)
 (add-hook 'rmail-show-message-hook 'goto-address-mode)
 
 (require 'sendmail)

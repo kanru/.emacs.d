@@ -44,13 +44,14 @@
 (require 'rc-expand-region)
 (require 'rc-ace-jump)
 (require 'rc-flyspell)
+(require 'rc-mail)
 (require 'rc-rmail)
+(require 'rc-gnus)
 (require 'rc-jabber)
 
 ;; Generic Modes
 (require 'rc-generic-x)
 (require 'rc-predictive)
-(require 'rc-gnus)
 (require 'rc-cua)
 (require 'rc-tramp)
 (require 'rc-yasnippet)
