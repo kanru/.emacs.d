@@ -33,10 +33,10 @@
 
 (setq nnmail-expiry-target 'nnmail-fancy-expiry-target
       nnmail-fancy-expiry-targets
-      '(("list-id" "dev-geolocation"  "nnfolder+archive:geolocation.%Y")
-        ("list-id" "b2g-internal"     "nnfolder+archive:b2g-internal.%Y")
-        ("from"    "bugzilla-daemon@" "nnfolder+archive:bugzilla.%Y-%m")
-        ("from"    "."                "nnfolder+archive:mozilla.%Y-%m"))
+      '(("list-id" "dev-geolocation"   "nnfolder+archive:geolocation.%Y")
+        ("list-id" "b2g-internal"      "nnfolder+archive:b2g-internal.%Y")
+        ("from"    "bugzilla-daemon@"  "nnfolder+archive:bugzilla.%Y-%m")
+        (to-from   "@mozilla.com"      "nnfolder+archive:mozilla.%Y-%m"))
       nnmail-expiry-wait-function
       (lambda (group)
         (cond ((string= group "mail.misc") 'immediate))))
