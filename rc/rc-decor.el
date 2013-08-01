@@ -11,7 +11,7 @@
 	("AR Heiti Light B5" . 1.2)))
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'han "Han")
-  (set-fontset-font t 'japanese-jisx0208 "WenQuanYi Micro Hei"))
+  (set-fontset-font t 'kana "Han"))
 ;; Setting `face-font-rescale-alist' somehow changes the default font
 ;; for new frame.
 (add-to-list 'frame-inherited-parameters 'font)
