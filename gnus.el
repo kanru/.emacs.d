@@ -39,6 +39,7 @@
         (to-from   "@mozilla.com"      "nnfolder+archive:mozilla.%Y-%m"))
       nnmail-expiry-wait-function
       (lambda (group)
-        (cond ((string= group "mail.misc") 'immediate))))
+        (cond ((string= group "mail.misc") 'immediate)))
+      nnmail-treat-duplicates 'delete)
 
 (provide 'my-gnus)
