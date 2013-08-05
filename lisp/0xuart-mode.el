@@ -8,7 +8,7 @@
                 "LOG_STOP" "LOG" "GSTATE" "WRITE" "CHECK" "ENTER") 'words)
   "0xuart filter mode commands")
 
-(define-generic-mode 'filter-mode
+(define-generic-mode filter-mode
   '("#")
   nil
   `(("/.+/" . 'font-lock-function-name-face)
