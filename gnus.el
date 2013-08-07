@@ -28,11 +28,20 @@
 (setq gnus-registry-max-entries 2500)
 (gnus-registry-initialize)
 
+(setq gnus-auto-expirable-newsgroups
+      "lists\\.mozilla")
+
+(setq nnmail-expiry-wait-function
+      (lambda (group)
+        (cond ((string-match "b2g-internal" group) 'never)
+              (t 30))))
+
 (setq nnmail-treat-duplicates 'delete
       nnmail-split-methods 'nnmail-split-fancy
       nnmail-split-fancy
-      '(| ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "mail.mozilla.\\1")
-          (from "bugzilla-daemon" "mail.mozilla.bugzilla")
+      '(| ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
+          ("list-id" ".*<\\(.*?\\)\\.w3\\.org>.*" "lists.w3.\\1")
+          (from "bugzilla-daemon" "lists.mozilla.bugzilla")
           (any ".*@mozilla.com" "mail.mozilla")
           "mail.misc"))
 
