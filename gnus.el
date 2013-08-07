@@ -2,7 +2,7 @@
 
 ;; Select methods
 (setq gnus-select-method
-      '(nnmbox "mail")
+      '(nnml "mail")
       mail-sources
       '((file :plugged t)))
 
@@ -28,18 +28,12 @@
 (setq gnus-registry-max-entries 2500)
 (gnus-registry-initialize)
 
-(setq gnus-auto-expirable-newsgroups
-      "mail.misc")
-
-(setq nnmail-expiry-target 'nnmail-fancy-expiry-target
-      nnmail-fancy-expiry-targets
-      '(("list-id" "dev-geolocation"   "nnfolder+archive:geolocation.%Y")
-        ("list-id" "b2g-internal"      "nnfolder+archive:b2g-internal.%Y")
-        ("from"    "bugzilla-daemon@"  "nnfolder+archive:bugzilla.%Y-%m")
-        (to-from   "@mozilla.com"      "nnfolder+archive:mozilla.%Y-%m"))
-      nnmail-expiry-wait-function
-      (lambda (group)
-        (cond ((string= group "mail.misc") 'immediate)))
-      nnmail-treat-duplicates 'delete)
+(setq nnmail-treat-duplicates 'delete
+      nnmail-split-methods 'nnmail-split-fancy
+      nnmail-split-fancy
+      '(| ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "mail.mozilla.\\1")
+          (from "bugzilla-daemon" "mail.mozilla.bugzilla")
+          (any ".*@mozilla.com" "mail.mozilla")
+          "mail.misc"))
 
 (provide 'my-gnus)
