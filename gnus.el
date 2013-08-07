@@ -29,7 +29,7 @@
 (gnus-registry-initialize)
 
 (setq gnus-auto-expirable-newsgroups
-      "lists\\.mozilla")
+      "lists\\.")
 
 (setq nnmail-expiry-wait-function
       (lambda (group)
@@ -40,9 +40,14 @@
       nnmail-split-methods 'nnmail-split-fancy
       nnmail-split-fancy
       '(| ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
+          ("list-id" ".*<\\(.*?\\)\\.lists\\(.alioth\\)?\\.debian\\.org>.*" "lists.debian.\\1")
           ("list-id" ".*<\\(.*?\\)\\.w3\\.org>.*" "lists.w3.\\1")
+          ("list-id" "summit2013zh\\.mail\\.moztw\\.org" "lists.mozilla.summit2013zh")
+          ("list-id" "ding\\.gnus\\.org" "lists.misc.gnus")
+          ("list-id" ".*<\\(.*?\\)\\.gnu\\.org>.*" "lists.gnu.\\1")
           (from "bugzilla-daemon" "lists.mozilla.bugzilla")
-          (any ".*@mozilla.com" "mail.mozilla")
+          ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
+          (to "kchen.mozilla.com" "mail.mozilla")
           "mail.misc"))
 
 (provide 'my-gnus)
