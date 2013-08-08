@@ -29,7 +29,7 @@
 
 (add-to-list 'gnus-button-alist
              '("\\<bug \\([[:digit:]]+\\)\\>" 0
-               (and (fboundp debbugs)
+               (and (fboundp 'debbugs)
                     gnus-newsgroup-name
                     (string-match "debian" gnus-newsgroup-name))
                debbugs 1))
