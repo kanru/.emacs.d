@@ -18,6 +18,22 @@
 (add-hook 'gnus-group-mode-hook 'hl-line-mode)
 (add-hook 'gnus-summary-mode-hook 'hl-line-mode)
 
+(setq gnus-treat-hide-citation-maybe t)
+
+(add-to-list 'gnus-button-alist
+             '("\\<bug \\([[:digit:]]+\\)\\>" 0
+               (and (fboundp 'bugzilla)
+                    gnus-newsgroup-name
+                    (string-match "mozilla" gnus-newsgroup-name))
+               bugzilla 1))
+
+(add-to-list 'gnus-button-alist
+             '("\\<bug \\([[:digit:]]+\\)\\>" 0
+               (and (fboundp debbugs)
+                    gnus-newsgroup-name
+                    (string-match "debian" gnus-newsgroup-name))
+               debbugs 1))
+
 ;; Make button for the multipart
 (setq gnus-buttonized-mime-types
       '("multipart/alternative" "multipart/signed")

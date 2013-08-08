@@ -83,5 +83,9 @@ Use url " url)
 (define-shortcut ddg
   "http://duckduckgo.com/?q=%s")
 
+(define-shortcut debbugs
+  "https://bugs.debian.org/%s"
+  'number)
+
 (provide 'rc-shortcuts)
 ;;; rc-shortcuts.el ends here
