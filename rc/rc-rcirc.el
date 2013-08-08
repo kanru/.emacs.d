@@ -130,7 +130,6 @@ This function returns a shorter name."
   (defun rcirc--set-rcirc-colors (&optional arg)
     "Set rcirc-colors to appropriate value."
     (let ((bg (face-background 'default))
-          (fg (face-foreground 'rcirc-my-nick))
           (shr-color-visible-luminance-min 80)
           candidates)
       (dolist (item color-name-rgb-alist)
