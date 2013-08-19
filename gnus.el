@@ -21,14 +21,14 @@
 (setq gnus-treat-hide-citation-maybe t)
 
 (add-to-list 'gnus-button-alist
-             '("\\<bug \\([[:digit:]]+\\)\\>" 0
+             '("\\<bug[ \n]*?[[:digit:]]+\\>" 0
                (and (fboundp 'bugzilla)
                     gnus-newsgroup-name
                     (string-match "mozilla" gnus-newsgroup-name))
                bugzilla 1))
 
 (add-to-list 'gnus-button-alist
-             '("\\<bug \\([[:digit:]]+\\)\\>" 0
+             '("\\<bug[ \n]*?[[:digit:]]+\\>" 0
                (and (fboundp 'debbugs)
                     gnus-newsgroup-name
                     (string-match "debian" gnus-newsgroup-name))
