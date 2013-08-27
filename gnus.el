@@ -62,6 +62,7 @@
           ("list-id" "ding\\.gnus\\.org" "lists.misc.gnus")
           ("list-id" ".*<\\(.*?\\)\\.gnu\\.org>.*" "lists.gnu.\\1")
           ("list-id" ".*<\\(.*?\\)\\.googlegroups\\.com>.*" "lists.misc.\\1")
+          ("list-id" "contribute.mail.moztw.org" "lists.mozilla.contribute")
           (from "bugzilla-daemon" "lists.mozilla.bugzilla")
           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
           (to "kchen.mozilla.com" "mail.mozilla")
