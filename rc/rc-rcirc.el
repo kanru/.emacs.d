@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 'rcirc)
+
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
 (rcirc-track-minor-mode 1)
@@ -73,7 +75,16 @@
                           "#geo"
                           "#auckland"
                           "#toronto"
+                          "#servo"
                           "#mozilla-taiwan")))
+
+(add-to-list 'rcirc-server-alist
+             '("irc.w3.org"
+               :port 6665
+               :channels ("#chairs"
+                          "#w3c"
+                          "#sysreq"
+                          "#geolocation")))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
@@ -126,18 +137,20 @@ This function returns a shorter name."
   (advice-add 'rcirc-generate-new-buffer-name :override #'rcirc-generate-new-buffer-name*))
 
 (require 'shr-color nil t)
+(defvar rcirc-colors)
 (when (featurep 'shr-color)
   (defun rcirc--set-rcirc-colors (&optional arg)
     "Set rcirc-colors to appropriate value."
     (let ((bg (face-background 'default))
           (shr-color-visible-luminance-min 80)
           candidates)
+      (or (color-defined-p bg)
+          (setq bg "black"))
       (dolist (item color-name-rgb-alist)
         (let ((color (car item)))
           (when (not (color-gray-p color))
             (let ((new-color (cadr (shr-color-visible bg color t))))
               (setq candidates (cons new-color candidates))))))
-      (defvar rcirc-colors)
       (setq rcirc-colors candidates)))
   (when (fboundp 'advice-add)
     (advice-add 'rcirc :before #'rcirc--set-rcirc-colors)))
