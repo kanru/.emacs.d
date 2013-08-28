@@ -1,5 +1,5 @@
 (require 'info)
-(add-to-list 'Info-additional-directory-list "~/src/gnus/texi/")
+(add-to-list 'Info-additional-directory-list "~/zone2/public/emacs/gnus/texi/")
 (add-to-list 'Info-additional-directory-list (locate-user-emacs-file "info"))
 
 (require 'info-look)
