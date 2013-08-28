@@ -35,7 +35,8 @@
                        "urnak")
       rcirc-default-nick "kanru"
       rcirc-default-user-name "kanru"
-      rcirc-default-full-name "Kan-Ru Chen")
+      rcirc-default-full-name "Kan-Ru Chen"
+      rcirc-server-alist nil)
 
 (add-to-list 'rcirc-server-alist
              '("irc.freenode.net"
@@ -51,7 +52,8 @@
                           "#sbcl"
                           "#python.tw"
                           "#pushisland"
-                          "#g0v.tw")))
+                          "#g0v.tw"
+                          "#h4")))
 
 (add-to-list 'rcirc-server-alist
              '("irc.debian.org"
