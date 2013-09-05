@@ -78,6 +78,7 @@
                           "#auckland"
                           "#toronto"
                           "#servo"
+                          "#webapi"
                           "#mozilla-taiwan")))
 
 (add-to-list 'rcirc-server-alist
