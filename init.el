@@ -28,6 +28,7 @@
 (require 'gtags nil t)
 
 ;; Misc
+(require 'rc-gnus)
 (require 'rc-mule)
 (require 'rc-misc)
 (require 'rc-decor)
@@ -46,7 +47,6 @@
 (require 'rc-flyspell)
 (require 'rc-mail)
 (require 'rc-rmail)
-(require 'rc-gnus)
 (require 'rc-jabber)
 
 ;; Generic Modes
