@@ -43,7 +43,6 @@
                :port 6697
                :encryption tls
                :channels ("#lisp"
-                          "#hime"
                           "#lojban"
                           "#emacs"
                           "#emacs.tw"
