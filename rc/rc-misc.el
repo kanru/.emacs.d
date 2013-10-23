@@ -1,5 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
 
+;; C-l
+(setq recenter-positions '(top bottom middle))
+
 ;; Browser
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program (or (getenv "BROWSER")
