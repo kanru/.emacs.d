@@ -121,22 +121,10 @@
             (member type '(nick keyword)))
     (funcall next-method buffer type)))
 
-;;; TODO: Avoid conflict buffer names if they are on different IRC
-;;; server. Maybe give a nick name to each server?
-(defun rcirc-generate-new-buffer-name* (process target)
-  "Return a buffer name based on PROCESS and TARGET.
-This is used for the initial name given to IRC buffers.
-This function returns a shorter name."
-  (substring-no-properties
-   (if target
-       target
-     (concat "*" (process-name process) "*"))))
-
 (when (fboundp 'advice-add)
   (advice-add 'rcirc :before #'rcirc--cache-authinfo)
   (advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
-  (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity)
-  (advice-add 'rcirc-generate-new-buffer-name :override #'rcirc-generate-new-buffer-name*))
+  (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity))
 
 (require 'shr-color nil t)
 (defvar rcirc-colors)
