@@ -3,6 +3,12 @@
 ;; Select methods
 (setq gnus-select-method
       '(nnml "mail")
+      gnus-secondary-select-methods
+      '((nnimap "mozilla"
+                (nnimap-address "mail.mozilla.com")
+                (nnimap-port "imaps")
+                (nnimap-inbox "INBOX")
+                (nnimap-split-methods default)))
       mail-sources
       '((file :plugged t)))
 
