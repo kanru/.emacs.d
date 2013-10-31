@@ -1,5 +1,10 @@
 ;;; my-gnus.el
 
+(setq spam-log-to-registry t
+      spam-use-bogofilter t)
+(gnus-registry-initialize)
+(spam-initialize)
+
 ;; Select methods
 (setq gnus-select-method
       '(nnml "mail")
@@ -46,10 +51,6 @@
       mm-discouraged-alternatives
       '("text/html" "image/.*"))
 
-;;; gnus-registry
-(setq gnus-registry-max-entries 2500)
-(gnus-registry-initialize)
-
 (setq gnus-auto-expirable-newsgroups
       "lists\\.")
 
@@ -61,7 +62,8 @@
 (setq nnmail-treat-duplicates 'delete
       nnmail-split-methods 'nnmail-split-fancy
       nnmail-split-fancy
-      '(| ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
+      '(| (: spam-split)
+          ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
           ("list-id" ".*<\\(.*?\\)\\.lists\\(.alioth\\)?\\.debian\\.org>.*" "lists.debian.\\1")
           ("list-id" ".*<\\(.*?\\)\\.w3\\.org>.*" "lists.w3.\\1")
           ("list-id" "summit2013zh\\.mail\\.moztw\\.org" "lists.mozilla.summit2013zh")
@@ -73,5 +75,12 @@
           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
           (to "kchen.mozilla.com" "mail.mozilla")
           "mail.misc"))
+
+(setq gnus-parameters
+      '(("mail.misc"
+         (spam-autodetect . t)
+         (spam-process ((spam spam-use-bogofilter)
+                        (ham spam-use-bogofilter)))
+         (spam-process-destination . "spam"))))
 
 (provide 'my-gnus)
