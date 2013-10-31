@@ -72,6 +72,7 @@
           ("list-id" ".*<\\(.*?\\)\\.googlegroups\\.com>.*" "lists.misc.\\1")
           ("list-id" "contribute\\.mail\\.moztw\\.org" "lists.mozilla.contribute")
           ("list-id" "awesome\\.naquadah\\.org" "lists.misc.awesome")
+          ("list-id" "awesome-devel\\.naquadah\\.org" "lists.misc.awesome")
           ("list-id" "debconf-team\\.lists\\.debconf\\.org" "lists.debian.debconf")
           (from "bugzilla-daemon" "lists.mozilla.bugzilla")
           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
