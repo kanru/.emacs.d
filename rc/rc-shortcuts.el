@@ -84,7 +84,7 @@ Use url " url)
   "http://duckduckgo.com/?q=%s")
 
 (define-shortcut debbugs
-  "https://bugs.debian.org/%s"
+  "http://bugs.debian.org/%s"
   'number)
 
 (provide 'rc-shortcuts)
