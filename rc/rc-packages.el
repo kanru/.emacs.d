@@ -46,7 +46,11 @@
                    paredit
                    rcirc-color
                    undo-tree
-                   vc-darcs))
+                   vc-darcs
+                   diff-hl
+                   rust-mode
+                   solarized-theme
+                   ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
       (package-install package))))
