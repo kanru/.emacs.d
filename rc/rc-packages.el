@@ -50,6 +50,7 @@
                    diff-hl
                    rust-mode
                    solarized-theme
+                   magit
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
