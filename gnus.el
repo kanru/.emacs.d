@@ -13,6 +13,10 @@
                 (nnimap-address "mail.mozilla.com")
                 (nnimap-port "imaps")
                 (nnimap-inbox "INBOX")
+                (nnimap-split-methods default))
+        (nnimap "kanru"
+                (nnimap-address "kanru.info")
+                (nnimap-inbox "INBOX")
                 (nnimap-split-methods default)))
       mail-sources
       '((file :plugged t)))
@@ -77,6 +81,7 @@
           (from "bugzilla-daemon" "lists.mozilla.bugzilla")
           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
           (to "kchen.mozilla.com" "mail.mozilla")
+          (to "picolisp@software-lab.de" "lists.misc.picolisp")
           "mail.misc"))
 
 (setq gnus-parameters
