@@ -28,10 +28,6 @@
   (make-local-variable 'column-number-mode)
   (column-number-mode t))
 
-(defun local-comment-auto-fill ()
-  (set (make-local-variable 'comment-auto-fill-only-comments) t)
-  (auto-fill-mode t))
-
 (defun turn-on-save-place-mode ()
   (setq save-place t))
 
@@ -41,7 +37,6 @@
           1 font-lock-warning-face t))))
 
 (add-hook 'prog-mode-hook 'local-column-number-mode)
-(add-hook 'prog-mode-hook 'local-comment-auto-fill)
 (add-hook 'prog-mode-hook 'turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'add-watchwords)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
