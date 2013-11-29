@@ -88,6 +88,11 @@
                           "#sysreq"
                           "#geolocation")))
 
+(add-to-list 'rcirc-server-alist
+             '("irc.gnome.org"
+               :port 6667
+               :channels ("#gnucash")))
+
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
   (auth-source-search :port '("irc-nickserv")
