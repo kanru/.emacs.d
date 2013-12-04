@@ -77,6 +77,7 @@
                           "#auckland"
                           "#toronto"
                           "#servo"
+                          "#rust"
                           "#webapi"
                           "#mozilla-taiwan")))
 
