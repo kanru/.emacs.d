@@ -67,6 +67,7 @@
       nnmail-split-methods 'nnmail-split-fancy
       nnmail-split-fancy
       '(| (: spam-split)
+          ("subject" "\\*\\*\\*SPAM" "spam")
           ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
           ("list-id" ".*<\\(.*?\\)\\.lists\\(.alioth\\)?\\.debian\\.org>.*" "lists.debian.\\1")
           ("list-id" ".*<\\(.*?\\)\\.w3\\.org>.*" "lists.w3.\\1")
