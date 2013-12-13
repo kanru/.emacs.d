@@ -34,5 +34,12 @@
     ;; simply delete the region
     (delete-region (point-min) (point-max))))
 
+(defun eshell/.. (&optional level)
+  "Go up LEVEL directories"
+  (interactive)
+  (let ((level (or level 1)))
+    (eshell/cd (make-string (* 2 level) ?.))
+    (eshell/ls)))
+
 (provide 'rc-eshell)
 ;;; rc-eshell.el ends here
