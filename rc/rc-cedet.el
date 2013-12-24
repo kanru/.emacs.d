@@ -24,28 +24,9 @@
 
 ;;; Code:
 
-(require 'ede/cpp-root)
 (require 'semantic/decorate/mode)
 
-(when (file-exists-p "~/zone2/mozilla/central")
-  (ede-cpp-root-project "mozilla-central"
-			:file "~/zone2/mozilla/central/configure.in"
-			:system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
-					       "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders"))
-
-  (ede-cpp-root-project "mozilla-central"
-			:file "~/zone2/mozilla/B2G/gecko/configure.in"
-			:system-include-path '("~/zone2/mozilla/B2G/objdir-gecko/dist/include"
-					       "~/zone2/mozilla/B2G/objdir-gecko/ipc/ipdl/_ipdlheaders")))
-
-(when (file-exists-p "~/zone2/public/chewing/npapi-chewing")
-  (ede-cpp-root-project "npapi-chewing"
-                        :name "NPAPI libchewing wrapper"
-                        :file "~/zone2/public/chewing/npapi-chewing/configure.ac"
-                        :include-path '("/src" "/npapi")
-                        :spp-table '(("XP_UNIX" . "1"))))
-
-(setq ede-locate-setup-options '(ede-locate-idutils ede-locate-base))
+(add-to-list 'semanticdb-project-roots "~/zone2/mozilla/central/")
 
 ;; https://lwn.net/Articles/502119
 
@@ -57,21 +38,10 @@
                                           global-semantic-stickyfunc-mode)))
 
 (semantic-toggle-decoration-style "semantic-tag-boundary" -1)
-;(semantic-toggle-decoration-style "semantic-decoration-on-includes" 1)
 (semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
 (semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
 (semantic-mode)
-(global-ede-mode)
-
-;; auto-complete setup
-;;
-;; (ac-config-default)
-;; (ac-set-trigger-key "TAB")
-
-;; (defun nix-setup-auto-complete-semantic ()
-;;   "Arrange to do semantic autocompletion."
-;;   (add-to-list 'ac-sources 'ac-source-semantic))
 
 (provide 'rc-cedet)
 ;;; rc-cedet.el ends here
