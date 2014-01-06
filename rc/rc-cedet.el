@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'semantic/decorate/mode)
+(require 'semantic/db)
 
 (add-to-list 'semanticdb-project-roots "~/zone2/mozilla/central/")
 
