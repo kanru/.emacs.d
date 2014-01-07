@@ -38,7 +38,7 @@
   "Go up LEVEL directories"
   (interactive)
   (let ((level (or level 1)))
-    (eshell/cd (make-string (* 2 level) ?.))
+    (eshell/cd (make-string (1+ level) ?.))
     (eshell/ls)))
 
 (provide 'rc-eshell)
