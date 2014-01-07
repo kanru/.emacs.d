@@ -102,5 +102,10 @@
 		(substatement-open . 0)
 		(template-args-cont c-lineup-template-args +))))
 
+;;; hide-ifdef-mode
+(setq hide-ifdef-shadow t
+      hide-ifdef-initially t)
+(add-hook 'c-mode-common-hook 'hide-ifdef-mode)
+
 (provide 'rc-cc-mode)
 ;;; rc-cc-mode.el ends here
