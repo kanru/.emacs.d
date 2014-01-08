@@ -70,6 +70,7 @@
 (semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
 (semantic-mode)
+(global-ede-mode)
 
 (provide 'rc-cedet)
 ;;; rc-cedet.el ends here
