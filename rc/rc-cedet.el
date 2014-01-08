@@ -24,10 +24,37 @@
 
 ;;; Code:
 
+(require 'ede/cpp-root)
 (require 'semantic/decorate/mode)
-(require 'semantic/db)
 
-(add-to-list 'semanticdb-project-roots "~/zone2/mozilla/central/")
+;;; TODO: Add a ede-project-autoload for gecko
+
+(defvar mozilla-central "/home/kanru/zone2/mozilla/central")
+
+(defun clang-complete->include-path (project-root)
+  "Read `.clang_complete' file under PROJECT-ROOT and return include paths."
+  (with-temp-buffer
+    (insert-file-contents (format "%s/.clang_complete" project-root))
+    (goto-char (point-min))
+    (let (paths)
+      (while (re-search-forward (format "-I%s\\(/.*\\)$" project-root) nil t)
+        (push (match-string-no-properties 1) paths))
+      paths)))
+
+(defun clang-complete->spp-table (project-root)
+  "Read `.clang_complete' file under PROJECT-ROOT and return spp-tables for ede."
+  (with-temp-buffer
+    (insert-file-contents (format "%s/.clang_complete" project-root))
+    (goto-char (point-min))
+    (let (defines)
+      (while (re-search-forward "-D\\(.*\\)$" nil t)
+        (push (cons (match-string-no-properties 1) "") defines))
+      defines)))
+
+(ede-cpp-root-project "mozilla/central"
+                      :file (expand-file-name "README.txt" mozilla-central)
+                      :include-path (clang-complete->include-path mozilla-central)
+                      :spp-table (clang-complete->spp-table mozilla-central))
 
 ;; https://lwn.net/Articles/502119
 
