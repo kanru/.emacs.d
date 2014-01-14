@@ -76,7 +76,7 @@
           ("list-id" "awesome-devel\\.naquadah\\.org" "lists.misc.awesome")
           ("list-id" "debconf-team\\.lists\\.debconf\\.org" "lists.debian.debconf")
           ("list-id" ".*<gnucash-\\(.*?\\)\\.gnucash\\.org>.*" "lists.gnucash.\\1")
-          (from "bugzilla-daemon" "lists.mozilla.bugzilla")
+          (from "bugzilla-daemon@mozilla" "lists.mozilla.bugzilla")
           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
           (to "kchen.mozilla.com" "mail.mozilla")
           (to "picolisp@software-lab.de" "lists.misc.picolisp")
