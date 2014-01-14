@@ -30,8 +30,6 @@
 (add-hook 'gnus-group-mode-hook 'hl-line-mode)
 (add-hook 'gnus-summary-mode-hook 'hl-line-mode)
 
-(setq gnus-treat-hide-citation-maybe t)
-
 (add-to-list 'gnus-button-alist
              '("\\<bug[ \n]*?\\([[:digit:]]+\\)\\>" 0
                (and (fboundp 'bugzilla)
