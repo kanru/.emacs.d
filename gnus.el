@@ -30,6 +30,11 @@
 (add-hook 'gnus-group-mode-hook 'hl-line-mode)
 (add-hook 'gnus-summary-mode-hook 'hl-line-mode)
 
+(defun gnus--simplify-summary-line-mode ()
+  (when (string-match "lists\..*\.bugzilla" gnus-newsgroup-name)
+    (setf gnus-summary-line-format "%U%R%z%B%s\n")))
+(add-hook 'gnus-summary-mode-hook 'gnus--simplify-summary-line-mode)
+
 (add-to-list 'gnus-button-alist
              '("\\<bug[ \n]*?\\([[:digit:]]+\\)\\>" 0
                (and (fboundp 'bugzilla)
