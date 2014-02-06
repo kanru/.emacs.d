@@ -24,7 +24,8 @@
 
 ;;; Code:
 
-(setq eshell-directory-name (locate-user-emacs-file "eshell"))
+(setq eshell-directory-name (locate-user-emacs-file "eshell")
+      eshell-ls-exclude-regexp "^:2e")
 
 (defun eshell/clear ()
   "Clears the shell buffer ala Unix's clear or DOS' cls"
