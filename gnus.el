@@ -56,12 +56,12 @@
       '("text/html" "image/.*"))
 
 (setq gnus-auto-expirable-newsgroups
-      "lists\\.")
-
-(setq nnmail-expiry-wait-function
+      "lists\\."
+      nnmail-expiry-wait-function
       (lambda (group)
         (cond ((string-match "b2g-internal" group) 'never)
-              (t 30))))
+              (t 30)))
+      gnus-inhibit-user-auto-expire nil)
 
 (setq nnmail-treat-duplicates 'delete
       nnmail-split-methods 'nnmail-split-fancy
