@@ -52,7 +52,8 @@
                           "#python.tw"
                           "#pushisland"
                           "#g0v.tw"
-                          "#h4")))
+                          "#h4"
+                          "#ledger")))
 
 (add-to-list 'rcirc-server-alist
              '("irc.debian.org"
@@ -80,19 +81,6 @@
                           "#rust"
                           "#webapi"
                           "#mozilla-taiwan")))
-
-(add-to-list 'rcirc-server-alist
-             '("irc.w3.org"
-               :port 6665
-               :channels ("#chairs"
-                          "#w3c"
-                          "#sysreq"
-                          "#geolocation")))
-
-(add-to-list 'rcirc-server-alist
-             '("irc.gnome.org"
-               :port 6667
-               :channels ("#gnucash")))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
