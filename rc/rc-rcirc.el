@@ -80,7 +80,8 @@
                           "#servo"
                           "#rust"
                           "#webapi"
-                          "#mozilla-taiwan")))
+                          "#mozilla-taiwan"
+                          "#perf-tw")))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
