@@ -24,14 +24,14 @@
 
 ;;; Code:
 
-(load (expand-file-name "~/zone4/quicklisp/slime-helper.el") 'noerror)
+(require 'slime)
 
-(when (fboundp 'slime-setup)
-  (slime-setup '(slime-fancy
-                 slime-indentation
-                 slime-sbcl-exts
-                 slime-sprof
-                 slime-xref-browser)))
+(setq slime-contribs
+      '(slime-fancy
+        slime-indentation
+        slime-sbcl-exts
+        slime-sprof
+        slime-xref-browser))
 
 (make-directory "~/.cache/slime-fasls/" t)
 (setq slime-compile-file-options '(:fasl-directory "~/.cache/slime-fasls/")
