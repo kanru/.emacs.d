@@ -64,7 +64,10 @@
                           "#debian-www")))
 
 (add-to-list 'rcirc-server-alist
-             '("concrete.mozilla.org"
+             '("127.0.1.1"
+               :ssh-host "people.mozilla.org"
+               :ssh-port 6697
+               :server "irc.mozilla.org"
                :port 6697
                :encryption tls
                :channels ("#b2g"
@@ -82,6 +85,19 @@
                           "#webapi"
                           "#mozilla-taiwan"
                           "#perf-tw")))
+
+(defun rcirc--connect-tunnel (next-method server &optional port &rest args)
+  (let ((record (assoc server rcirc-server-alist)))
+    (if (null (plist-get (cdr record) :ssh-host))
+        (apply next-method server port args)
+      (let ((ssh-host (plist-get (cdr record) :ssh-host))
+            (ssh-port (plist-get (cdr record) :ssh-port))
+            (irc-server (plist-get (cdr record) :server)))
+        (call-process "ssh" nil nil nil ssh-host
+                      "-L" (format "%s:%d:%s:%d"
+                                   server ssh-port irc-server port)
+                      "-f" "sleep" "10")
+        (apply next-method server ssh-port args)))))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
@@ -118,6 +134,7 @@
 
 (when (fboundp 'advice-add)
   (advice-add 'rcirc :before #'rcirc--cache-authinfo)
+  (advice-add 'rcirc-connect :around #'rcirc--connect-tunnel)
   (advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
   (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity))
 
