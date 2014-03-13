@@ -27,30 +27,45 @@
 (require 'package)
 (package-initialize)
 
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (unless package-archive-contents
   (package-refresh-contents))
 
 (dolist (package '(ace-jump-mode
+                   calfw
+                   css-eldoc
+                   diff-hl
                    dtrt-indent
                    expand-region
+                   git-annex
                    git-commit-mode
-                   go-mode
+                   git-rebase-mode
+                   graphviz-dot-mode
                    haskell-mode
+                   highlight-defined
+                   highlight-defined
+                   ido-ubiquitous
+                   ido-vertical-mode
                    iedit
+                   ledger-mode
+                   lice
                    lua-mode
-                   nav
-                   openwith
+                   magit
+                   magit
+                   magit
+                   nlinum
                    paredit
+                   projectile
                    rcirc-color
+                   rcirc-controls
+                   slime
+                   smex
+                   solarized-theme
                    undo-tree
                    vc-darcs
-                   diff-hl
-                   rust-mode
-                   solarized-theme
-                   magit
+                   yasnippet
+                   go-mode
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
