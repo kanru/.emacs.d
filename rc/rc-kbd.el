@@ -60,5 +60,14 @@
 ;; Nav
 (global-set-key (kbd "<f5>") 'nav)
 
+(eval-after-load 'smex
+  '(global-set-key (kbd "M-x") 'smex))
+
+(eval-after-load 'ido-vertical-mode
+  '(ido-vertical-mode 1))
+
+(eval-after-load 'ido-ubiquitous
+  '(ido-ubiquitous-mode 1))
+
 (provide 'rc-kbd)
 ;;; rc-kbd.el ends here
