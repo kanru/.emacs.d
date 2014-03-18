@@ -30,6 +30,13 @@
 (add-hook 'gnus-group-mode-hook 'hl-line-mode)
 (add-hook 'gnus-summary-mode-hook 'hl-line-mode)
 
+(setq gnus-summary-line-format "%U%R%z%B%(%[%4L: %-23,23f%]%) %s\n"
+      gnus-sum-thread-tree-false-root ""
+      gnus-sum-thread-tree-indent "  "
+      gnus-sum-thread-tree-leaf-with-other "├─━ "
+      gnus-sum-thread-tree-root ""
+      gnus-sum-thread-tree-single-leaf "└─━ "
+      gnus-sum-thread-tree-vertical "│ ")
 (defun gnus--simplify-summary-line-mode ()
   (when (string-match "lists\..*\.bugzilla" gnus-newsgroup-name)
     (setf gnus-summary-line-format "%U%R%z%B%s\n")))
