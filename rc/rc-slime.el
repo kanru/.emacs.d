@@ -24,10 +24,11 @@
 
 ;;; Code:
 
-(require 'slime)
+(require 'slime-autoloads)
 
 (setq slime-contribs
       '(slime-fancy
+        slime-repl
         slime-indentation
         slime-sbcl-exts
         slime-sprof
