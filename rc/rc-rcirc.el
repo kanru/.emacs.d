@@ -140,11 +140,20 @@
             (member type '(nick keyword)))
     (funcall next-method buffer type)))
 
+(defun rcirc--after-rcirc-next-active-buffer (&rest arg)
+  (set-transient-map
+   (let ((map (make-sparse-keymap)))
+     (dolist (keys '("C-SPC" "SPC"))
+       (define-key map (kbd keys)
+         'rcirc-next-active-buffer))
+     map)))
+
 (when (fboundp 'advice-add)
   (advice-add 'rcirc :before #'rcirc--cache-authinfo)
   (advice-add 'rcirc-connect :around #'rcirc--connect-tunnel)
   (advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
-  (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity))
+  (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity)
+  (advice-add 'rcirc-next-active-buffer :after #'rcirc--after-rcirc-next-active-buffer))
 
 (require 'shr-color nil t)
 (defvar rcirc-colors)
