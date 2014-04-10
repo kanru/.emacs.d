@@ -30,6 +30,7 @@
 ;;; TODO: Add a ede-project-autoload for gecko
 
 (defvar mozilla-central "/home/kanru/zone2/mozilla/central")
+(defvar b2g "/home/kanru/zone2/mozilla/B2G")
 
 (defun clang-complete->include-path (project-root)
   "Read `.clang_complete' file under PROJECT-ROOT and return include paths."
@@ -47,23 +48,31 @@
     (insert-file-contents (format "%s/.clang_complete" project-root))
     (goto-char (point-min))
     (let (defines)
-      (while (re-search-forward "-D\\(.*\\)$" nil t)
+      (while (re-search-forward "^-D\\(.*\\)$" nil t)
         (push (cons (match-string-no-properties 1) "") defines))
       defines)))
 
-(ede-cpp-root-project "mozilla/central"
-                      :file (expand-file-name "README.txt" mozilla-central)
-                      :include-path (clang-complete->include-path mozilla-central)
-                      :spp-table (clang-complete->spp-table mozilla-central))
+(ede-cpp-root-project
+ "mozilla/central"
+ :file (expand-file-name "README.txt" mozilla-central)
+ :include-path (clang-complete->include-path mozilla-central)
+ :spp-table (clang-complete->spp-table mozilla-central))
+
+(ede-cpp-root-project
+ "b2g"
+ :file (expand-file-name "README.md" b2g)
+ :include-path (clang-complete->include-path b2g)
+ :spp-table (clang-complete->spp-table b2g))
 
 ;; https://lwn.net/Articles/502119
 
-(setq semantic-default-submodes (append semantic-default-submodes
-                                        '(global-semantic-idle-local-symbol-highlight-mode
-                                          global-semantic-idle-summary-mode
-                                          global-semantic-decoration-mode
-                                          global-semantic-highlight-func-mode
-                                          global-semantic-stickyfunc-mode)))
+(setq semantic-default-submodes
+      '(global-semanticdb-minor-mode
+        global-semantic-idle-scheduler-mode
+        global-semantic-idle-summary-mode
+        global-semantic-decoration-mode
+        global-semantic-stickyfunc-mode
+        global-semantic-idle-local-symbol-highlight-mode))
 
 (semantic-toggle-decoration-style "semantic-tag-boundary" -1)
 (semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
