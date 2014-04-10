@@ -78,6 +78,9 @@
 (semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
 (semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
+(eval-after-load 'semantic
+  '(define-key semantic-mode-map "\M-." 'semantic-ia-fast-jump))
+
 (semantic-mode)
 (global-ede-mode)
 
