@@ -66,6 +66,9 @@
                    vc-darcs
                    yasnippet
                    go-mode
+                   helm
+                   helm-git
+                   helm-projectile
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)

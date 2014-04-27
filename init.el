@@ -48,6 +48,7 @@
 (require 'rc-mail)
 (require 'rc-rmail)
 (require 'rc-jabber)
+(require 'rc-helm)
 
 ;; Generic Modes
 (require 'rc-generic-x)
