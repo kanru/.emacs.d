@@ -69,6 +69,7 @@
                    helm
                    helm-git
                    helm-projectile
+                   helm-swoop
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
