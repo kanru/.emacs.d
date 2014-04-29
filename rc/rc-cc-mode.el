@@ -40,7 +40,7 @@
 		(inclass . +)		; Guessed value
 		(inline-close . 0)	; Guessed value
 		(innamespace . 0)	; Guessed value
-		(member-init-cont . 0)
+		(member-init-cont . -)
 		(member-init-intro . +)
 		(namespace-close . 0)	; Guessed value
 		(statement . 0)		; Guessed value
