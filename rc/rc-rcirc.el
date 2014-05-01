@@ -85,7 +85,8 @@
                           "#webapi"
                           "#mozilla-taiwan"
                           "#perf-tw"
-                          "#fxos-perf")))
+                          "#fxos-perf"
+                          "#memshrink")))
 
 (defun rcirc--open-network-stream-wrapper
     (next-method name buffer host &rest args)
