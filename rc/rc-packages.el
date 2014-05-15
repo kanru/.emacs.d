@@ -70,6 +70,7 @@
                    helm-git
                    helm-projectile
                    helm-swoop
+                   smart-mode-line
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)

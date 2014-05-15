@@ -32,6 +32,7 @@
 (require 'rc-mule)
 (require 'rc-misc)
 (require 'rc-decor)
+(require 'rc-smart-mode-line)
 (require 'rc-kbd)
 (require 'rc-info)
 (require 'rc-autoinsert)
