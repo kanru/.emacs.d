@@ -36,7 +36,8 @@
       rcirc-default-nick "kanru"
       rcirc-default-user-name "kanru"
       rcirc-default-full-name "Kan-Ru Chen"
-      rcirc-server-alist nil)
+      rcirc-server-alist nil
+      rcirc-reconnect-delay 10)
 
 (add-to-list 'rcirc-server-alist
              '("irc.freenode.net"
