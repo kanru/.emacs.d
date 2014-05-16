@@ -25,10 +25,12 @@
 (add-to-list 'safe-local-variable-values '(lexical-binding . t))
 (add-to-list 'safe-local-variable-values '(whitespace-line-column . 80))
 
-;; Hippie expand: at times perhaps too hip
-(require 'hippie-exp)
-(delete 'try-expand-line hippie-expand-try-functions-list)
-(delete 'try-expand-list hippie-expand-try-functions-list)
+;; Hippie expand
+(setq hippie-expand-try-functions-list
+      '(try-expand-dabbrev
+        try-complete-file-name
+        try-expand-dabbrev-all-buffers
+        try-expand-dabbrev-from-kill))
 
 ;; ido-mode is like magic pixie dust!
 (when (> emacs-major-version 21)
