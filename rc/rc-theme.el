@@ -25,6 +25,7 @@
 ;;; Code:
 
 (setq custom-theme-directory (locate-user-emacs-file "themes"))
+(setq solarized-use-variable-pitch nil)
 
 (provide 'rc-theme)
 ;;; rc-theme.el ends here
