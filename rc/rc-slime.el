@@ -35,14 +35,14 @@
         slime-xref-browser))
 
 (make-directory "~/.cache/slime-fasls/" t)
-(setq slime-compile-file-options '(:fasl-directory "~/.cache/slime-fasls/")
+(setq slime-compile-file-options `(:fasl-directory ,(expand-file-name "~/.cache/slime-fasls/"))
       slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(my-sbcl ("sh" "/home/kanru/zone2/public/lisp/sbcl/run-sbcl.sh"))
 	(ccl ("~/zone2/public/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
+        (cmucl ("cmucl"))
         (picolisp ("pil") :init slime-init-picolisp)))
 
 (defun slime-init-picolisp (file _)
