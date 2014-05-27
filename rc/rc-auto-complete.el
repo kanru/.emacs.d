@@ -24,20 +24,10 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/zone2/public/emacs/auto-complete/")
-(add-to-list 'load-path "~/zone2/public/emacs/auto-complete-clang/")
-(add-to-list 'load-path "~/zone2/public/emacs/ac-slime/")
+(require 'auto-complete)
+(require 'auto-complete-config)
 
-(when (require 'auto-complete-config nil t)
-  (add-to-list 'ac-dictionary-directories "~/zone2/public/emacs/auto-complete/dict")
-  (ac-config-default)
-  (require 'auto-complete-clang)
-  (add-hook 'c-mode-common-hook (lambda () (add-to-list 'ac-sources 'ac-source-clang)))
-  (require 'ac-slime)
-  (add-hook 'slime-mode-hook 'set-up-slime-ac)
-  (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
-  (eval-after-load "auto-complete"
-    '(add-to-list 'ac-modes 'slime-repl-mode)))
+(ac-config-default)
 
 (provide 'rc-auto-complete)
 ;;; rc-auto-complete.el ends here
