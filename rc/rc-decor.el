@@ -3,10 +3,15 @@
 ;; Set fonts
 (customize-set-variable
  'face-font-family-alternatives
- (cons '("Han" "WenQuanYi Micro Hei" "AR Heiti Light B5" "cwTexYen")
+ (cons '("Han"
+         "WenQuanYi Zen Hei"
+         "WenQuanYi Micro Hei"
+         "AR Heiti Light B5"
+         "cwTexYen")
        face-font-family-alternatives))
 (setq face-font-rescale-alist
-      '(("WenQuanYi Micro Hei" . 1.25)
+      '(("WenQuanYi Zen Hei" . 1.25)
+        ("WenQuanYi Micro Hei" . 1.25)
 	("cwTexYen" . 1.35)
 	("AR Heiti Light B5" . 1.2)))
 (when (fboundp 'set-fontset-font)
