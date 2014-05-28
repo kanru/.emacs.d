@@ -27,7 +27,9 @@
 ;;; Default composing style
 (setq message-from-style 'angles
       mail-from-style    'angles
-      message-forward-as-mime nil)
+      message-forward-as-mime nil
+      message-forward-included-headers '("From" "To" "Date"
+                                         "Subject" "Message-ID"))
 
 (setq user-mail-address-regexp
       (regexp-opt
