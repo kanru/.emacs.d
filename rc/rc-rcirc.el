@@ -25,6 +25,7 @@
 ;;; Code:
 
 (require 'rcirc)
+(require 'rcirc-controls nil t)
 
 (add-hook 'rcirc-mode-hook 'rcirc-omit-mode)
 
