@@ -26,7 +26,8 @@
 
 ;;; Default composing style
 (setq message-from-style 'angles
-      mail-from-style    'angles)
+      mail-from-style    'angles
+      message-forward-as-mime nil)
 
 (setq user-mail-address-regexp
       (regexp-opt
