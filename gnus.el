@@ -8,13 +8,9 @@
       gnus-secondary-select-methods
       '((nnimap "mozilla"
                 (nnimap-address "mail.mozilla.com")
-                (nnimap-port "imaps")
-                (nnimap-inbox "INBOX")
-                (nnimap-split-methods default))
+                (nnimap-port "imaps"))
         (nnimap "kanru"
-                (nnimap-address "kanru.info")
-                (nnimap-inbox "INBOX")
-                (nnimap-split-methods default)))
+                (nnimap-address "kanru.info")))
       mail-sources
       '((file :plugged t)))
 
@@ -69,26 +65,5 @@
         (cond ((string-match "b2g-internal" group) 'never)
               (t 30)))
       gnus-inhibit-user-auto-expire nil)
-
-(setq nnmail-treat-duplicates 'delete
-      nnmail-split-methods 'nnmail-split-fancy
-      nnmail-split-fancy
-      '(| ("subject" "\\*\\*\\*SPAM" junk)
-          (&
-           ("list-id" ".*<\\(.*?\\)\\(\\.lists\\)?\\.mozilla\\.org>.*" "lists.mozilla.\\1")
-           ("list-id" ".*<\\(.*?\\)\\.lists\\(.alioth\\)?\\.debian\\.org>.*" "lists.debian.\\1")
-           ("list-id" ".*<\\(.*?\\)\\.w3\\.org>.*" "lists.w3.\\1")
-           ("list-id" "ding\\.gnus\\.org" "lists.misc.gnus")
-           ("list-id" ".*<\\(.*?\\)\\.gnu\\.org>.*" "lists.gnu.\\1")
-           ("list-id" ".*<\\(.*?\\)\\.googlegroups\\.com>.*" "lists.misc.\\1")
-           ("list-id" "contribute\\.mail\\.moztw\\.org" "lists.mozilla.contribute")
-           ("list-id" "awesome\\.naquadah\\.org" "lists.misc.awesome")
-           ("list-id" "awesome-devel\\.naquadah\\.org" "lists.misc.awesome")
-           ("list-id" "debconf-team\\.lists\\.debconf\\.org" "lists.debian.debconf")
-           (from "bugzilla-daemon@mozilla" "lists.mozilla.bugzilla")
-           ("x-loop" "owner@bugs\\.debian\\.org" "mail.debian.bugs")
-           (to "picolisp@software-lab.de" "lists.misc.picolisp"))
-          (to "kchen.mozilla.com" "mail.mozilla")
-          "mail.misc"))
 
 (provide 'my-gnus)
