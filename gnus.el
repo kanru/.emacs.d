@@ -1,6 +1,9 @@
 ;;; my-gnus.el
 
-(gnus-registry-initialize)
+(setq gnus-save-newsrc-file nil
+      gnus-read-newsrc-file nil
+      gnus-save-killed-list nil
+      gnus-check-new-newsgroups 'ask-server)
 
 ;; Select methods
 (setq gnus-select-method
@@ -16,6 +19,8 @@
       mail-sources
       '((file :plugged t)))
 
+(setq gnus-registry-max-entries 10000)
+(gnus-registry-initialize)
 ;; Fetching by `Message-ID' Using the Registry
 (setq gnus-refer-article-method
       '(current
