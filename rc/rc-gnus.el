@@ -5,4 +5,14 @@
       message-directory   (expand-file-name "Mail/" gnus-home-directory))
 
 (require 'gnus-load nil t)
+
+(defun gnus-treat-simplified-chinese ()
+  "Convert Simplified Chinese to Traditional Chinese using opencc."
+  (interactive)
+  (gnus-with-article-buffer
+    (article-goto-body)
+    (let ((opencc (executable-find "opencc")))
+       (when opencc
+         (shell-command-on-region (point) (point-max) opencc t t)))))
+
 (provide 'rc-gnus)
