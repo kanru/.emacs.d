@@ -8,9 +8,11 @@
       gnus-secondary-select-methods
       '((nnimap "mozilla"
                 (nnimap-address "mail.mozilla.com")
-                (nnimap-port "imaps"))
+                (nnimap-port "imaps")
+                (nnimap-fetch-partial-articles t))
         (nnimap "kanru"
-                (nnimap-address "kanru.info")))
+                (nnimap-address "kanru.info")
+                (nnimap-fetch-partial-articles t)))
       mail-sources
       '((file :plugged t)))
 
