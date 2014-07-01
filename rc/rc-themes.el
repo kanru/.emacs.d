@@ -28,5 +28,5 @@
 (setq solarized-use-variable-pitch nil)
 (load-theme 'solarized-light)
 
-(provide 'rc-theme)
+(provide 'rc-themes)
 ;;; rc-theme.el ends here
