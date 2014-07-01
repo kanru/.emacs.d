@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(setq diary-file "~/zone1/etc/diary"
+(setq diary-file "~/git/personal/etc/diary"
       diary-comment-start "/*"
       diary-comment-end "*/"
       calendar-mark-diary-entries-flag t

@@ -71,6 +71,7 @@
                    helm-projectile
                    helm-swoop
                    smart-mode-line
+                   bbdb
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)

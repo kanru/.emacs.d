@@ -1,13 +1,10 @@
 ;;; rc-org.el -- OrgMode Settings
 
-(add-to-list 'load-path "~/zone2/public/emacs/org-mode/lisp")
-(add-to-list 'load-path "~/zone2/public/emacs/org-mode/contrib/lisp")
-
 (require 'org)
 (require 'org-checklist nil t)
 
-(let ((quest-file (format-time-string "~/zone1/org/quests/%Y.org")))
-  (setq org-directory "~/zone1/org"
+(let ((quest-file (format-time-string "~/git/personal/org/quests/%Y.org")))
+  (setq org-directory "~/git/personal/org"
         org-default-notes-file quest-file
         org-agenda-files (list quest-file)
         org-agenda-custom-commands

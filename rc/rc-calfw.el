@@ -24,18 +24,9 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/zone2/public/emacs/emacs-calfw")
-(require 'calfw nil t)
-(require 'calfw-cal nil t)
-(require 'calfw-org nil t)
-
-(eval-after-load "calfw"
-  '(defun my-open-calendar ()
-     (interactive)
-     (cfw:open-calendar-buffer
-      :contents-sources
-      (list
-       (cfw:org-create-source "Green")))))
+(require 'calfw)
+(require 'calfw-cal)
+(require 'calfw-org)
 
 (provide 'rc-calfw)
 ;;; rc-calfw.el ends here

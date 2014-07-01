@@ -26,7 +26,7 @@
 
 (require 'smart-mode-line)
 
-(setq sml/theme 'light)
+(setq sml/theme 'automatic)
 (sml/setup)
 
 (provide 'rc-smart-mode-line)

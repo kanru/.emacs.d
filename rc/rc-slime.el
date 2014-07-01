@@ -35,11 +35,12 @@
         slime-xref-browser))
 
 (make-directory "~/.cache/slime-fasls/" t)
-(setq slime-compile-file-options `(:fasl-directory ,(expand-file-name "~/.cache/slime-fasls/"))
+(setq slime-compile-file-options
+      `(:fasl-directory ,(expand-file-name "~/.cache/slime-fasls/"))
       slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(ccl ("~/zone2/public/lisp/ccl/lx86cl64"))
+	(ccl ("~/git/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
         (cmucl ("cmucl"))
@@ -48,7 +49,7 @@
 (defun slime-init-picolisp (file _)
   (setq slime-protocol-version 'ignore)
   (format "%S\n"
-          `(prog (load ,(expand-file-name "~/zone2/public/swank-picolisp/swank-picolisp.l"))
+          `(prog (load ,(expand-file-name "~/git/swank-picolisp/swank-picolisp.l"))
                  (start-swank ,file))))
 (provide 'rc-slime)
 ;;; rc-slime.el ends here

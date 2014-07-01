@@ -3,6 +3,7 @@
 
 ;; Set init file for custom settings
 (setq custom-file (locate-user-emacs-file "custom.el"))
+(load custom-file 'noerror)
 
 ;; Load path etc.
 (add-to-list 'load-path (locate-user-emacs-file "lisp"))
@@ -28,6 +29,7 @@
 (require 'gtags nil t)
 
 ;; Misc
+(require 'rc-themes)
 (require 'rc-gnus)
 (require 'rc-mule)
 (require 'rc-misc)
@@ -36,7 +38,6 @@
 (require 'rc-kbd)
 (require 'rc-info)
 (require 'rc-autoinsert)
-(require 'rc-theme)
 (require 'rc-pcomplete)
 (require 'rc-shortcuts)
 (require 'rc-compile)
@@ -53,7 +54,6 @@
 
 ;; Generic Modes
 (require 'rc-generic-x)
-(require 'rc-predictive)
 (require 'rc-cua)
 (require 'rc-tramp)
 (require 'rc-yasnippet)
@@ -77,10 +77,8 @@
 (require 'rc-java)
 (require 'rc-markdown)
 (require 'rc-nxml)
-(require 'rc-python)
 (require 'rc-js-mode)
 (require 'rc-slime)
 (require 'rc-auto-complete)
 
-(load custom-file 'noerror)
 ;;; init.el ends here

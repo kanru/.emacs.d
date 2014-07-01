@@ -24,11 +24,9 @@
 
 ;;; Code:
 
-(add-to-list 'load-path "~/zone2/public/emacs/expand-region.el/")
-(require 'expand-region nil t)
+(require 'expand-region)
 
-(eval-after-load 'expand-region
-  '(global-set-key (kbd "C-=") 'er/expand-region))
+(global-set-key (kbd "C-=") 'er/expand-region)
 
 (provide 'rc-expand-region)
 ;;; rc-expand-region.el ends here
