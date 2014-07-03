@@ -58,6 +58,17 @@
 (set-default 'c-macro-names-with-semicolon
              "\\_<NS_\\(IMPL\\|DECL\\|DEFINE\\|DECLARE\\)_.*\\_>")
 
+(define-skeleton insert-mozilla-header
+  "Insert Mozilla license boilerplate."
+  nil
+  "/* -*- Mode: C++; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 2 -*- */\n"
+  "/* vim: set ts=2 et sw=2 tw=80: */\n"
+  "/* This Source Code Form is subject to the terms of the Mozilla Public\n"
+  " * License, v. 2.0. If a copy of the MPL was not distributed with this file,\n"
+  " * You can obtain one at http://mozilla.org/MPL/2.0/. */\n")
+
+(define-abbrev c++-mode-abbrev-table "mozh" "" 'insert-mozilla-header :system t)
+
 ;;; hide-ifdef-mode
 (setq hide-ifdef-shadow t
       hide-ifdef-initially t)

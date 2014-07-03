@@ -56,7 +56,6 @@
 (require 'rc-generic-x)
 (require 'rc-cua)
 (require 'rc-tramp)
-(require 'rc-yasnippet)
 (require 'rc-org)
 (require 'rc-rfc)
 (require 'rc-ediff)

@@ -64,7 +64,6 @@
                    solarized-theme
                    undo-tree
                    vc-darcs
-                   yasnippet
                    go-mode
                    helm
                    helm-git
