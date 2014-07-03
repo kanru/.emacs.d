@@ -24,13 +24,22 @@
 
 ;;; Code:
 
-(require 'helm)
-
-(setq helm-time-zone-home-location "Taipei")
+(require 'helm-config)
 (helm-mode 1)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(setq helm-time-zone-home-location "Taipei")
+
+(define-key global-map [remap execute-extended-command] 'helm-M-x)
+(define-key global-map [remap switch-to-buffer] 'helm-mini)
+(define-key global-map [remap find-file] 'helm-find-files)
+(define-key global-map [remap occur] 'helm-occur)
+(define-key global-map [remap list-buffers] 'helm-buffers-list)
+(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(unless (boundp 'completion-in-region-function)
+  (define-key lisp-interaction-mode-map
+    [remap completion-at-point] 'helm-lisp-completion-at-point)
+  (define-key emacs-lisp-mode-map
+    [remap completion-at-point] 'helm-lisp-completion-at-point))
+
 (global-set-key (kbd "C-x f") 'helm-recentf)
 
 (provide 'rc-helm)
