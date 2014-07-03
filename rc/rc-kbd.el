@@ -20,7 +20,6 @@
 (global-set-key (kbd "C-M-r") 'isearch-backward)
 
 ;; File finding
-(global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 (global-set-key (kbd "C-c y") 'bury-buffer)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
@@ -59,15 +58,6 @@
 
 ;; Nav
 (global-set-key (kbd "<f5>") 'nav)
-
-(eval-after-load 'smex
-  '(global-set-key (kbd "M-x") 'smex))
-
-(eval-after-load 'ido-vertical-mode
-  '(ido-vertical-mode 1))
-
-(eval-after-load 'ido-ubiquitous
-  '(ido-ubiquitous-mode 1))
 
 (provide 'rc-kbd)
 ;;; rc-kbd.el ends here
