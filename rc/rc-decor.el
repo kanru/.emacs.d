@@ -51,7 +51,8 @@
       uniquify-buffer-name-style 'forward
       whitespace-line-column 80
       ediff-window-setup-function 'ediff-setup-windows-plain
-      xterm-mouse-mode t)
+      xterm-mouse-mode t
+      x-underline-at-descent-line t)
 
 (provide 'rc-decor)
 ;; rc-decor.el ends here
