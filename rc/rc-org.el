@@ -133,7 +133,7 @@
          nil)))
 
 (setq org-stuck-projects
-      '("+PROJECT/-DONE-MAYBE" ("TODO" "NEXT") nil "IGNORE"))
+      '("+PROJECT/-DONE-MAYBE" ("NEXT") nil "IGNORE"))
 
 ;;; Clock setup
 
