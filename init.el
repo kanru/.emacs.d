@@ -29,12 +29,12 @@
 (require 'gtags nil t)
 
 ;; Misc
+(require 'rc-smart-mode-line)
 (require 'rc-themes)
 (require 'rc-gnus)
 (require 'rc-mule)
 (require 'rc-misc)
 (require 'rc-decor)
-(require 'rc-smart-mode-line)
 (require 'rc-kbd)
 (require 'rc-info)
 (require 'rc-autoinsert)
