@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 'cc-mode)
+
 (c-add-style "mozilla"
              '((indent-tabs-mode . nil)
                (c-basic-offset . 2)
