@@ -126,9 +126,8 @@
           (tags-todo "-CANCELLED+WAITING|HOLD/!"
                      ((org-agenda-overriding-header "Waiting and Holding Tasks")
                       (org-tags-match-list-sublevels nil)))
-          (tags "-REFILE/"
+          (tags "+PROJECT/DONE"
                 ((org-agenda-overriding-header "Tasks to Archive")
-                 (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
                  (org-tags-match-list-sublevels nil))))
          nil)))
 
