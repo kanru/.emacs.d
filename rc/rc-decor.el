@@ -10,7 +10,7 @@
          "cwTexYen")
        face-font-family-alternatives))
 (setq face-font-rescale-alist
-      '(("WenQuanYi Zen Hei" . 1.25)
+      '(("WenQuanYi Zen Hei" . 1.1)
         ("WenQuanYi Micro Hei" . 1.25)
 	("cwTexYen" . 1.35)
 	("AR Heiti Light B5" . 1.2)))
