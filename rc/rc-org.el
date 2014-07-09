@@ -134,6 +134,8 @@
 (setq org-stuck-projects
       '("+PROJECT/-DONE-MAYBE" ("NEXT") nil "IGNORE"))
 
+(setq org-agenda-include-diary t)
+
 ;;; Clock setup
 
 ;; Resume clocking task when emacs is restarted
