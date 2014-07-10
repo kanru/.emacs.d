@@ -56,17 +56,19 @@
         (push (cons (match-string-no-properties 1) "") defines))
       defines)))
 
-(ede-cpp-root-project
- "mozilla/central"
- :file (expand-file-name "README.txt" mozilla-central)
- :include-path (clang-complete->include-path mozilla-central)
- :spp-table (clang-complete->spp-table mozilla-central))
+(when (file-exists-p mozilla-central)
+  (ede-cpp-root-project
+   "mozilla/central"
+   :file (expand-file-name "README.txt" mozilla-central)
+   :include-path (clang-complete->include-path mozilla-central)
+   :spp-table (clang-complete->spp-table mozilla-central)))
 
-(ede-cpp-root-project
- "b2g"
- :file (expand-file-name "README.md" b2g)
- :include-path (clang-complete->include-path b2g)
- :spp-table (clang-complete->spp-table b2g))
+(when (file-exists-p b2g)
+  (ede-cpp-root-project
+   "b2g"
+   :file (expand-file-name "README.md" b2g)
+   :include-path (clang-complete->include-path b2g)
+   :spp-table (clang-complete->spp-table b2g)))
 
 ;; https://lwn.net/Articles/502119
 
