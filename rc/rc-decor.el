@@ -4,14 +4,16 @@
 (customize-set-variable
  'face-font-family-alternatives
  (cons '("Han"
-         "Source Han Sans TWHK"
+         "Source Han Sans TC"
+         "Source Han Sans SC"
          "WenQuanYi Zen Hei"
          "WenQuanYi Micro Hei"
          "AR Heiti Light B5"
          "cwTexYen")
        face-font-family-alternatives))
 (setq face-font-rescale-alist
-      '(("Source Han Sans TWHK" . 1.1)
+      '(("Source Han Sans TC" . 1.1)
+        ("Source Han Sans SC" . 1.1)
         ("WenQuanYi Zen Hei" . 1.1)
         ("WenQuanYi Micro Hei" . 1.25)
 	("cwTexYen" . 1.35)
