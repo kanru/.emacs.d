@@ -55,7 +55,8 @@
                           "#pushisland"
                           "#g0v.tw"
                           "#h4"
-                          "#ledger")))
+                          "#ledger"
+                          "#darktable")))
 
 (add-to-list 'rcirc-server-alist
              '("irc.debian.org"
@@ -88,7 +89,8 @@
                           "#mozilla-taiwan"
                           "#perf-tw"
                           "#fxos-perf"
-                          "#memshrink")))
+                          "#memshrink"
+                          "#e10s")))
 
 (defun rcirc--open-network-stream-wrapper
     (next-method name buffer host &rest args)
