@@ -26,6 +26,10 @@
 
 (require 'smart-mode-line)
 
+(add-to-list 'sml/replacer-regexp-list '("^:Git:[Oo]rg/" ":Org:") t)
+(add-to-list 'sml/replacer-regexp-list '("^~/[Hh]g/" ":HG:") t)
+(add-to-list 'sml/replacer-regexp-list '("^~/mozilla/" ":Moz:") t)
+
 (setq sml/theme 'automatic)
 (sml/setup)
 
