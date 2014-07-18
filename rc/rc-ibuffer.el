@@ -1,8 +1,8 @@
 ;;; rc-ibuffer.el -- IBuffer Mode Settings
 
 (setq ibuffer-saved-filter-groups
-      '(("default"
-         ("mozilla" (or (filename . "mozilla")))
+      `(("default"
+         ("mozilla" (or (filename . ,(expand-file-name "~/mozilla"))))
          ("mail/news"
           (or (mode . message-mode)
               (mode . bbdb-mode)
@@ -20,7 +20,8 @@
               (name . "^\\*slime-")))
          ("irc"
           (or (mode . erc-mode)
-              (mode . rcirc-mode))))))
+              (mode . rcirc-mode)))
+         ("org" (mode . org-mode)))))
 (add-hook 'ibuffer-mode-hook
 	  (lambda ()
 	    (ibuffer-switch-to-saved-filter-groups "default")))
