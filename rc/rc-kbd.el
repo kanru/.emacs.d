@@ -18,6 +18,7 @@
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
+(define-key isearch-mode-map (kbd "<f3>") 'isearch-repeat-forward)
 
 ;; File finding
 (global-set-key (kbd "C-c y") 'bury-buffer)
