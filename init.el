@@ -51,6 +51,7 @@
 (require 'rc-rmail)
 (require 'rc-jabber)
 (require 'rc-helm)
+(require 'rc-debian)
 
 ;; Generic Modes
 (require 'rc-generic-x)
