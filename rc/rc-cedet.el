@@ -30,7 +30,7 @@
 ;;; TODO: Add a ede-project-autoload for gecko
 
 (defvar mozilla-central (expand-file-name "~/mozilla/central"))
-(defvar b2g (expand-file-name "~/mozilla/B2G"))
+(defvar b2g (expand-file-name "~/mozilla/B2G/gecko"))
 
 (defun clang-complete->include-path (project-root)
   "Read `.clang_complete' file under PROJECT-ROOT and return include paths."
@@ -66,7 +66,7 @@
 (when (file-exists-p b2g)
   (ede-cpp-root-project
    "b2g"
-   :file (expand-file-name "README.md" b2g)
+   :file (expand-file-name "README.txt" b2g)
    :include-path (clang-complete->include-path b2g)
    :spp-table (clang-complete->spp-table b2g)))
 
