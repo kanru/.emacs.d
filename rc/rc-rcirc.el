@@ -50,6 +50,8 @@
                           "#emacs.tw"
                           "#cschat.tw"
                           "#haskell.tw"
+                          "#lisp.tw"
+                          "#rust.tw"
                           "#sbcl"
                           "#python.tw"
                           "#pushisland"
