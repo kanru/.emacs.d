@@ -71,6 +71,15 @@
 
 (define-abbrev c++-mode-abbrev-table "mozh" "" 'insert-mozilla-header :system t)
 
+(define-skeleton insert-namespace
+  "Insert namespace."
+  "Namespace: "
+  > "namespace " str & " " "{" \n
+  > _ \n
+  > "} // " str | "anonymous namespace"\n)
+
+(define-abbrev c++-mode-abbrev-table "namespace" "" 'insert-namespace :system t)
+
 ;;; hide-ifdef-mode
 (setq hide-ifdef-shadow t
       hide-ifdef-initially t)
