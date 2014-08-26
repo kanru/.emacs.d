@@ -45,7 +45,6 @@
                :port 6697
                :encryption tls
                :channels ("#lisp"
-                          "#lojban"
                           "#emacs"
                           "#emacs.tw"
                           "#cschat.tw"
@@ -57,7 +56,6 @@
                           "#pushisland"
                           "#g0v.tw"
                           "#h4"
-                          "#ledger"
                           "#darktable")))
 
 (add-to-list 'rcirc-server-alist
