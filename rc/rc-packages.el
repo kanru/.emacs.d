@@ -35,6 +35,7 @@
 (dolist (package '(ace-jump-mode
                    bbdb
                    calfw
+                   company-mode
                    css-eldoc
                    diff-hl
                    dtrt-indent

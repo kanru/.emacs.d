@@ -28,16 +28,17 @@
 (ido-mode 1)
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
-(with-eval-after-load 'smex
-  (smex-initialize)
-  (global-set-key (kbd "M-x") 'smex)
-  (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-  (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command))
 (setq ido-enable-flex-matching t
       ido-enable-dot-prefix t
       ido-create-new-buffer 'always
       ido-use-filename-at-point 'guess
       ido-use-virtual-buffers 'auto)
+
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (provide 'rc-ido)
 ;;; rc-ido.el ends here

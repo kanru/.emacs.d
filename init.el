@@ -79,6 +79,6 @@
 (require 'rc-nxml)
 (require 'rc-js-mode)
 (require 'rc-slime)
-(require 'rc-auto-complete)
+(require 'rc-company)
 
 ;;; init.el ends here
