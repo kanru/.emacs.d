@@ -33,26 +33,23 @@
   (package-refresh-contents))
 
 (dolist (package '(ace-jump-mode
+                   bbdb
                    calfw
                    css-eldoc
                    diff-hl
                    dtrt-indent
                    expand-region
-                   git-annex
                    git-commit-mode
                    git-rebase-mode
+                   go-mode
                    graphviz-dot-mode
                    haskell-mode
                    highlight-defined
-                   highlight-defined
                    ido-ubiquitous
-                   ido-vertical-mode
                    iedit
                    ledger-mode
                    lice
                    lua-mode
-                   magit
-                   magit
                    magit
                    nlinum
                    paredit
@@ -60,17 +57,11 @@
                    rcirc-color
                    rcirc-controls
                    slime
+                   smart-mode-line
                    smex
                    solarized-theme
                    undo-tree
                    vc-darcs
-                   go-mode
-                   helm
-                   helm-git
-                   helm-projectile
-                   helm-swoop
-                   smart-mode-line
-                   bbdb
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
