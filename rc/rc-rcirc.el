@@ -181,5 +181,8 @@
     (advice-add 'rcirc :before #'rcirc--set-rcirc-colors)))
 (require 'rcirc-color nil t)
 
+(add-to-list 'ibuffer-fontification-alist
+             '(99 (member (current-buffer) rcirc-activity) rcirc-prompt) t)
+
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
