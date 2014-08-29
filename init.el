@@ -50,7 +50,7 @@
 (require 'rc-mail)
 (require 'rc-rmail)
 (require 'rc-jabber)
-(require 'rc-helm)
+(require 'rc-ido)
 (require 'rc-debian)
 
 ;; Generic Modes
