@@ -76,9 +76,21 @@
   "Namespace: "
   > "namespace " str & " " "{" \n
   > _ \n
-  > "} // namespace " str | "anonymous namespace"\n)
+  > "} // namespace " str | "anonymous namespace" \n)
 
 (define-abbrev c++-mode-abbrev-table "namespace" "" 'insert-namespace :system t)
+
+(define-skeleton insert-ifndef
+  "Insert #ifndef guard."
+  (completing-read "#ifndef " nil nil nil 
+                   (replace-regexp-in-string "[-\\/.]" "_" (buffer-name)))
+  "#ifndef " str \n
+  "#define " str \n
+  \n _ \n \n
+  "#endif // " str \n)
+
+(define-abbrev c-mode-abbrev-table "ifndef" "" 'insert-ifndef :system t)
+(define-abbrev c++-mode-abbrev-table "ifndef" "" 'insert-ifndef :system t)
 
 ;;; hide-ifdef-mode
 (setq hide-ifdef-shadow t
