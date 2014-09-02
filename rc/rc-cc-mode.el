@@ -76,7 +76,7 @@
   "Namespace: "
   > "namespace " str & " " "{" \n
   > _ \n
-  > "} // namespace " str | "anonymous namespace" \n)
+  > "} // namespace " str | -10 & "anonymous namespace" \n)
 
 (define-abbrev c++-mode-abbrev-table "namespace" "" 'insert-namespace :system t)
 
