@@ -36,17 +36,17 @@
    nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|XXX\\)\\>"
           1 font-lock-warning-face t))))
 
-(require 'highlight-80+ nil t)
-(defun turn-on-highlight-80+-mode ()
-  (when (featurep 'highlight-80+)
-    (highlight-80+-mode 1)))
+(require 'column-enforce-mode nil t)
+(defun turn-on-column-enforce-mode ()
+  (when (featurep 'column-enforce-mode)
+    (column-enforce-n 80)))
 
 (add-hook 'prog-mode-hook 'local-column-number-mode)
 (add-hook 'prog-mode-hook 'turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'add-watchwords)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'prettify-symbols-mode)
-(add-hook 'prog-mode-hook 'turn-on-highlight-80+-mode)
+(add-hook 'prog-mode-hook 'turn-on-column-enforce-mode)
   
 (provide 'rc-prog)
 ;;; rc-prog.el ends here
