@@ -40,6 +40,7 @@
                    diff-hl
                    dtrt-indent
                    expand-region
+                   ggtags-mode
                    git-commit-mode
                    git-rebase-mode
                    go-mode
@@ -52,6 +53,7 @@
                    lice
                    lua-mode
                    magit
+                   monokai-theme
                    nlinum
                    paredit
                    projectile
