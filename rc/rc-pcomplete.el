@@ -58,5 +58,22 @@
    ((pcomplete-match "checkout" 1)
     (pcomplete-here* (pcmpl-git-get-refs "heads")))))
 
+(defun pcmpl-global-complete-symbol (symbol)
+  "Return a list of symbols using GNU Global"
+  (when (executable-find "global")
+    (with-temp-buffer
+      (insert (shell-command-to-string (concat "global -c " symbol)))
+      (goto-char (point-min))
+      (let (symbols)
+        (while (and (not (eobp))
+                    (re-search-forward "^.*$" nil t))
+          (add-to-list 'symbols (match-string 0)))
+        symbols))))
+
+(defun pcomplete/global ()
+  "Completion for global"
+  (when (not (string-equal "" (pcomplete-arg)))
+   (pcomplete-here* (pcmpl-global-complete-symbol (pcomplete-arg)))))
+
 (provide 'rc-pcomplete)
 ;;; rc-pcomplete.el ends here
