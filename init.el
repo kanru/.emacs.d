@@ -78,7 +78,7 @@
 (require 'rc-markdown)
 (require 'rc-nxml)
 (require 'rc-js-mode)
-(require 'rc-slime)
+(require 'rc-sly)
 (require 'rc-company)
 
 ;;; init.el ends here
