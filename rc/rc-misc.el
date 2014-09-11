@@ -33,7 +33,6 @@
         try-expand-dabbrev-from-kill))
 
 (set-default 'indent-tabs-mode nil)
-(set-default 'indicate-empty-lines t)
 (set-default 'imenu-auto-rescan t)
 
 (add-hook 'text-mode-hook 'turn-on-auto-fill)

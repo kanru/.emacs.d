@@ -44,6 +44,8 @@
   (mouse-wheel-mode t)
   (blink-cursor-mode -1))
 
+(setq-default indicate-empty-lines t)
+
 (setq visible-bell nil
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
