@@ -53,7 +53,7 @@
       shift-select-mode nil
       mouse-yank-at-point t
       require-final-newline t
-      truncate-partial-width-windows nil
+      truncate-partial-width-windows t
       uniquify-buffer-name-style 'forward
       whitespace-line-column 80
       ediff-window-setup-function 'ediff-setup-windows-plain
