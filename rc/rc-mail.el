@@ -28,6 +28,9 @@
 (setq message-from-style 'angles
       mail-from-style    'angles
       message-forward-as-mime nil
+      message-forward-ignored-headers (regexp-opt '("X-" "Received"
+                                                    "DKIM" "Return"
+                                                    "Envelope"))
       message-forward-included-headers '("From" "To" "Date"
                                          "Subject" "Message-ID"))
 
