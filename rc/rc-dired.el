@@ -27,6 +27,7 @@
 (require 'dired-x)
 
 (setq dired-omit-files "\\(^\\.[^\\.].*$\\|^\\.\\..+$\\)")
+(setq dired-dwim-target t)
 
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
 (add-hook 'dired-mode-hook 'hl-line-mode)
