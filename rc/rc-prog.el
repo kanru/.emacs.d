@@ -45,7 +45,6 @@
 (add-hook 'prog-mode-hook 'turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'add-watchwords)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
-(add-hook 'prog-mode-hook 'prettify-symbols-mode)
 (add-hook 'prog-mode-hook 'turn-on-column-enforce-mode)
 (add-hook 'prog-mode-hook 'indent-guide-mode)
   
