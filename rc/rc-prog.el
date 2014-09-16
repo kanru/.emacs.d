@@ -47,6 +47,7 @@
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (add-hook 'prog-mode-hook 'prettify-symbols-mode)
 (add-hook 'prog-mode-hook 'turn-on-column-enforce-mode)
+(add-hook 'prog-mode-hook 'indent-guide-mode)
   
 (provide 'rc-prog)
 ;;; rc-prog.el ends here
