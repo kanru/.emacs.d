@@ -106,5 +106,14 @@ minibuffer to ease cutting and pasting."
           "pariatur. Excepteur sint occaecat cupidatat non proident, sunt in "
           "culpa qui officia deserunt mollit anim id est laborum."))
 
+(defun logcat ()
+  "Open a adb logcat monitor buffer"
+  (interactive)
+  (let ((buffer (make-comint "logcat" "adb" nil "logcat")))
+    (switch-to-buffer-other-window buffer)
+    (with-current-buffer buffer
+      (make-local-variable 'comint-buffer-maximum-size)
+      (setq comint-buffer-maximum-size 4096))))
+
 (provide 'rc-misc)
 ;; rc-misc.el ends here
