@@ -1,5 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
 
+;; fit-frame-to-buffer
+(setq fit-window-to-buffer-horizontally t)
+
 ;; C-l
 (setq recenter-positions '(top bottom middle))
 
