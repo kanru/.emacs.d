@@ -77,7 +77,6 @@
         global-semantic-idle-scheduler-mode
         global-semantic-idle-summary-mode
         global-semantic-decoration-mode
-        global-semantic-stickyfunc-mode
         global-semantic-idle-local-symbol-highlight-mode))
 
 (semantic-toggle-decoration-style "semantic-tag-boundary" -1)
