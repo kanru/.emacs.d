@@ -41,6 +41,8 @@
   (when (featurep 'column-enforce-mode)
     (column-enforce-n 80)))
 
+(which-function-mode 1)
+
 (add-hook 'prog-mode-hook 'local-column-number-mode)
 (add-hook 'prog-mode-hook 'turn-on-save-place-mode)
 (add-hook 'prog-mode-hook 'add-watchwords)
