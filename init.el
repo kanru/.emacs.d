@@ -26,7 +26,6 @@
 (require 'uuid)
 (require 'thingatpt)
 (require 'imenu)
-(require 'gtags nil t)
 
 ;; Misc
 (require 'rc-smart-mode-line)
@@ -69,6 +68,7 @@
 (require 'rc-paredit)
 (require 'rc-eldoc)
 (require 'rc-diary)
+(require 'rc-ggtags)
 
 ;; Programming Modes
 (require 'rc-prog)
