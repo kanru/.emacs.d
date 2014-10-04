@@ -59,7 +59,6 @@
 (require 'rc-org)
 (require 'rc-rfc)
 (require 'rc-ediff)
-(require 'rc-gtags)
 (require 'rc-ibuffer)
 (require 'rc-eshell)
 (require 'rc-dired)
