@@ -13,5 +13,10 @@
  :regexp "[^][()'\" \t\n]+"
  :ignore-case t
  :doc-spec '(("(ansicl)Symbol Index" nil nil nil)))
+(info-lookup-add-help
+ :mode 'sly-mrepl-mode
+ :regexp "[^][()'\" \t\n]+"
+ :ignore-case t
+ :doc-spec '(("(ansicl)Symbol Index" nil nil nil)))
 
 (provide 'rc-info)
