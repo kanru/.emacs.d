@@ -35,9 +35,16 @@
           ;; Not the last window
           (delete-window target-window)
           (bury-buffer target-buffer))
-      (let ((window (split-window-below -10)))
-        (select-window window)
-        (switch-to-buffer target-buffer)))))
+      (when target-buffer
+        (let ((window (split-window-below -10)))
+          (select-window window)
+          (switch-to-buffer target-buffer))))))
+
+;;; hide jabber buffer from normal operation
+(setq jabber-chat-buffer-format " *-jabber-chat-%n-*")
+;;; Disable avatar
+(setq jabber-roster-line-format " %c %-25n %u %-8s  %S"
+      jabber-chat-buffer-show-avatar nil)
 
 (global-set-key [f6] 'k-display-jabber-chat-window)
 
