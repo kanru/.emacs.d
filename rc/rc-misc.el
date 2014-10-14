@@ -1,5 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
 
+;;; man
+(setq Man-width 80)
+
 ;; fit-frame-to-buffer
 (setq fit-window-to-buffer-horizontally t)
 
