@@ -44,7 +44,8 @@
 (setq jabber-chat-buffer-format " *-jabber-chat-%n-*")
 ;;; Disable avatar
 (setq jabber-roster-line-format " %c %-25n %u %-8s  %S"
-      jabber-chat-buffer-show-avatar nil)
+      jabber-chat-buffer-show-avatar nil
+      jabber-alert-presence-hooks nil)
 
 (global-set-key [f6] 'k-display-jabber-chat-window)
 
