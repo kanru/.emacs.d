@@ -5,6 +5,8 @@
       gnus-save-killed-list nil
       gnus-check-new-newsgroups 'ask-server)
 
+(setq gnus-use-full-window nil)
+
 ;; Select methods
 (setq gnus-select-method
       '(nnml "mail")
