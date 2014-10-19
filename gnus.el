@@ -11,11 +11,7 @@
 (setq gnus-select-method
       '(nnml "mail")
       gnus-secondary-select-methods
-      '((nnimap "mozilla"
-                (nnimap-address "mail.mozilla.com")
-                (nnimap-port "imaps")
-                (nnimap-fetch-partial-articles t))
-        (nnimap "kanru"
+      '((nnimap "kanru"
                 (nnimap-address "kanru.info")
                 (nnimap-fetch-partial-articles t)))
       mail-sources
