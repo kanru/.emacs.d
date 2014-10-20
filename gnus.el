@@ -17,14 +17,6 @@
       mail-sources
       '((file :plugged t)))
 
-(setq gnus-registry-max-entries 10000)
-(gnus-registry-initialize)
-;; Fetching by `Message-ID' Using the Registry
-(setq gnus-refer-article-method
-      '(current
-        (nnregistry)
-        (nnweb "gmane" (nnweb-type gmane))))
-
 (setq gnus-ignored-from-addresses user-mail-address-regexp)
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
