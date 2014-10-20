@@ -79,5 +79,6 @@
 (require 'rc-js-mode)
 (require 'rc-sly)
 (require 'rc-company)
+(require 'rc-web-mode)
 
 ;;; init.el ends here
