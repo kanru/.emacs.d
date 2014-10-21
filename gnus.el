@@ -17,6 +17,13 @@
       mail-sources
       '((file :plugged t)))
 
+;;; Archive groups
+(setq gnus-message-archive-group
+      '((cond
+         ((message-news-p) (format-time-string "sent.%Y-%m"))
+         ((message-mail-p) "nnimap+kanru:Sent")))
+      gnus-gcc-mark-as-read t)
+
 (setq gnus-ignored-from-addresses user-mail-address-regexp)
 
 (add-hook 'gnus-group-mode-hook 'gnus-topic-mode)
