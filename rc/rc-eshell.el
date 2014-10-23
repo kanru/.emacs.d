@@ -25,7 +25,8 @@
 ;;; Code:
 
 (setq eshell-directory-name (locate-user-emacs-file "eshell")
-      eshell-ls-exclude-regexp "^\\(:2e\\|__MACOSX\\)")
+      eshell-ls-exclude-regexp "^\\(:2e\\|__MACOSX\\)"
+      eshell-visual-subcommands '(("git" "log" "diff" "show")))
 
 (defun eshell/clear ()
   "Clears the shell buffer ala Unix's clear or DOS' cls"
