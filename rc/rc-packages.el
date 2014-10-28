@@ -27,7 +27,7 @@
 (require 'package)
 (package-initialize)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
 (unless package-archive-contents
   (package-refresh-contents))
