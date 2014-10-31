@@ -77,7 +77,7 @@
 (require 'rc-markdown)
 (require 'rc-nxml)
 (require 'rc-js-mode)
-(require 'rc-sly)
+(require 'rc-slime)
 (require 'rc-company)
 (require 'rc-web-mode)
 

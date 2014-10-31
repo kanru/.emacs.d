@@ -28,8 +28,8 @@
 
 (setq slime-contribs
       '(slime-fancy
-        slime-repl
         slime-indentation
+        slime-fuzzy
         slime-sbcl-exts
         slime-sprof
         slime-xref-browser))

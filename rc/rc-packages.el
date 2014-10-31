@@ -59,7 +59,7 @@
                    projectile
                    rcirc-color
                    rcirc-controls
-                   sly
+                   slime
                    smart-mode-line
                    smex
                    solarized-theme
