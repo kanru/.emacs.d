@@ -15,7 +15,7 @@
 (autoload 'gid "id-utils" "Id Utilities; get id" t)
 
 ;; Load features that needs to be loaded early in startup
-(require 'rc-cedet)
+;; (require 'rc-cedet)
 (require 'rc-startup)
 (when (>= emacs-major-version 24)
   (require 'rc-packages))
