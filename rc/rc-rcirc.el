@@ -68,9 +68,6 @@
 
 (add-to-list 'rcirc-server-alist
              '("irc.mozilla.org"
-               :ssh-host "people.mozilla.org"
-               :ssh-port 6697
-               :ssh-server "127.0.1.1"
                :port 6697
                :encryption tls
                :channels ("#b2g"
@@ -91,27 +88,6 @@
                           "#fxos-perf"
                           "#memshrink"
                           "#e10s")))
-
-(defun rcirc--open-network-stream-wrapper
-    (next-method name buffer host &rest args)
-  (apply next-method name buffer ssh-server args))
-
-(defun rcirc--connect-tunnel (next-method server &optional port &rest args)
-  (let ((record (assoc server rcirc-server-alist)))
-    (if (null (plist-get (cdr record) :ssh-host))
-        (apply next-method server port args)
-      (let ((ssh-host (plist-get (cdr record) :ssh-host))
-            (ssh-port (plist-get (cdr record) :ssh-port))
-            (ssh-server (plist-get (cdr record) :ssh-server)))
-        (call-process "ssh" nil nil nil ssh-host
-                      "-L" (format "%s:%d:%s:%d"
-                                   ssh-server ssh-port server port)
-                      "-f" "sleep 10")
-        (advice-add 'open-network-stream :around
-                    #'rcirc--open-network-stream-wrapper)
-        (apply next-method server ssh-port args)
-        (advice-remove 'open-network-stream
-                       #'rcirc--open-network-stream-wrapper)))))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
@@ -156,7 +132,6 @@
 
 (when (fboundp 'advice-add)
   (advice-add 'rcirc :before #'rcirc--cache-authinfo)
-  (advice-add 'rcirc-connect :around #'rcirc--connect-tunnel)
   (advice-add 'rcirc-authenticate :around #'rcirc--authenticate-using-authinfo)
   (advice-add 'rcirc-record-activity :around #'rcirc--filter-normal-buffer-activity)
   (advice-add 'rcirc-next-active-buffer :after #'rcirc--after-rcirc-next-active-buffer))
