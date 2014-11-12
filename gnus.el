@@ -65,12 +65,4 @@
       mm-discouraged-alternatives
       '("text/html" "image/.*"))
 
-(setq gnus-auto-expirable-newsgroups
-      "lists\\."
-      nnmail-expiry-wait-function
-      (lambda (group)
-        (cond ((string-match "b2g-internal" group) 'never)
-              (t 30)))
-      gnus-inhibit-user-auto-expire nil)
-
 (provide 'my-gnus)
