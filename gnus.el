@@ -13,7 +13,7 @@
       gnus-secondary-select-methods
       '((nnimap "kanru"
                 (nnimap-address "kanru.info")
-                (nnimap-fetch-partial-articles t)))
+                (nnimap-fetch-partial-articles "text/")))
       mail-sources
       '((file :plugged t)))
 
