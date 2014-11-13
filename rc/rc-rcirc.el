@@ -87,7 +87,8 @@
                           "#perf-tw"
                           "#fxos-perf"
                           "#memshrink"
-                          "#e10s")))
+                          "#e10s"
+                          "#jsapi")))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
