@@ -65,6 +65,7 @@
                    solarized-theme
                    undo-tree
                    vc-darcs
+                   column-enforce-mode
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
