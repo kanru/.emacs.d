@@ -66,6 +66,7 @@
                    undo-tree
                    vc-darcs
                    column-enforce-mode
+                   pomodoro
                    ))
   (unless (package-installed-p package)
     (when (assoc package package-archive-contents)
