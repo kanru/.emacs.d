@@ -34,11 +34,18 @@
       ido-use-filename-at-point 'guess
       ido-use-virtual-buffers 'auto)
 
-(require 'smex)
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(add-to-list 'ido-ubiquitous-function-overrides
+             '(disable exact "todo-read-category"))
+(ido-ubiquitous-set-function-overrides
+ 'ido-ubiquitous-function-overrides ido-ubiquitous-function-overrides)
+
+(require 'smex nil t)
+(eval-after-load 'smex
+  '(progn
+     (smex-initialize)
+     (global-set-key [remap execute-extended-command] 'smex)
+     (global-set-key (kbd "M-X") 'smex-major-mode-commands)
+     (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)))
 
 (provide 'rc-ido)
 ;;; rc-ido.el ends here
