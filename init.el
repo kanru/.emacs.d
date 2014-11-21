@@ -51,6 +51,7 @@
 (require 'rc-jabber)
 (require 'rc-ido)
 (require 'rc-debian)
+(require 'rc-todo)
 
 ;; Generic Modes
 (require 'rc-generic-x)
