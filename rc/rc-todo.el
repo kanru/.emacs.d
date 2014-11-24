@@ -26,6 +26,12 @@
 
 (setf todo-directory (expand-file-name "~/git/personal/todo/"))
 
+(cond
+ ((string-match-p "\\(work\\|mozilla\\)" system-name)
+  (setf todo-default-todo-file "mozilla"))
+ (t
+  (setf todo-default-todo-file "misc")))
+
 (global-set-key (kbd "C-c t") #'todo-show)
 (global-set-key (kbd "C-c j") #'todo-jump-to-category)
 (global-set-key (kbd "C-c i") #'todo-insert-item)

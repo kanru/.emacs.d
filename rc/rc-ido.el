@@ -34,10 +34,8 @@
       ido-use-filename-at-point 'guess
       ido-use-virtual-buffers 'auto)
 
-(add-to-list 'ido-ubiquitous-function-overrides
-             '(disable exact "todo-read-category"))
-(ido-ubiquitous-set-function-overrides
- 'ido-ubiquitous-function-overrides ido-ubiquitous-function-overrides)
+(add-to-list 'ido-ubiquitous-command-overrides
+             '(disable exact "todo-add-category"))
 
 (require 'smex nil t)
 (eval-after-load 'smex
