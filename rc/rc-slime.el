@@ -40,7 +40,7 @@
       slime-net-coding-system 'utf-8-unix
       slime-lisp-implementations
       '((sbcl ("sbcl"))
-	(ccl ("~/git/lisp/ccl/lx86cl64"))
+	(ccl ("~/r/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
         (cmucl ("cmucl"))
@@ -49,7 +49,7 @@
 (defun slime-init-picolisp (file _)
   (setq slime-protocol-version 'ignore)
   (format "%S\n"
-          `(prog (load ,(expand-file-name "~/git/swank-picolisp/swank-picolisp.l"))
+          `(prog (load ,(expand-file-name "~/r/swank-picolisp/swank-picolisp.l"))
                  (start-swank ,file))))
 (provide 'rc-slime)
 ;;; rc-slime.el ends here

@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(setf todo-directory (expand-file-name "~/git/personal/todo/"))
+(setf todo-directory (expand-file-name "~/r/personal/todo/"))
 
 (cond
  ((string-match-p "\\(work\\|mozilla\\)" system-name)

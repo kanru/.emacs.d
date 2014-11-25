@@ -33,7 +33,7 @@
       sly-net-coding-system 'utf-8-unix
       sly-lisp-implementations
       '((sbcl ("sbcl"))
-	(ccl ("~/git/lisp/ccl/lx86cl64"))
+	(ccl ("~/r/lisp/ccl/lx86cl64"))
         (clisp ("clisp"))
         (ecl ("ecl"))
         (cmucl ("cmucl"))))

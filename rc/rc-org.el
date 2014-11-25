@@ -34,7 +34,7 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-agenda-files '("~/git/org"))
+(setq org-agenda-files '("~/r/org"))
 
 ;;; TODO keywords
 (setq org-todo-keywords
@@ -62,27 +62,27 @@
         ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
         ("DONE" ("WAITING") ("CANCELLED") ("HOLD"))))
 
-(setq org-directory "~/git/org")
-(setq org-default-notes-file "~/git/org/refile.org")
+(setq org-directory "~/r/org")
+(setq org-default-notes-file "~/r/org/refile.org")
 
 ;;; Capture templates for: TODO tasks, notes, appointments, meetings
 (setq org-capture-templates
-      '(("t" "todo" entry (file "~/git/org/refile.org")
+      '(("t" "todo" entry (file "~/r/org/refile.org")
          "* TODO %?\n%U\n%a\n"
          :clock-in t :clock-resume t)
-        ("r" "respond" entry (file "~/git/org/refile.org")
+        ("r" "respond" entry (file "~/r/org/refile.org")
          "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n"
          :clock-in t :clock-resume t :immediate-finish t)
-        ("n" "note" entry (file "~/git/org/refile.org")
+        ("n" "note" entry (file "~/r/org/refile.org")
          "* %? :NOTE:\n%U\n%a\n"
          :clock-in t :clock-resume t)
-        ("j" "journal" entry (file+datetree "~/git/org/diary.org")
+        ("j" "journal" entry (file+datetree "~/r/org/diary.org")
          "* %?\n%U\n"
          :clock-in t :clock-resume t)
-        ("w" "review" entry (file "~/git/org/refile.org")
+        ("w" "review" entry (file "~/r/org/refile.org")
          "* TODO Review %c\n%U\n"
          :clock-in t :clock-resume t :immediate-finish t)
-        ("m" "meeting" entry (file "~/git/org/refile.org")
+        ("m" "meeting" entry (file "~/r/org/refile.org")
          "* MEETING with %? :MEETING:\n%U"
          :clock-in t :clock-resume t)))
 
