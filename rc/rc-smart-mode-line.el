@@ -26,7 +26,7 @@
 
 (require 'smart-mode-line)
 
-(setf sml/hidden-modes "")
+(setf rm-whitelist "sbcl")
 
 (add-to-list 'sml/replacer-regexp-list '("^:Git:[Oo]rg/" ":Org:") t)
 (add-to-list 'sml/replacer-regexp-list '("^~/[Hh]g/" ":HG:") t)
