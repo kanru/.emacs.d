@@ -27,7 +27,7 @@
 (require 'org)
 (require 'org-checklist nil t)
 
-(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\)$" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\)$" . org-mode))
 
 ;;; Standard key bindings
 (global-set-key (kbd "C-c l") 'org-store-link)
