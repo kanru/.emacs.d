@@ -24,7 +24,8 @@
 
 ;;; Code:
 
-(setf todo-directory (expand-file-name "~/r/personal/todo/"))
+(setf todo-directory (expand-file-name "~/r/personal/todo/")
+      todo-categories-align 'left)
 
 (cond
  ((string-match-p "\\(work\\|mozilla\\)" system-name)
