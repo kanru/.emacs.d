@@ -65,4 +65,8 @@
       mm-discouraged-alternatives
       '("text/html" "image/.*"))
 
+(setq gnus-posting-styles
+      '(("mozilla"
+         (address "kchen@mozilla.com"))))
+
 (provide 'my-gnus)
