@@ -66,7 +66,14 @@
       '("text/html" "image/.*"))
 
 (setq gnus-posting-styles
-      '(("mozilla"
-         (address "kchen@mozilla.com"))))
+      `((t
+         (address ,(rot13 "xnaeh@xnaeh.vasb")))
+        ((or (string-match-p "work" system-name)
+             (string-match-p "mozilla" gnus-newsgroup-name))
+         (address ,(rot13 "xpura@zbmvyyn.pbz"))
+         ("X-Message-SMTP-Method"
+          ,(rot13 "fzgc znvy.zbmvyyn.pbz 587 xpura@zbmvyyn.pbz")))
+        ("debian"
+         (address ,(rot13 "xbfgre@qrovna.bet")))))
 
 (provide 'my-gnus)
