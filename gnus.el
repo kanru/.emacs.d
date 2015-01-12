@@ -72,7 +72,7 @@
              (string-match-p "mozilla" gnus-newsgroup-name))
          (address ,(rot13 "xpura@zbmvyyn.pbz"))
          ("X-Message-SMTP-Method"
-          ,(rot13 "fzgc znvy.zbmvyyn.pbz 587 xpura@zbmvyyn.pbz")))
+          ,(rot13 "fzgc fzgc.tznvy.pbz 587 xpura@zbmvyyn.pbz")))
         ("debian"
          (address ,(rot13 "xbfgre@qrovna.bet")))))
 
