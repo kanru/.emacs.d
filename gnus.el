@@ -68,8 +68,7 @@
 (setq gnus-posting-styles
       `((t
          (address ,(rot13 "xnaeh@xnaeh.vasb")))
-        ((or (string-match-p "work" system-name)
-             (string-match-p "mozilla" gnus-newsgroup-name))
+        ("mozilla"
          (address ,(rot13 "xpura@zbmvyyn.pbz"))
          ("X-Message-SMTP-Method"
           ,(rot13 "fzgc fzgc.tznvy.pbz 587 xpura@zbmvyyn.pbz")))
