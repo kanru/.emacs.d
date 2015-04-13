@@ -40,6 +40,10 @@
       gnus-sum-thread-tree-root ""
       gnus-sum-thread-tree-single-leaf "└─━ "
       gnus-sum-thread-tree-vertical "│ ")
+(setq gnus-summary-default-score 1
+      gnus-summary-default-low-score 1
+      gnus-summary-default-high-score 1
+      gnus-subthread-sort-functions '((not gnus-thread-sort-by-total-score)))
 (defun gnus--simplify-summary-line-mode ()
   (when (string-match "lists\..*\.bugzilla" gnus-newsgroup-name)
     (setf gnus-summary-line-format "%U%R%z%* %1{%d%} %(%B%s%) \n")))
