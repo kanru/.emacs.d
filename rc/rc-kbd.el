@@ -55,5 +55,8 @@
 ;; Nav
 (global-set-key (kbd "<f5>") 'nav)
 
+;; Magit
+(global-set-key (kbd "C-c m") 'magit-status)
+
 (provide 'rc-kbd)
 ;;; rc-kbd.el ends here
