@@ -13,4 +13,12 @@
        (when opencc
          (shell-command-on-region (point) (point-max) opencc t t)))))
 
+(defun my-gnus-group-exit (&optional really-exit)
+  (interactive "P")
+  (if really-exit
+      (gnus-group-exit)
+    (bury-buffer)))
+
+(define-key gnus-group-mode-map (kbd "q") 'my-gnus-group-exit)
+
 (provide 'rc-gnus)
