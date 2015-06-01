@@ -53,7 +53,7 @@
                           "#rust.tw"
                           "#sbcl"
                           "#python.tw"
-                          "#pushisland"
+                          "#pushisland2"
                           "#g0v.tw"
                           "#h4"
                           "#darktable")))
