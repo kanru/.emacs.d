@@ -1,5 +1,8 @@
 ;;; rc-misc.el -- Misc Settings
 
+;; Disable URL matching in ffap
+(setq ffap-url-regexp nil)
+
 ;;; man
 (setq Man-width 80)
 
