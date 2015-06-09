@@ -82,6 +82,7 @@
                           "#toronto"
                           "#servo"
                           "#rust"
+                          "#mozreview"
                           "#webapi"
                           "#mozilla-taiwan"
                           "#perf-tw"
