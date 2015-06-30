@@ -59,6 +59,7 @@
 (require 'rc-ido)
 (require 'rc-debian)
 (require 'rc-todo)
+(require 'rc-magit)
 
 ;; Generic Modes
 (require 'rc-generic-x)
