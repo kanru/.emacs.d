@@ -86,6 +86,7 @@
                           "#webapi"
                           "#mozilla-taiwan"
                           "#perf-tw"
+                          "#perf"
                           "#fxos-perf"
                           "#memshrink"
                           "#e10s"
