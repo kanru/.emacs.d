@@ -24,7 +24,8 @@
 
 ;;; Code:
 
-(setq magit-last-seen-setup-instructions "1.4.0")
+(setq magit-last-seen-setup-instructions "1.4.0"
+      magit-push-always-verify nil)
 
 (provide 'rc-magit)
 ;;; rc-magit.el ends here
