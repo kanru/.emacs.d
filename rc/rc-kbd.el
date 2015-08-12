@@ -52,8 +52,8 @@
 ;; Gnus
 (global-set-key (kbd "C-c g") 'gnus)
 
-;; Nav
-(global-set-key (kbd "<f5>") 'nav)
+;; Neotree
+(global-set-key (kbd "<f5>") 'neotree)
 
 ;; Magit
 (global-set-key (kbd "C-c m") 'magit-status)
