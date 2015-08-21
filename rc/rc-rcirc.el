@@ -88,6 +88,7 @@
                           "#perf-tw"
                           "#perf"
                           "#fxos-perf"
+                          "#raptor"
                           "#memshrink"
                           "#e10s"
                           "#jsapi")))
