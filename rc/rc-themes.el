@@ -25,7 +25,6 @@
 ;;; Code:
 
 (setq custom-theme-directory (locate-user-emacs-file "themes"))
-(load-theme 'monokai t)
 
 (provide 'rc-themes)
 ;;; rc-theme.el ends here

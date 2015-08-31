@@ -30,7 +30,6 @@
 (add-to-list 'sml/replacer-regexp-list '("^~/[Hh]g/" ":HG:") t)
 (add-to-list 'sml/replacer-regexp-list '("^~/mozilla/" ":Moz:") t)
 
-(setq sml/theme 'dark)
 (sml/setup)
 
 (provide 'rc-smart-mode-line)
