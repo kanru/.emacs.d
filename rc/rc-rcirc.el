@@ -70,7 +70,8 @@
              '("irc.mozilla.org"
                :port 6697
                :encryption tls
-               :channels ("#developers"
+               :channels ("#fxos"
+                          "#developers"
                           "#gfx"
                           "#layout"
                           "#media"
