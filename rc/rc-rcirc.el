@@ -71,8 +71,6 @@
                :port 6697
                :encryption tls
                :channels ("#fxos"
-                          "#b2g"
-                          "#gaia"
                           "#developers"
                           "#gfx"
                           "#layout"
