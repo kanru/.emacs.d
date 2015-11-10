@@ -163,5 +163,9 @@
   (add-to-list 'ibuffer-fontification-alist
                '(99 (member (current-buffer) rcirc-activity) rcirc-prompt) t))
 
+(require 'rcirc-notify nil t)
+(with-eval-after-load 'rcirc-notify
+  (rcirc-notify-add-hooks))
+
 (provide 'rc-rcirc)
 ;;; rc-rcirc.el ends here
