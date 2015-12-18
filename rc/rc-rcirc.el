@@ -31,7 +31,7 @@
 
 (rcirc-track-minor-mode 1)
 (setq rcirc-fill-column 79
-      rcirc-buffer-maximum-lines 2000
+      rcirc-buffer-maximum-lines 20000
       rcirc-keywords '("kanru"
                        "urnak")
       rcirc-default-nick "kanru"
