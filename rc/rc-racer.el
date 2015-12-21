@@ -27,7 +27,8 @@
 (require 'rust-mode)
 (require 'racer)
 
-(setq racer-rust-src-path "/home/kanru/r/rust/src/")
+(setq racer-rust-src-path "/home/kanru/r/rust/src/"
+      racer-cmd "/home/kanru/.local/bin/racer")
 
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
