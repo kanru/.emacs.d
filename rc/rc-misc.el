@@ -70,8 +70,6 @@
 
 (setq ring-bell-function (lambda nil))
 
-(setq scroll-conservatively most-positive-fixnum)
-
 (require 'mm-url)
 (defun replace-tinyurl ()
   "Grabs the url at point and echos the equivalent tinyurl in the
