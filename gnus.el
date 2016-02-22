@@ -32,6 +32,9 @@
 (setq gnus-face-1 'font-lock-keyword-face
       gnus-face-2 'font-lock-doc-face)
 
+(add-to-list 'gnus-signature-separator
+             "^_______________________________________________$")
+
 (setq gnus-summary-line-format "%U%R%z%* %1{%d%} %(%-20,20f %2{%4k%} %B%s%) \n"
       gnus-sum-thread-tree-false-root ""
       gnus-sum-thread-tree-indent "  "
