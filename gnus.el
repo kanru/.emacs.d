@@ -32,6 +32,7 @@
 (setq gnus-face-1 'font-lock-keyword-face
       gnus-face-2 'font-lock-doc-face)
 
+(setq gnus-article-skip-boring t)
 (add-to-list 'gnus-signature-separator
              "^_______________________________________________$")
 
