@@ -74,23 +74,16 @@
                           "#developers"
                           "#gfx"
                           "#layout"
-                          "#media"
                           "#content"
                           "#geo"
-                          "#auckland"
-                          "#toronto"
                           "#servo"
                           "#rust"
-                          "#mozreview"
-                          "#webapi"
                           "#mozilla-taiwan"
                           "#perf-tw"
                           "#perf"
-                          "#fxos-perf"
                           "#raptor"
                           "#memshrink"
-                          "#e10s"
-                          "#jsapi")))
+                          "#e10s")))
 
 (defun rcirc--cache-authinfo (arg)
   "Read authinfo from `auth-sources' via the auth-source API."
