@@ -4,6 +4,7 @@
 (customize-set-variable
  'face-font-family-alternatives
  (cons '("Han"
+         "Noto Sans CJK TC"
          "Source Han Sans TC"
          "Source Han Sans SC"
          "WenQuanYi Zen Hei"
@@ -12,7 +13,8 @@
          "cwTexYen")
        face-font-family-alternatives))
 (setq face-font-rescale-alist
-      '(("Source Han Sans TC" . 1.1)
+      '(("Noto Sans CJK TC" . 1.1)
+        ("Source Han Sans TC" . 1.1)
         ("Source Han Sans SC" . 1.1)
         ("WenQuanYi Zen Hei" . 1.1)
         ("WenQuanYi Micro Hei" . 1.25)
