@@ -25,52 +25,46 @@
 ;;; Code:
 
 (require 'package)
+(setq package-enable-at-startup nil)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(unless package-archive-contents
-  (package-refresh-contents))
+(eval-when-compile
+  (require 'use-package))
 
-(dolist (package '(ace-jump-mode
-                   bbdb
-                   calfw
-                   company-mode
-                   css-eldoc
-                   diff-hl
-                   dtrt-indent
-                   expand-region
-                   ggtags-mode
-                   git-commit-mode
-                   git-rebase-mode
-                   go-mode
-                   graphviz-dot-mode
-                   haskell-mode
-                   highlight-defined
-                   ido-ubiquitous
-                   iedit
-                   ledger-mode
-                   lice
-                   lua-mode
-                   magit
-                   monokai-theme
-                   nlinum
-                   paredit
-                   projectile
-                   rcirc-color
-                   rcirc-controls
-                   slime
-                   smart-mode-line
-                   smex
-                   solarized-theme
-                   undo-tree
-                   vc-darcs
-                   column-enforce-mode
-                   pomodoro
-                   ))
-  (unless (package-installed-p package)
-    (when (assoc package package-archive-contents)
-      (package-install package))))
+(setq use-package-always-ensure t)
+
+(use-package ace-jump-mode)
+(use-package column-enforce-mode)
+(use-package company)
+(use-package css-eldoc)
+(use-package diff-hl)
+(use-package dtrt-indent)
+(use-package expand-region)
+(use-package ggtags)
+(use-package git-commit)
+(use-package go-mode)
+(use-package graphviz-dot-mode)
+(use-package haskell-mode)
+(use-package highlight-defined)
+(use-package ido-ubiquitous)
+(use-package iedit)
+(use-package ledger-mode)
+(use-package lice)
+(use-package lua-mode)
+(use-package magit)
+(use-package nlinum)
+(use-package paredit)
+(use-package projectile)
+(use-package rcirc-color)
+(use-package slime)
+(use-package smart-mode-line)
+(use-package smex)
+(use-package undo-tree)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
