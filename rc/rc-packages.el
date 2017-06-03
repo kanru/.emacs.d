@@ -67,6 +67,7 @@
 (use-package smart-mode-line)
 (use-package smex)
 (use-package undo-tree)
+(use-package toml-mode)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
