@@ -5,6 +5,7 @@
 (setq ibuffer-saved-filter-groups
       `(("default"
          ("mozilla" (or (filename . ,(expand-file-name "~/mozilla"))))
+         ("journal" (filename . "journal/[0-9]+.txt$"))
          ("mail/news"
           (or (mode . message-mode)
               (mode . bbdb-mode)
