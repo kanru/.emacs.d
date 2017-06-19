@@ -48,7 +48,6 @@
 (use-package ggtags)
 (use-package git-commit)
 (use-package go-mode)
-(use-package graphviz-dot-mode)
 (use-package haskell-mode)
 (use-package highlight-defined)
 (use-package ido-ubiquitous)
