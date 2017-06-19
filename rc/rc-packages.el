@@ -68,6 +68,7 @@
 (use-package undo-tree)
 (use-package toml-mode)
 (use-package org-journal)
+(use-package ibuffer-projectile)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
