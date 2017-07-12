@@ -2,13 +2,15 @@
 
 (require 'ibuffer)
 
-(setq ibuffer-saved-filter-groups
-      `(("default"
-         ("mozilla" (or (filename . ,(expand-file-name "~/mozilla"))))
-         ("journal" (filename . "journal/[0-9]+.txt$"))
-         ,@(ibuffer-projectile-generate-filter-groups))))
-(add-hook 'ibuffer-mode-hook
+(setq my-ibuffer-default-groups
+      `(("mozilla" (or (filename . ,(expand-file-name "~/mozilla"))))
+        ("journal" (filename . "journal/[0-9]+.txt$"))))
+(add-hook 'ibuffer-hook
 	  (lambda ()
+            (setq ibuffer-saved-filter-groups
+                  `(("default"
+                     ,@my-ibuffer-default-groups
+                     ,@(ibuffer-projectile-generate-filter-groups))))
 	    (ibuffer-switch-to-saved-filter-groups "default")))
 
 (add-to-list 'ibuffer-fontification-alist
