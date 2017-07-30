@@ -50,7 +50,7 @@
 (use-package go-mode)
 (use-package haskell-mode)
 (use-package highlight-defined)
-(use-package ido-ubiquitous)
+(use-package ido-completing-read+)
 (use-package ledger-mode)
 (use-package lice)
 (use-package lua-mode)
