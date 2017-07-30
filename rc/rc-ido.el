@@ -34,9 +34,6 @@
       ido-use-filename-at-point 'guess
       ido-use-virtual-buffers 'auto)
 
-(add-to-list 'ido-ubiquitous-command-overrides
-             '(disable exact "todo-add-category"))
-
 (require 'smex nil t)
 (eval-after-load 'smex
   '(progn
