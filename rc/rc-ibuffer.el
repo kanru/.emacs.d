@@ -2,7 +2,8 @@
 
 (require 'ibuffer)
 
-(setq my-ibuffer-default-groups
+(setq ibuffer-projectile-prefix ""
+      my-ibuffer-default-groups
       `(("journal" (filename . "journal/[0-9]+.txt$"))))
 (add-hook 'ibuffer-hook
 	  (lambda ()
