@@ -72,19 +72,19 @@
 
 ;; https://lwn.net/Articles/502119
 
-(setq semantic-default-submodes
-      '(global-semanticdb-minor-mode
-        global-semantic-idle-scheduler-mode
-        global-semantic-idle-summary-mode
-        global-semantic-decoration-mode
-        global-semantic-idle-local-symbol-highlight-mode))
+;; (setq semantic-default-submodes
+;;       '(global-semanticdb-minor-mode
+;;         global-semantic-idle-scheduler-mode
+;;         global-semantic-idle-summary-mode
+;;         global-semantic-decoration-mode
+;;         global-semantic-idle-local-symbol-highlight-mode))
 
-(semantic-toggle-decoration-style "semantic-tag-boundary" -1)
-(semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
-(semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
+;; (semantic-toggle-decoration-style "semantic-tag-boundary" -1)
+;; (semantic-toggle-decoration-style "semantic-decoration-on-protected-members" 1)
+;; (semantic-toggle-decoration-style "semantic-decoration-on-private-members" 1)
 
-(semantic-mode)
-(global-ede-mode)
+;; (semantic-mode)
+;; (global-ede-mode)
 
 (provide 'rc-cedet)
 ;;; rc-cedet.el ends here
