@@ -71,7 +71,6 @@
 (require 'rc-ibuffer)
 (require 'rc-eshell)
 (require 'rc-dired)
-(require 'rc-calfw)
 (require 'rc-rcirc)
 (require 'rc-paredit)
 (require 'rc-eldoc)
