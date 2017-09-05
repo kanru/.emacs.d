@@ -34,8 +34,6 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-(setq org-agenda-files '("~/r/org"))
-
 ;;; TODO keywords
 (setq org-todo-keywords
       '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -62,27 +60,28 @@
         ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
         ("DONE" ("WAITING") ("CANCELLED") ("HOLD"))))
 
-(setq org-directory "~/r/org")
-(setq org-default-notes-file "~/r/org/refile.org")
+(setq org-agenda-files '("~/Dropbox/Notes"))
+(setq org-directory "~/Dropbox/Notes")
+(setq org-default-notes-file "~/Dropbox/Notes/inbox.org")
 
 ;;; Capture templates for: TODO tasks, notes, appointments, meetings
 (setq org-capture-templates
-      '(("t" "todo" entry (file "~/r/org/refile.org")
+      '(("t" "todo" entry (file "~/Dropbox/Notes/inbox.org")
          "* TODO %?\n%U\n%a\n"
          :clock-in t :clock-resume t)
-        ("r" "respond" entry (file "~/r/org/refile.org")
+        ("r" "respond" entry (file "~/Dropbox/Notes/inbox.org")
          "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n"
          :clock-in t :clock-resume t :immediate-finish t)
-        ("n" "note" entry (file "~/r/org/refile.org")
+        ("n" "note" entry (file "~/Dropbox/Notes/inbox.org")
          "* %? :NOTE:\n%U\n%a\n"
          :clock-in t :clock-resume t)
         ("j" "journal" entry (file+datetree "~/r/org/diary.org")
          "* %?\n%U\n"
          :clock-in t :clock-resume t)
-        ("w" "review" entry (file "~/r/org/refile.org")
+        ("w" "review" entry (file "~/Dropbox/Notes/inbox.org")
          "* TODO Review %c\n%U\n"
          :clock-in t :clock-resume t :immediate-finish t)
-        ("m" "meeting" entry (file "~/r/org/refile.org")
+        ("m" "meeting" entry (file "~/Dropbox/Notes/inbox.org")
          "* MEETING with %? :MEETING:\n%U"
          :clock-in t :clock-resume t)))
 
@@ -133,8 +132,6 @@
 
 (setq org-stuck-projects
       '("+PROJECT/-DONE-MAYBE" ("NEXT") nil "IGNORE"))
-
-(setq org-agenda-include-diary t)
 
 ;;; Clock setup
 
