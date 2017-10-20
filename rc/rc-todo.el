@@ -1,6 +1,6 @@
-;;; rc-todo.el --- TODO mode                         -*- lexical-binding: t; -*-
+;;; rc-todo.el --- TODO-txt mode                         -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2014  Kan-Ru Chen (陳侃如)
+;; Copyright (C) 2014, 2017  Kan-Ru Chen (陳侃如)
 
 ;; Author: Kan-Ru Chen (陳侃如) <kanru@kanru.info>
 ;; Keywords: 
@@ -24,18 +24,9 @@
 
 ;;; Code:
 
-(setf todo-directory (expand-file-name "~/r/personal/todo/")
-      todo-categories-align 'left)
+(setf todotxt-file (expand-file-name "~/Dropbox/todo/todo.txt"))
 
-(cond
- ((string-match-p "\\(work\\|mozilla\\)" system-name)
-  (setf todo-default-todo-file "mozilla"))
- (t
-  (setf todo-default-todo-file "misc")))
-
-(global-set-key (kbd "C-c t") #'todo-show)
-(global-set-key (kbd "C-c j") #'todo-jump-to-category)
-(global-set-key (kbd "C-c i") #'todo-insert-item)
+(global-set-key (kbd "C-c t") #'todotxt)
 
 (provide 'rc-todo)
 ;;; rc-todo.el ends here
