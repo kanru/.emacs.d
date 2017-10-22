@@ -69,6 +69,7 @@
 (use-package toml-mode)
 (use-package org-journal)
 (use-package ibuffer-projectile)
+(use-package ess)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
