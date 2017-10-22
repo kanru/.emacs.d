@@ -70,6 +70,7 @@
 (use-package org-journal)
 (use-package ibuffer-projectile)
 (use-package ess)
+(use-package todotxt)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
