@@ -71,6 +71,10 @@
 (use-package ibuffer-projectile)
 (use-package ess)
 (use-package todotxt)
+(use-package rust-mode)
+(use-package racer)
+(use-package eglot)
+(use-package deadgrep)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here

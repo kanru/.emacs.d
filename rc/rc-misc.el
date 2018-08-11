@@ -12,11 +12,6 @@
 ;; C-l
 (setq recenter-positions '(top bottom middle))
 
-;; Browser
-(setq browse-url-browser-function 'browse-url-generic
-      browse-url-generic-program (or (getenv "BROWSER")
-                                     (executable-find "browse")))
-
 ;; User FULL NAME
 (setq user-full-name "Kan-Ru Chen (陳侃如)")
 
@@ -123,6 +118,8 @@ minibuffer to ease cutting and pasting."
     (with-current-buffer buffer
       (make-local-variable 'comint-buffer-maximum-size)
       (setq comint-buffer-maximum-size 4096))))
+
+(defalias 'rg 'deadgrep)
 
 (provide 'rc-misc)
 ;; rc-misc.el ends here
