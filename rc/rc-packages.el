@@ -75,6 +75,7 @@
 (use-package racer)
 (use-package eglot)
 (use-package deadgrep)
+(use-package elm-mode)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
