@@ -72,10 +72,11 @@
 (use-package ess)
 (use-package todotxt)
 (use-package rust-mode)
-(use-package racer)
 (use-package eglot)
 (use-package deadgrep)
 (use-package elm-mode)
+(use-package dpkg-dev-el)
+(use-package debian-el)
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here

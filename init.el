@@ -87,6 +87,5 @@
 (require 'rc-slime)
 (require 'rc-company)
 (require 'rc-web-mode)
-(require 'rc-racer)
 
 ;;; init.el ends here
