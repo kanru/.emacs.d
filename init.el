@@ -33,6 +33,7 @@
 (require 'uuid)
 (require 'thingatpt)
 (require 'imenu)
+(require 'ra-emacs-lsp)
 
 ;; Misc
 (require 'rc-smart-mode-line)

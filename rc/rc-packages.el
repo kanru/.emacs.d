@@ -77,6 +77,12 @@
 (use-package elm-mode)
 (use-package dpkg-dev-el)
 (use-package debian-el)
+(use-package lsp-mode)
+(use-package dash)
+(use-package ht)
+(use-package yasnippet)
+(use-package company-box
+  :hook (company-mode . company-box-mode))
 
 (provide 'rc-packages)
 ;;; rc-packages.el ends here
